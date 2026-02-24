@@ -1,0 +1,4 @@
+.env
+.gitattributes 
+.gitmodules 
+node_modules 
