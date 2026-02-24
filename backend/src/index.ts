@@ -17,7 +17,10 @@ app.use(
 );
 
 app.use(express.json());
-app.all("/api/auth/*", toNodeHandler(auth));
+app.use("/api/auth", (req, res) => {
+  req.url = req.originalUrl;
+  toNodeHandler(auth)(req, res);
+});
 app.use(
   "/trpc",
   trpcExpress.createExpressMiddleware({
