@@ -3,7 +3,6 @@ import express from 'express';
 import { router, publicProcedure } from './trpc.ts';
 import { z } from 'zod';
 
-// 1. Define Router
 const appRouter = router({
   hello: publicProcedure
     .input(z.string().nullish())
@@ -12,10 +11,8 @@ const appRouter = router({
     }),
 });
 
-// Export type router type
 export type AppRouter = typeof appRouter;
 
-// 2. Express Server
 const app = express();
 app.use(
   '/trpc',
