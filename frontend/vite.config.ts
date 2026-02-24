@@ -10,4 +10,10 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    proxy: {
+      "/api": "http://localhost:3000",
+      "/trpc": "http://localhost:3000",
+    },
+  },
 });

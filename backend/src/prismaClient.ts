@@ -1,3 +1,3 @@
-import { PrismaClient } from "@prisma/client/scripts/default-index";
+import { PrismaClient } from "@prisma/client";
 
 export const prisma = new PrismaClient();
