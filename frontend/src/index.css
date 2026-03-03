@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 :root {
+    --color-asu-maroon: #8C1D40;
+    --color-asu-gold: #FFC627;
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
