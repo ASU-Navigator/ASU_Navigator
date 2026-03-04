@@ -30,25 +30,30 @@ export default function SignupPage() {
     }
   }
 
-  const focusStyle = { boxShadow: "0 0 0 2px var(--color-asu-maroon)" };
+  const inputClass =
+    "w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-asu-maroon focus:border-transparent transition-all";
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-[420px] bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden">
+
         {/* Maroon header */}
-        <div className="px-8 pt-8 pb-6" style={{ backgroundColor: "var(--color-asu-maroon)" }}>
-          <div className="flex items-center gap-3 mb-1">
-            <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-black text-base">A</span>
+        <div className="bg-asu-maroon px-8 py-8">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+              <span className="text-white font-black text-lg leading-none">A</span>
             </div>
-            <span className="text-white font-bold text-xl tracking-tight">ASU Navigator</span>
+            <div>
+              <p className="text-white font-bold text-xl leading-tight">ASU Navigator</p>
+              <p className="text-white/60 text-xs mt-0.5">Create your account to get started</p>
+            </div>
           </div>
-          <p className="text-white/70 text-sm mt-1 ml-12">Create your account to get started</p>
         </div>
 
         {/* Form */}
-        <div className="px-8 py-7">
-          <form onSubmit={handleSubmit} className="space-y-5">
+        <div className="px-8 py-8">
+          <form onSubmit={handleSubmit} className="space-y-4">
+
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">
                 Full Name
@@ -59,9 +64,7 @@ export default function SignupPage() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 placeholder="Your Name"
-                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none transition-all"
-                onFocus={(e) => (e.target.style.boxShadow = focusStyle.boxShadow)}
-                onBlur={(e) => (e.target.style.boxShadow = "")}
+                className={inputClass}
               />
             </div>
 
@@ -75,9 +78,7 @@ export default function SignupPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="yourname@asu.edu"
-                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none transition-all"
-                onFocus={(e) => (e.target.style.boxShadow = focusStyle.boxShadow)}
-                onBlur={(e) => (e.target.style.boxShadow = "")}
+                className={inputClass}
               />
               <p className="text-xs text-gray-400 mt-1">Must be an @asu.edu address</p>
             </div>
@@ -93,38 +94,29 @@ export default function SignupPage() {
                 required
                 minLength={8}
                 placeholder="••••••••"
-                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none transition-all"
-                onFocus={(e) => (e.target.style.boxShadow = focusStyle.boxShadow)}
-                onBlur={(e) => (e.target.style.boxShadow = "")}
+                className={inputClass}
               />
               <p className="text-xs text-gray-400 mt-1">Minimum 8 characters</p>
             </div>
 
             {error && (
-              <p className="text-red-700 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-2.5">
+              <div className="text-red-700 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
                 {error}
-              </p>
+              </div>
             )}
 
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-2.5 text-white font-semibold rounded-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed"
-              style={{ backgroundColor: "var(--color-asu-maroon)" }}
-              onMouseEnter={(e) => !isLoading && ((e.target as HTMLButtonElement).style.backgroundColor = "#7a1836")}
-              onMouseLeave={(e) => ((e.target as HTMLButtonElement).style.backgroundColor = "var(--color-asu-maroon)")}
+              className="w-full py-2.5 bg-asu-maroon hover:bg-asu-maroon-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer mt-1"
             >
-              {isLoading ? "Creating account…" : "Create Account"}
+              {isLoading ? "Creating account..." : "Create Account"}
             </button>
           </form>
 
-          <p className="text-center text-sm text-gray-500 mt-5">
+          <p className="text-center text-sm text-gray-500 mt-6">
             Already have an account?{" "}
-            <Link
-              to="/login"
-              className="font-semibold hover:underline"
-              style={{ color: "var(--color-asu-maroon)" }}
-            >
+            <Link to="/login" className="text-asu-maroon font-semibold hover:underline">
               Sign in
             </Link>
           </p>

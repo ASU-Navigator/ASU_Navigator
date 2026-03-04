@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   --color-asu-maroon: #8C1D40;
+  --color-asu-maroon-dark: #7a1836;
   --color-asu-gold: #FFC627;
+}
+
+:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
