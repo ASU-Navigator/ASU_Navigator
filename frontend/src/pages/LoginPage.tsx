@@ -1,4 +1,4 @@
-import { type FormEvent, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/auth";
 
@@ -10,7 +10,7 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  async function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
@@ -24,74 +24,84 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="background-primary min-h-screen flex items-center justify-center px-4">
-      <div className="form-background w-full max-w-md">
-        {/* Logo area */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "var(--color-asu-maroon)" }}>
-              <span className="text-white font-bold text-lg">A</span>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div className="w-full max-w-[420px] bg-white rounded-2xl shadow-lg overflow-hidden">
+        {/* Maroon header */}
+        <div className="px-8 pt-8 pb-6" style={{ backgroundColor: "var(--color-asu-maroon)" }}>
+          <div className="flex items-center gap-3 mb-1">
+            <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-black text-base">A</span>
             </div>
-            <h1 className="text-2xl font-bold text-white">ASU Navigator</h1>
+            <span className="text-white font-bold text-xl tracking-tight">ASU Navigator</span>
           </div>
-          <p className="text-gray-400 text-sm">Sign in to view your campus route</p>
+          <p className="text-white/70 text-sm mt-1 ml-12">Sign in to access your campus map</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-[var(--color-asu-gold)] transition-colors"
-              placeholder="you@asu.edu"
-            />
-          </div>
+        {/* Form */}
+        <div className="px-8 py-7">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                ASU Email
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="yourname@asu.edu"
+                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                style={{ "--tw-ring-color": "var(--color-asu-maroon)" } as React.CSSProperties}
+                onFocus={(e) => e.target.style.boxShadow = "0 0 0 2px var(--color-asu-maroon)"}
+                onBlur={(e) => e.target.style.boxShadow = ""}
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-1">
-              Password
-            </label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-[var(--color-asu-gold)] transition-colors"
-              placeholder="••••••••"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                Password
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                placeholder="••••••••"
+                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none transition-all"
+                onFocus={(e) => e.target.style.boxShadow = "0 0 0 2px var(--color-asu-maroon)"}
+                onBlur={(e) => e.target.style.boxShadow = ""}
+              />
+            </div>
 
-          {error && (
-            <p className="text-red-400 text-sm bg-red-900/20 border border-red-500/30 rounded-lg px-4 py-2">
-              {error}
-            </p>
-          )}
+            {error && (
+              <p className="text-red-700 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-2.5">
+                {error}
+              </p>
+            )}
 
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="w-full py-2.5 px-4 rounded-lg font-semibold text-white transition-opacity disabled:opacity-60"
-            style={{ backgroundColor: "var(--color-asu-maroon)" }}
-          >
-            {isLoading ? "Signing in…" : "Sign In"}
-          </button>
-        </form>
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full py-2.5 text-white font-semibold rounded-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+              style={{ backgroundColor: "var(--color-asu-maroon)" }}
+              onMouseEnter={(e) => !isLoading && ((e.target as HTMLButtonElement).style.backgroundColor = "#7a1836")}
+              onMouseLeave={(e) => ((e.target as HTMLButtonElement).style.backgroundColor = "var(--color-asu-maroon)")}
+            >
+              {isLoading ? "Signing in…" : "Sign In"}
+            </button>
+          </form>
 
-        <p className="text-center text-gray-400 text-sm mt-6">
-          Don't have an account?{" "}
-          <Link
-            to="/signup"
-            className="font-semibold hover:opacity-80 transition-opacity"
-            style={{ color: "var(--color-asu-gold)" }}
-          >
-            Sign up
-          </Link>
-        </p>
+          <p className="text-center text-sm text-gray-500 mt-5">
+            Don't have an account?{" "}
+            <Link
+              to="/signup"
+              className="font-semibold hover:underline"
+              style={{ color: "var(--color-asu-maroon)" }}
+            >
+              Sign up
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );
