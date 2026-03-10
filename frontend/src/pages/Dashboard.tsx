@@ -66,8 +66,7 @@ export default function Dashboard() {
                 <button
                   onClick={() => navigate(`/map?date=${selectedDate}`)}
                   disabled={events.length < 2}
-                  className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity disabled:opacity-40"
-                  style={{ backgroundColor: "var(--color-asu-maroon)" }}
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity disabled:opacity-40 bg-asu-maroon"
                   title={events.length < 2 ? "Need at least 2 classes to view a route" : ""}
                 >
                   🗺 View Route

@@ -14,7 +14,35 @@ type RouteSegment = {
   durationSeconds: number;
   gapSeconds: number;
   isTight: boolean;
+  isFallback?: boolean;
 };
+
+// Module-level geocode cache — persists across re-renders
+const geocodeCache = new Map<string, { lat: number; lng: number } | null>();
+
+async function geocodeLocation(locationStr: string): Promise<{ lat: number; lng: number } | null> {
+  const upper = locationStr.toUpperCase();
+  if (!locationStr || upper.includes("ONLINE") || upper.includes("VIRTUAL") || upper.includes("ZOOM")) return null;
+  if (geocodeCache.has(locationStr)) return geocodeCache.get(locationStr)!;
+
+  return new Promise((resolve) => {
+    const geocoder = new window.google.maps.Geocoder();
+    geocoder.geocode(
+      { address: `${locationStr}, Arizona State University`, region: "us" },
+      (results, status) => {
+        const result =
+          status === "OK" && results?.[0]
+            ? {
+                lat: results[0].geometry.location.lat(),
+                lng: results[0].geometry.location.lng(),
+              }
+            : null;
+        geocodeCache.set(locationStr, result);
+        resolve(result);
+      },
+    );
+  });
+}
 
 function formatTime(date: Date) {
   return date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true });
@@ -41,6 +69,7 @@ export default function MapPage() {
 
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
+  const [routeApiError, setRouteApiError] = useState<string | null>(null);
 
   // Determine map center from the most common campus
   const mapCenter = (() => {
@@ -57,57 +86,121 @@ export default function MapPage() {
   useEffect(() => {
     if (!isLoaded || events.length < 2) return;
 
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string;
+
+    /** Straight-line walking estimate used as fallback when the Routes API is unavailable */
+    function straightLineSegment(
+      fromIndex: number,
+      toIndex: number,
+      fromLat: number, fromLng: number,
+      toLat: number, toLng: number,
+      gapSeconds: number,
+    ): RouteSegment {
+      const R = 6_371_000;
+      const dLat = (toLat - fromLat) * (Math.PI / 180);
+      const dLng = (toLng - fromLng) * (Math.PI / 180);
+      const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(fromLat * (Math.PI / 180)) *
+          Math.cos(toLat * (Math.PI / 180)) *
+          Math.sin(dLng / 2) ** 2;
+      const distMeters = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      const durationSeconds = Math.round(distMeters / 1.4); // ~5 km/h walking
+      return {
+        fromIndex,
+        toIndex,
+        path: [{ lat: fromLat, lng: fromLng }, { lat: toLat, lng: toLng }],
+        durationSeconds,
+        gapSeconds,
+        isTight: durationSeconds > gapSeconds - 300,
+      };
+    }
+
     async function compute() {
       setIsComputingRoutes(true);
-      const service = new window.google.maps.DirectionsService();
+      setRouteApiError(null);
       const segments: RouteSegment[] = [];
+      let firstApiError: string | null = null;
 
       for (let i = 0; i < events.length - 1; i++) {
         const from = events[i];
         const to = events[i + 1];
         const fromB = resolveBuilding(from.location);
         const toB = resolveBuilding(to.location);
-        if (!fromB || !toB || fromB.code === toB.code) continue;
+
+        // Fall back to Geocoding API for buildings not in static DB
+        const fromCoords = fromB
+          ? { lat: fromB.lat, lng: fromB.lng }
+          : await geocodeLocation(from.location);
+        const toCoords = toB
+          ? { lat: toB.lat, lng: toB.lng }
+          : await geocodeLocation(to.location);
+
+        if (!fromCoords || !toCoords) continue;
+
+        // Skip if same building (exact coords match or same static code)
+        if (
+          fromB && toB && fromB.code === toB.code
+        ) continue;
+        if (
+          fromCoords.lat === toCoords.lat && fromCoords.lng === toCoords.lng
+        ) continue;
 
         const gapSeconds = (to.start.getTime() - from.end.getTime()) / 1000;
 
-        const result = await new Promise<google.maps.DirectionsResult | null>((resolve) => {
-          service.route(
+        // Try the Routes API; fall back to a straight-line estimate on any failure
+        let usedFallback = false;
+        try {
+          const res = await fetch(
+            "https://routes.googleapis.com/directions/v2:computeRoutes",
             {
-              origin: { lat: fromB.lat, lng: fromB.lng },
-              destination: { lat: toB.lat, lng: toB.lng },
-              travelMode: google.maps.TravelMode.WALKING,
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "X-Goog-Api-Key": apiKey,
+                "X-Goog-FieldMask": "routes.duration,routes.polyline.encodedPolyline",
+              },
+              body: JSON.stringify({
+                origin: { location: { latLng: { latitude: fromCoords.lat, longitude: fromCoords.lng } } },
+                destination: { location: { latLng: { latitude: toCoords.lat, longitude: toCoords.lng } } },
+                travelMode: "WALK",
+              }),
             },
-            (res, status) => resolve(status === "OK" ? res : null),
           );
-        });
 
-        if (!result) continue;
+          type RoutesResponse = {
+            routes?: { duration?: string; polyline?: { encodedPolyline?: string } }[];
+            error?: { message?: string; status?: string };
+          };
+          const data = await res.json() as RoutesResponse;
 
-        const leg = result.routes[0]?.legs[0];
-        if (!leg) continue;
-        const durationSeconds = leg.duration?.value ?? 0;
-
-        const path: { lat: number; lng: number }[] = [];
-        for (const step of leg.steps) {
-          const decoded = window.google.maps.geometry.encoding.decodePath(
-            step.polyline.points,
-          );
-          for (const pt of decoded.getArray()) {
-            path.push({ lat: pt.lat(), lng: pt.lng() });
+          if (data.error) {
+            firstApiError ??= data.error.message ?? data.error.status ?? "Routes API error";
+            usedFallback = true;
+          } else {
+            const route = data.routes?.[0];
+            if (route?.duration && route.polyline?.encodedPolyline) {
+              const durationSeconds = parseInt(route.duration, 10);
+              const decoded = window.google.maps.geometry.encoding.decodePath(
+                route.polyline.encodedPolyline,
+              );
+              const path = decoded.getArray().map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
+              segments.push({ fromIndex: i, toIndex: i + 1, path, durationSeconds, gapSeconds, isTight: durationSeconds > gapSeconds - 300 });
+            } else {
+              usedFallback = true;
+            }
           }
+        } catch {
+          firstApiError ??= "Network error contacting Routes API";
+          usedFallback = true;
         }
 
-        segments.push({
-          fromIndex: i,
-          toIndex: i + 1,
-          path,
-          durationSeconds,
-          gapSeconds,
-          isTight: durationSeconds > gapSeconds - 300,
-        });
+        if (usedFallback) {
+          segments.push({ ...straightLineSegment(i, i + 1, fromCoords.lat, fromCoords.lng, toCoords.lat, toCoords.lng, gapSeconds), isFallback: true });
+        }
       }
 
+      if (firstApiError) setRouteApiError(firstApiError);
       setRouteSegments(segments);
       setIsComputingRoutes(false);
     }
@@ -124,7 +217,7 @@ export default function MapPage() {
       {/* Sidebar */}
       <aside className="w-80 shrink-0 flex flex-col bg-gray-900 border-r border-white/10 overflow-y-auto">
         {/* Sidebar header */}
-        <div className="p-4 border-b border-white/10" style={{ backgroundColor: "var(--color-asu-maroon)" }}>
+        <div className="p-4 border-b border-white/10 bg-asu-maroon">
           <div className="flex items-center justify-between mb-1">
             <span className="text-white font-bold">ASU Navigator</span>
             <button
@@ -146,6 +239,14 @@ export default function MapPage() {
         {isComputingRoutes && (
           <div className="px-4 py-2 bg-yellow-900/30 border-b border-yellow-500/20 text-yellow-300 text-xs flex items-center gap-2">
             <span className="animate-spin">⟳</span> Computing walking routes…
+          </div>
+        )}
+
+        {routeApiError && !isComputingRoutes && (
+          <div className="px-4 py-2 bg-orange-900/30 border-b border-orange-500/20 text-orange-300 text-xs">
+            <p className="font-semibold mb-0.5">Routes API unavailable — showing estimates</p>
+            <p className="text-orange-400/80">{routeApiError}</p>
+            <p className="mt-1 text-orange-400/60">Enable the <strong>Routes API</strong> in Google Cloud Console to get real walking paths.</p>
           </div>
         )}
 
@@ -247,8 +348,11 @@ export default function MapPage() {
               path={seg.path}
               options={{
                 strokeColor: seg.isTight ? "#EF4444" : "#3B82F6",
-                strokeWeight: 5,
-                strokeOpacity: 0.85,
+                strokeWeight: seg.isFallback ? 3 : 5,
+                strokeOpacity: seg.isFallback ? 0.55 : 0.85,
+                icons: seg.isFallback
+                  ? [{ icon: { path: "M 0,-1 0,1", strokeOpacity: 1, scale: 3 }, offset: "0", repeat: "12px" }]
+                  : undefined,
               }}
             />
           ))}

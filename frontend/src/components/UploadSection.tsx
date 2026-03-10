@@ -7,13 +7,15 @@ type Props = {
 
 export default function UploadSection({ onUpload, isLoading }: Props) {
   const [isDragging, setIsDragging] = useState(false);
+  const [fileError, setFileError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   function readFile(file: File) {
     if (!file.name.endsWith(".ics")) {
-      alert("Please upload a .ics calendar file.");
+      setFileError("Please upload a .ics calendar file.");
       return;
     }
+    setFileError(null);
     const reader = new FileReader();
     reader.onload = (e) => {
       const content = e.target?.result;
@@ -71,9 +73,13 @@ export default function UploadSection({ onUpload, isLoading }: Props) {
             <p className="text-white font-medium">Drag your .ics file here</p>
             <p className="text-gray-400 text-sm mt-1">or click to browse</p>
           </div>
-          <p className="text-gray-500 text-xs mt-2">
-            Export from MyASU → Academics → Schedule → Export Calendar (.ics)
-          </p>
+          {fileError ? (
+            <p className="text-red-400 text-xs mt-1">{fileError}</p>
+          ) : (
+            <p className="text-gray-500 text-xs mt-2">
+              Export from MyASU → Academics → Schedule → Export Calendar (.ics)
+            </p>
+          )}
         </div>
       )}
     </div>

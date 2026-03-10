@@ -13,10 +13,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav
-      className="flex items-center justify-between px-6 py-4 border-b border-white/10"
-      style={{ backgroundColor: "var(--color-asu-maroon)" }}
-    >
+    <nav className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-asu-maroon">
       <div className="flex items-center gap-3">
         <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
           <span className="text-white font-bold text-sm">A</span>
