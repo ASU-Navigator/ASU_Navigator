@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { GoogleMap, Marker, Polyline, useJsApiLoader } from "@react-google-maps/api";
 import type { ParsedEvent } from "../types";
-import { trpc } from "../utils/trpc/client";
+import { trpc, trpcClient } from "../utils/trpc/client";
 import { resolveBuilding } from "../utils/buildingLookup";
 import { CAMPUS_CENTERS, CAMPUS_LABELS, type Campus } from "../data/asuBuildings";
 import LoadingScreen from "../components/LoadingScreen";
@@ -66,11 +66,9 @@ export default function MapPage() {
 
   const scheduleQuery = trpc.schedule.get.useQuery({ date });
   const events: ParsedEvent[] = scheduleQuery.data?.events ?? [];
-  const utils = trpc.useUtils();
 
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
-  const [routeApiError, setRouteApiError] = useState<string | null>(null);
 
   // Determine map center from the most common campus
   const mapCenter = (() => {
@@ -117,9 +115,7 @@ export default function MapPage() {
 
     async function compute() {
       setIsComputingRoutes(true);
-      setRouteApiError(null);
       const segments: RouteSegment[] = [];
-      let firstApiError: string | null = null;
 
       for (let i = 0; i < events.length - 1; i++) {
         const from = events[i];
@@ -150,7 +146,7 @@ export default function MapPage() {
         // Try the Routes API via backend proxy; fall back to straight-line estimate on failure
         let usedFallback = false;
         try {
-          const result = await utils.schedule.route.fetch({
+          const result = await trpcClient.schedule.route.query({
             originLat: fromCoords.lat,
             originLng: fromCoords.lng,
             destLat: toCoords.lat,
@@ -158,7 +154,6 @@ export default function MapPage() {
           });
 
           if (!result.ok) {
-            firstApiError ??= result.error;
             usedFallback = true;
           } else {
             const decoded = window.google.maps.geometry.encoding.decodePath(
@@ -175,7 +170,6 @@ export default function MapPage() {
             });
           }
         } catch {
-          firstApiError ??= "Error contacting route service";
           usedFallback = true;
         }
 
@@ -184,7 +178,6 @@ export default function MapPage() {
         }
       }
 
-      if (firstApiError) setRouteApiError(firstApiError);
       setRouteSegments(segments);
       setIsComputingRoutes(false);
     }
@@ -226,15 +219,7 @@ export default function MapPage() {
           </div>
         )}
 
-        {routeApiError && !isComputingRoutes && (
-          <div className="px-4 py-2 bg-orange-900/30 border-b border-orange-500/20 text-orange-300 text-xs">
-            <p className="font-semibold mb-0.5">Routes API unavailable — showing estimates</p>
-            <p className="text-orange-400/80">{routeApiError}</p>
-            <p className="mt-1 text-orange-400/60">Enable the <strong>Routes API</strong> in Google Cloud Console to get real walking paths.</p>
-          </div>
-        )}
-
-        {/* Event list */}
+{/* Event list */}
         <div className="flex-1 p-3 space-y-2">
           {events.length === 0 ? (
             <p className="text-gray-400 text-sm text-center mt-8">No classes on this day.</p>
