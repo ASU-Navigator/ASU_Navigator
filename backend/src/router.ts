@@ -34,6 +34,58 @@ const scheduleRouter = router({
     await prisma.schedule.deleteMany({ where: { userId } });
     return { success: true };
   }),
+
+  route: protectedProcedure
+    .input(
+      z.object({
+        originLat: z.number(),
+        originLng: z.number(),
+        destLat: z.number(),
+        destLng: z.number(),
+      }),
+    )
+    .query(async ({ input }) => {
+      const apiKey = process.env.API_KEY;
+      if (!apiKey) throw new Error("API_KEY not configured");
+
+      const res = await fetch(
+        "https://routes.googleapis.com/directions/v2:computeRoutes",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Goog-Api-Key": apiKey,
+            "X-Goog-FieldMask": "routes.duration,routes.polyline.encodedPolyline",
+          },
+          body: JSON.stringify({
+            origin: { location: { latLng: { latitude: input.originLat, longitude: input.originLng } } },
+            destination: { location: { latLng: { latitude: input.destLat, longitude: input.destLng } } },
+            travelMode: "WALK",
+          }),
+        },
+      );
+
+      type RoutesResponse = {
+        routes?: { duration?: string; polyline?: { encodedPolyline?: string } }[];
+        error?: { message?: string; status?: string };
+      };
+      const data = await res.json() as RoutesResponse;
+
+      if (data.error) {
+        return { ok: false as const, error: data.error.message ?? data.error.status ?? "Routes API error" };
+      }
+
+      const route = data.routes?.[0];
+      if (!route?.duration || !route.polyline?.encodedPolyline) {
+        return { ok: false as const, error: "No route returned" };
+      }
+
+      return {
+        ok: true as const,
+        durationSeconds: parseInt(route.duration, 10),
+        encodedPolyline: route.polyline.encodedPolyline,
+      };
+    }),
 });
 
 export const appRouter = router({

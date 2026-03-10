@@ -23,22 +23,22 @@ const geocodeCache = new Map<string, { lat: number; lng: number } | null>();
 async function geocodeLocation(locationStr: string): Promise<{ lat: number; lng: number } | null> {
   const upper = locationStr.toUpperCase();
   if (!locationStr || upper.includes("ONLINE") || upper.includes("VIRTUAL") || upper.includes("ZOOM")) return null;
-  if (geocodeCache.has(locationStr)) return geocodeCache.get(locationStr)!;
+  if (geocodeCache.has(locationStr)) return geocodeCache.get(locationStr) ?? null;
 
   return new Promise((resolve) => {
     const geocoder = new window.google.maps.Geocoder();
     geocoder.geocode(
       { address: `${locationStr}, Arizona State University`, region: "us" },
       (results, status) => {
-        const result =
-          status === "OK" && results?.[0]
-            ? {
-                lat: results[0].geometry.location.lat(),
-                lng: results[0].geometry.location.lng(),
-              }
-            : null;
-        geocodeCache.set(locationStr, result);
-        resolve(result);
+        try {
+          const loc = status === "OK" ? results?.[0]?.geometry?.location ?? null : null;
+          const result = loc ? { lat: loc.lat(), lng: loc.lng() } : null;
+          geocodeCache.set(locationStr, result);
+          resolve(result);
+        } catch {
+          geocodeCache.set(locationStr, null);
+          resolve(null);
+        }
       },
     );
   });
@@ -66,6 +66,7 @@ export default function MapPage() {
 
   const scheduleQuery = trpc.schedule.get.useQuery({ date });
   const events: ParsedEvent[] = scheduleQuery.data?.events ?? [];
+  const utils = trpc.useUtils();
 
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
@@ -85,8 +86,6 @@ export default function MapPage() {
 
   useEffect(() => {
     if (!isLoaded || events.length < 2) return;
-
-    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string;
 
     /** Straight-line walking estimate used as fallback when the Routes API is unavailable */
     function straightLineSegment(
@@ -148,50 +147,35 @@ export default function MapPage() {
 
         const gapSeconds = (to.start.getTime() - from.end.getTime()) / 1000;
 
-        // Try the Routes API; fall back to a straight-line estimate on any failure
+        // Try the Routes API via backend proxy; fall back to straight-line estimate on failure
         let usedFallback = false;
         try {
-          const res = await fetch(
-            "https://routes.googleapis.com/directions/v2:computeRoutes",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "X-Goog-Api-Key": apiKey,
-                "X-Goog-FieldMask": "routes.duration,routes.polyline.encodedPolyline",
-              },
-              body: JSON.stringify({
-                origin: { location: { latLng: { latitude: fromCoords.lat, longitude: fromCoords.lng } } },
-                destination: { location: { latLng: { latitude: toCoords.lat, longitude: toCoords.lng } } },
-                travelMode: "WALK",
-              }),
-            },
-          );
+          const result = await utils.schedule.route.fetch({
+            originLat: fromCoords.lat,
+            originLng: fromCoords.lng,
+            destLat: toCoords.lat,
+            destLng: toCoords.lng,
+          });
 
-          type RoutesResponse = {
-            routes?: { duration?: string; polyline?: { encodedPolyline?: string } }[];
-            error?: { message?: string; status?: string };
-          };
-          const data = await res.json() as RoutesResponse;
-
-          if (data.error) {
-            firstApiError ??= data.error.message ?? data.error.status ?? "Routes API error";
+          if (!result.ok) {
+            firstApiError ??= result.error;
             usedFallback = true;
           } else {
-            const route = data.routes?.[0];
-            if (route?.duration && route.polyline?.encodedPolyline) {
-              const durationSeconds = parseInt(route.duration, 10);
-              const decoded = window.google.maps.geometry.encoding.decodePath(
-                route.polyline.encodedPolyline,
-              );
-              const path = decoded.getArray().map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
-              segments.push({ fromIndex: i, toIndex: i + 1, path, durationSeconds, gapSeconds, isTight: durationSeconds > gapSeconds - 300 });
-            } else {
-              usedFallback = true;
-            }
+            const decoded = window.google.maps.geometry.encoding.decodePath(
+              result.encodedPolyline,
+            );
+            const path = decoded.getArray().map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
+            segments.push({
+              fromIndex: i,
+              toIndex: i + 1,
+              path,
+              durationSeconds: result.durationSeconds,
+              gapSeconds,
+              isTight: result.durationSeconds > gapSeconds - 300,
+            });
           }
         } catch {
-          firstApiError ??= "Network error contacting Routes API";
+          firstApiError ??= "Error contacting route service";
           usedFallback = true;
         }
 
