@@ -5,6 +5,20 @@ The project will allow students to upload their schedules to derive the most tim
 Dependencies:
 Google Maps API Key can be obtained here: https://developers.google.com/maps/documentation/javascript/get-api-key
 
+Set up end file:
+
+
+How to run:
+
+Front-end:
+pnpm install
+pnpm run dev
+
+Back-end:
+npx prisma generate
+pnpm install
+pnpm run dev
+
 Tech Stack:
 - frontend: HTML/CSS/TS
 - backend: tRPC
