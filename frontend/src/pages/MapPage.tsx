@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { GoogleMap, Marker, Polyline, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, Polyline, useJsApiLoader } from "@react-google-maps/api";
 import type { ParsedEvent } from "../types";
 import { trpc, trpcClient } from "../utils/trpc/client";
 import { resolveBuilding } from "../utils/buildingLookup";
@@ -52,7 +52,7 @@ function todayStr() {
   return new Date().toISOString().split("T")[0];
 }
 
-const LIBRARIES: ("geometry")[] = ["geometry"];
+const LIBRARIES: ("geometry" | "marker")[] = ["geometry", "marker"];
 
 export default function MapPage() {
   const [searchParams] = useSearchParams();
@@ -69,6 +69,8 @@ export default function MapPage() {
 
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
+  const [map, setMap] = useState<google.maps.Map | null>(null);
+  const markersRef = useRef<google.maps.marker.AdvancedMarkerElement[]>([]);
 
   // Determine map center from the most common campus
   const mapCenter = (() => {
@@ -152,14 +154,15 @@ export default function MapPage() {
             destLat: toCoords.lat,
             destLng: toCoords.lng,
           });
-
+          console.log('Route API result:', result);
           if (!result.ok) {
+            console.log('Route API failed:', result.error);
             usedFallback = true;
           } else {
             const decoded = window.google.maps.geometry.encoding.decodePath(
               result.encodedPolyline,
             );
-            const path = decoded.getArray().map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
+            const path = decoded.map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
             segments.push({
               fromIndex: i,
               toIndex: i + 1,
@@ -169,7 +172,8 @@ export default function MapPage() {
               isTight: result.durationSeconds > gapSeconds - 300,
             });
           }
-        } catch {
+        } catch (error) {
+          console.log('Route API exception:', error);
           usedFallback = true;
         }
 
@@ -185,6 +189,67 @@ export default function MapPage() {
     void compute();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoaded, events.length, date]);
+
+  // Advanced Markers Effect
+  useEffect(() => {
+    console.log('Advanced Markers Effect running:', { map: !!map, eventsLength: events.length });
+    if (!map || events.length === 0) {
+      console.log('Skipping marker creation:', { map: !!map, eventsLength: events.length });
+      return;
+    }
+
+    // Clear existing markers
+    markersRef.current.forEach(marker => marker.map = null);
+    markersRef.current = [];
+
+    // Load marker library and create markers
+    const createMarkers = async () => {
+      // console.log('Creating markers for', events.length, 'events');
+      const { AdvancedMarkerElement } = await google.maps.importLibrary('marker') as google.maps.MarkerLibrary;
+      console.log('AdvancedMarkerElement loaded');
+
+      for (const [i, event] of events.entries()) {
+        const building = resolveBuilding(event.location);
+        if (!building) {
+          console.log('No building for event', i, event.location);
+          continue;
+        }
+
+        // console.log('Creating marker for', building.name, building.lat, building.lng);
+
+        // Create custom content for the marker
+        const content = document.createElement('div');
+        content.style.color = 'white';
+        content.style.fontWeight = 'bold';
+        content.style.fontSize = '12px';
+        content.style.background = '#dc2626'; // ASU maroon
+        content.style.borderRadius = '50%';
+        content.style.width = '24px';
+        content.style.height = '24px';
+        content.style.display = 'flex';
+        content.style.alignItems = 'center';
+        content.style.justifyContent = 'center';
+        content.style.border = '2px solid white';
+        content.style.zIndex = '1000'; // Ensure it's above the map
+        content.style.position = 'relative';
+        content.textContent = String(i + 1 % 100); // Show event index (1-99) on marker
+
+        // Create the advanced marker
+        const marker = new AdvancedMarkerElement({
+          map,
+          position: { lat: building.lat, lng: building.lng },
+          content,
+          title: `${event.summary} — ${building.name}`,
+        });
+
+        markersRef.current.push(marker);
+        console.log('Marker created for', building.name);
+      }
+      console.log('Total markers created:', markersRef.current.length);
+    };
+
+    createMarkers();
+  }, [map, events]);
 
   if (scheduleQuery.isPending) return <LoadingScreen message="Loading schedule…" />;
   if (!isLoaded) return <LoadingScreen message="Loading map…" />;
@@ -283,33 +348,15 @@ export default function MapPage() {
           mapContainerStyle={{ width: "100%", height: "100%" }}
           center={{ lat: mapCenter.lat, lng: mapCenter.lng }}
           zoom={mapCenter.zoom}
+          onLoad={(mapInstance) => setMap(mapInstance)}
           options={{
             disableDefaultUI: false,
             zoomControl: true,
             streetViewControl: false,
             mapTypeControl: false,
-            styles: [{ featureType: "poi.school", elementType: "labels", stylers: [{ visibility: "on" }] }],
+            mapId: "bdfa66bd0ca03dc990ecaed7", //load map styles from Google Cloud Console with ASU branding and highlighted buildings
           }}
         >
-          {/* Markers for each class location */}
-          {events.map((event, i) => {
-            const building = resolveBuilding(event.location);
-            if (!building) return null;
-            return (
-              <Marker
-                key={event.uid}
-                position={{ lat: building.lat, lng: building.lng }}
-                label={{
-                  text: String(i + 1),
-                  color: "white",
-                  fontWeight: "bold",
-                  fontSize: "12px",
-                }}
-                title={`${event.summary} — ${building.name}`}
-              />
-            );
-          })}
-
           {/* Walking route polylines */}
           {routeSegments.map((seg) => (
             <Polyline

@@ -15,8 +15,10 @@ pnpm install
 pnpm run dev
 
 Back-end:
+npx prisma migrate dev
 npx prisma generate
 pnpm install
+pnpm install axios
 pnpm run dev
 
 Tech Stack:

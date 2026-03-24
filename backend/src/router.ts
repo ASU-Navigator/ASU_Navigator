@@ -45,45 +45,38 @@ const scheduleRouter = router({
       }),
     )
     .query(async ({ input }) => {
+      console.log('Route query called with:', input);
       const apiKey = process.env.API_KEY;
       if (!apiKey) throw new Error("API_KEY not configured");
 
-      const res = await fetch(
-        "https://routes.googleapis.com/directions/v2:computeRoutes",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Goog-Api-Key": apiKey,
-            "X-Goog-FieldMask": "routes.duration,routes.polyline.encodedPolyline",
-          },
-          body: JSON.stringify({
-            origin: { location: { latLng: { latitude: input.originLat, longitude: input.originLng } } },
-            destination: { location: { latLng: { latitude: input.destLat, longitude: input.destLng } } },
-            travelMode: "WALK",
-          }),
-        },
-      );
+      const origin = `${input.originLat},${input.originLng}`;
+      const destination = `${input.destLat},${input.destLng}`;
+      const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&mode=walking&key=${apiKey}`;
+      console.log('Fetching URL:', url.replace(apiKey, 'API_KEY'));
 
-      type RoutesResponse = {
-        routes?: { duration?: string; polyline?: { encodedPolyline?: string } }[];
-        error?: { message?: string; status?: string };
-      };
-      const data = await res.json() as RoutesResponse;
+      const res = await fetch(url);
+      const data = await res.json();
+      console.log('Directions API response status:', data.status);
+      console.log('Directions API response:', data);
 
-      if (data.error) {
-        return { ok: false as const, error: data.error.message ?? data.error.status ?? "Routes API error" };
+      if (data.status !== "OK") {
+        return { ok: false as const, error: data.error_message || data.status };
       }
 
       const route = data.routes?.[0];
-      if (!route?.duration || !route.polyline?.encodedPolyline) {
+      if (!route) {
         return { ok: false as const, error: "No route returned" };
+      }
+
+      const leg = route.legs?.[0];
+      if (!leg?.duration?.value || !route.overview_polyline?.points) {
+        return { ok: false as const, error: "Invalid route data" };
       }
 
       return {
         ok: true as const,
-        durationSeconds: parseInt(route.duration, 10),
-        encodedPolyline: route.polyline.encodedPolyline,
+        durationSeconds: leg.duration.value,
+        encodedPolyline: route.overview_polyline.points,
       };
     }),
 });
