@@ -210,10 +210,11 @@ export default function MapPage() {
 
       for (const [i, event] of events.entries()) {
         const building = resolveBuilding(event.location);
-        if (!building) {
-          console.log('No building for event', i, event.location);
-          continue;
-        }
+        const coords = building
+          ? { lat: building.lat, lng: building.lng }
+          : await geocodeLocation(event.location);
+        if (!coords) continue;
+        const displayName = building?.name ?? event.location;
 
         // console.log('Creating marker for', building.name, building.lat, building.lng);
 
@@ -237,9 +238,9 @@ export default function MapPage() {
         // Create the advanced marker
         const marker = new AdvancedMarkerElement({
           map,
-          position: { lat: building.lat, lng: building.lng },
+          position: coords,
           content,
-          title: `${event.summary} — ${building.name}`,
+          title: `${event.summary} — ${displayName}`,
         });
 
         markersRef.current.push(marker);
@@ -292,7 +293,8 @@ export default function MapPage() {
             events.map((event, i) => {
               const building = resolveBuilding(event.location);
               const seg = routeSegments.find((s) => s.fromIndex === i);
-              const isVirtual = !building;
+              const loc = (event.location ?? "").toUpperCase();
+              const isVirtual = !event.location || loc.includes("ONLINE") || loc.includes("VIRTUAL") || loc.includes("ZOOM");
 
               return (
                 <div key={event.uid} className="space-y-1">
@@ -305,7 +307,7 @@ export default function MapPage() {
                       <p className="text-gray-300 text-xs mt-1">{building.name} · {CAMPUS_LABELS[building.campus]}</p>
                     ) : (
                       <p className="text-gray-500 text-xs mt-1 italic">
-                        {event.location || "No location"}
+                        {event.location || "No location specified"}
                       </p>
                     )}
                     {isVirtual && (
