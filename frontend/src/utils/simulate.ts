@@ -5,9 +5,9 @@ export type SimulatedClass = {
   name: string;
   buildingCode: string;
   room: string;
-  startTime: string; // "HH:MM"
-  endTime: string;   // "HH:MM"
-  days: string[];    // subset of ['M','T','W','Th','F']
+  startTime: string;
+  endTime: string;
+  days: string[];
 };
 
 export const DAYS = ["M", "T", "W", "Th", "F"] as const;

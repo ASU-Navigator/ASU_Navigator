@@ -4,8 +4,12 @@ import Navbar from "../components/Navbar";
 import { ASU_BUILDINGS, CAMPUS_LABELS } from "../data/asuBuildings";
 import { type SimulatedClass, DAYS, DAY_LABELS, SIMULATE_KEY } from "../utils/simulate";
 
-function todayStr() {
-  return new Date().toISOString().split("T")[0];
+function nearestWeekday() {
+  const d = new Date();
+  const day = d.getDay();
+  if (day === 0) d.setDate(d.getDate() + 1);
+  else if (day === 6) d.setDate(d.getDate() + 2);
+  return d.toISOString().split("T")[0];
 }
 
 const CAMPUSES = ["tempe", "west", "polytechnic", "downtown"] as const;
@@ -51,7 +55,7 @@ export default function SimulatePage() {
 
   function viewOnMap() {
     localStorage.setItem(SIMULATE_KEY, JSON.stringify(classes));
-    navigate(`/map?mode=simulate&date=${todayStr()}`);
+    navigate(`/map?mode=simulate&date=${nearestWeekday()}`);
   }
 
   return (

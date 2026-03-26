@@ -274,7 +274,6 @@ export default function MapPage() {
 
   return (
     <div className="flex h-screen overflow-hidden relative">
-      {/* Mobile backdrop */}
       {sidebarOpen && (
         <div
           className="md:hidden absolute inset-0 bg-black/50 z-10"
@@ -282,13 +281,11 @@ export default function MapPage() {
         />
       )}
 
-      {/* Sidebar */}
       <aside className={`
         w-80 shrink-0 flex flex-col bg-gray-900 border-r border-white/10 overflow-y-auto
         absolute md:relative inset-y-0 left-0 z-20 transition-transform duration-200
         ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
       `}>
-        {/* Sidebar header */}
         <div className="p-4 border-b border-white/10 bg-asu-maroon">
           <div className="flex items-center justify-between mb-1">
             <span className="text-white font-bold">ASU Navigator</span>
@@ -314,7 +311,6 @@ export default function MapPage() {
           </div>
         )}
 
-        {/* Event list */}
         <div className="flex-1 p-3 space-y-2">
           {events.length === 0 ? (
             <p className="text-gray-400 text-sm text-center mt-8">No classes on this day.</p>
@@ -354,7 +350,6 @@ export default function MapPage() {
                     )}
                   </button>
 
-                  {/* Route connector */}
                   {seg && (
                     <div className={`mx-3 px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 ${
                       seg.isTight
@@ -379,9 +374,7 @@ export default function MapPage() {
         </div>
       </aside>
 
-      {/* Map */}
       <div className="flex-1 relative">
-        {/* Mobile sidebar toggle */}
         <button
           className="md:hidden absolute top-4 left-4 z-10 bg-gray-900/90 border border-white/20 rounded-lg px-3 py-2 text-white text-sm font-medium shadow-lg"
           onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -403,7 +396,6 @@ export default function MapPage() {
             mapId: "bdfa66bd0ca03dc990ecaed7",
           }}
         >
-          {/* Walking route polylines */}
           {routeSegments.map((seg) => (
             <Polyline
               key={`${seg.fromIndex}-${seg.toIndex}`}
@@ -420,7 +412,6 @@ export default function MapPage() {
           ))}
         </GoogleMap>
 
-        {/* All-online empty state */}
         {allVirtual && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="bg-gray-900/95 border border-white/20 rounded-2xl p-6 text-center max-w-xs shadow-xl">
@@ -431,7 +422,6 @@ export default function MapPage() {
           </div>
         )}
 
-        {/* Active marker info card */}
         {activeEvent && (
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 border border-white/20 rounded-2xl p-4 shadow-xl w-72 z-10">
             <div className="flex items-start justify-between gap-2">
