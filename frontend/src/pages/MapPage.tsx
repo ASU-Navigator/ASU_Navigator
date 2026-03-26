@@ -164,9 +164,7 @@ export default function MapPage() {
             destLat: toCoords.lat,
             destLng: toCoords.lng,
           });
-          console.log('Route API result:', result);
           if (!result.ok) {
-            console.log('Route API failed:', result.error);
             usedFallback = true;
           } else {
             const decoded = window.google.maps.geometry.encoding.decodePath(
@@ -182,8 +180,7 @@ export default function MapPage() {
               isTight: result.durationSeconds > gapSeconds - 300,
             });
           }
-        } catch (error) {
-          console.log('Route API exception:', error);
+        } catch {
           usedFallback = true;
         }
 
@@ -202,11 +199,7 @@ export default function MapPage() {
 
   // Advanced Markers Effect
   useEffect(() => {
-    console.log('Advanced Markers Effect running:', { map: !!map, eventsLength: events.length });
-    if (!map || events.length === 0) {
-      console.log('Skipping marker creation:', { map: !!map, eventsLength: events.length });
-      return;
-    }
+    if (!map || events.length === 0) return;
 
     // Clear existing markers
     markersRef.current.forEach(marker => marker.map = null);
@@ -214,9 +207,7 @@ export default function MapPage() {
 
     // Load marker library and create markers
     const createMarkers = async () => {
-      // console.log('Creating markers for', events.length, 'events');
       const { AdvancedMarkerElement } = await google.maps.importLibrary('marker') as google.maps.MarkerLibrary;
-      console.log('AdvancedMarkerElement loaded');
 
       for (const [i, event] of events.entries()) {
         const building = resolveBuilding(event.location);
@@ -226,7 +217,6 @@ export default function MapPage() {
         if (!coords) continue;
         const displayName = building?.name ?? event.location;
 
-        // console.log('Creating marker for', building.name, building.lat, building.lng);
 
         // Create custom content for the marker
         const content = document.createElement('div');
@@ -254,9 +244,7 @@ export default function MapPage() {
         });
 
         markersRef.current.push(marker);
-        console.log('Marker created for', building.name);
       }
-      console.log('Total markers created:', markersRef.current.length);
     };
 
     createMarkers();
