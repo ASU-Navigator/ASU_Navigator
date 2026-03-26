@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Dashboard from "./pages/Dashboard";
 import MapPage from "./pages/MapPage";
+import SimulatePage from "./pages/SimulatePage";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
         children: [
           { path: "dashboard", element: <Dashboard /> },
           { path: "map", element: <MapPage /> },
+          { path: "simulate", element: <SimulatePage /> },
         ],
       },
       { path: "*", element: <ErrorPage /> },

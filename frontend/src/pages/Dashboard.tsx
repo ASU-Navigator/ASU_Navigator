@@ -191,14 +191,22 @@ export default function Dashboard() {
                   date={date}
                   onChange={(d) => setSearchParams((p) => { p.set("date", d); return p; })}
                 />
-                <button
-                  onClick={() => navigate(`/map?date=${date}&schedule=${scheduleId}`)}
-                  disabled={physicalEvents.length < 2}
-                  className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity disabled:opacity-40 bg-asu-maroon"
-                  title={physicalEvents.length < 2 ? "Need at least 2 in-person classes to view a route" : ""}
-                >
-                  🗺 View Route
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => navigate("/simulate")}
+                    className="px-4 py-2 rounded-lg text-sm font-medium text-gray-300 border border-white/20 hover:text-white hover:border-white/40 transition-colors"
+                  >
+                    Simulate
+                  </button>
+                  <button
+                    onClick={() => navigate(`/map?date=${date}&schedule=${scheduleId}`)}
+                    disabled={physicalEvents.length < 2}
+                    className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity disabled:opacity-40 bg-asu-maroon"
+                    title={physicalEvents.length < 2 ? "Need at least 2 in-person classes to view a route" : ""}
+                  >
+                    🗺 View Route
+                  </button>
+                </div>
               </div>
 
               {events.length === 0 ? (
