@@ -1,5 +1,21 @@
 [
   {
+    "code": "BDH",
+    "name": "Bulldog Hall",
+    "campus": "tempe",
+    "lat": 33.41782719433897,
+    "lng": -111.9307780827746,
+    "place_id": ""
+  },
+  {
+    "code": "SGHAL",
+    "name": "Sage Hall",
+    "campus": "tempe",
+    "lat": 33.41561,
+    "lng": -111.92849,
+    "place_id": ""
+  },
+  {
     "code": "WGHL",
     "name": "Wrigley Hall",
     "campus": "tempe",
