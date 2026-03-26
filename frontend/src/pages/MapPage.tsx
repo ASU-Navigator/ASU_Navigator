@@ -240,6 +240,10 @@ export default function MapPage() {
     createMarkers();
   }, [map, events]);
 
+  if (!scheduleId) {
+    navigate("/dashboard", { replace: true });
+    return null;
+  }
   if (scheduleQuery.isPending) return <LoadingScreen message="Loading schedule…" />;
   if (!isLoaded) return <LoadingScreen message="Loading map…" />;
 

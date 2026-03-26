@@ -35,10 +35,14 @@ app.use(
   trpcExpress.createExpressMiddleware({
     router: appRouter,
     createContext: async ({ req }): Promise<TRPCContext> => {
-      const session = await auth.api.getSession({
-        headers: fromNodeHeaders(req.headers),
-      });
-      return { session };
+      try {
+        const session = await auth.api.getSession({
+          headers: fromNodeHeaders(req.headers),
+        });
+        return { session };
+      } catch {
+        return { session: null };
+      }
     },
   }),
 );
