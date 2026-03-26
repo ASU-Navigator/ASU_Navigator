@@ -25,10 +25,20 @@ async function geocodeLocation(locationStr: string): Promise<{ lat: number; lng:
   if (!locationStr || upper.includes("ONLINE") || upper.includes("VIRTUAL") || upper.includes("ZOOM")) return null;
   if (geocodeCache.has(locationStr)) return geocodeCache.get(locationStr) ?? null;
 
+  // ASU ICS format: "Tempe BDH 201" → strip campus prefix + room number so
+  // the geocoder isn't confused by the room number as a street address.
+  let query = locationStr;
+  const asuMatch = locationStr.match(
+    /^(Tempe|West|Polytechnic|Downtown)\s+([A-Z][A-Z0-9]+)(?:\s+\S+)?$/i,
+  );
+  if (asuMatch) {
+    query = `${asuMatch[2]} Building, Arizona State University, Tempe, AZ`;
+  }
+
   return new Promise((resolve) => {
     const geocoder = new window.google.maps.Geocoder();
     geocoder.geocode(
-      { address: `${locationStr}, Arizona State University`, region: "us" },
+      { address: query, region: "us" },
       (results, status) => {
         try {
           const loc = status === "OK" ? results?.[0]?.geometry?.location ?? null : null;
