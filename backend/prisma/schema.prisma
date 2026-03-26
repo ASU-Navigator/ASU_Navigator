@@ -19,7 +19,7 @@ model User {
   updatedAt     DateTime
   sessions      Session[]
   accounts      Account[]
-  schedule      Schedule?
+  schedules     Schedule[]
 }
 
 
@@ -63,7 +63,8 @@ model Verification {
 
 model Schedule {
   id        String   @id @default(uuid())
-  userId    String   @unique
+  userId    String
+  label     String   @default("My Schedule")
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   rawIcs    String
   createdAt DateTime @default(now())

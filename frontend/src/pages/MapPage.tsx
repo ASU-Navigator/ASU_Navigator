@@ -17,7 +17,6 @@ type RouteSegment = {
   isFallback?: boolean;
 };
 
-// Module-level geocode cache — persists across re-renders
 const geocodeCache = new Map<string, { lat: number; lng: number } | null>();
 
 async function geocodeLocation(locationStr: string): Promise<{ lat: number; lng: number } | null> {
@@ -25,8 +24,6 @@ async function geocodeLocation(locationStr: string): Promise<{ lat: number; lng:
   if (!locationStr || upper.includes("ONLINE") || upper.includes("VIRTUAL") || upper.includes("ZOOM")) return null;
   if (geocodeCache.has(locationStr)) return geocodeCache.get(locationStr) ?? null;
 
-  // ASU ICS format: "Tempe BDH 201" → strip campus prefix + room number so
-  // the geocoder isn't confused by the room number as a street address.
   let query = locationStr;
   const asuMatch = locationStr.match(
     /^(Tempe|West|Polytechnic|Downtown)\s+([A-Z][A-Z0-9]+)(?:\s+\S+)?$/i,
@@ -68,21 +65,26 @@ export default function MapPage() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const date = searchParams.get("date") ?? todayStr();
+  const scheduleId = searchParams.get("schedule") ?? "";
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string,
     libraries: LIBRARIES,
   });
 
-  const scheduleQuery = trpc.schedule.get.useQuery({ date });
+  const scheduleQuery = trpc.schedule.get.useQuery(
+    { scheduleId, date },
+    { enabled: !!scheduleId },
+  );
   const events: ParsedEvent[] = scheduleQuery.data?.events ?? [];
 
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const markersRef = useRef<google.maps.marker.AdvancedMarkerElement[]>([]);
+  const [activeEventIndex, setActiveEventIndex] = useState<number | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Determine map center from the most common campus
   const mapCenter = (() => {
     const campusCounts: Partial<Record<Campus, number>> = {};
     for (const e of events) {
@@ -97,7 +99,6 @@ export default function MapPage() {
   useEffect(() => {
     if (!isLoaded || events.length < 2) return;
 
-    /** Straight-line walking estimate used as fallback when the Routes API is unavailable */
     function straightLineSegment(
       fromIndex: number,
       toIndex: number,
@@ -114,7 +115,7 @@ export default function MapPage() {
           Math.cos(toLat * (Math.PI / 180)) *
           Math.sin(dLng / 2) ** 2;
       const distMeters = R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-      const durationSeconds = Math.round(distMeters / 1.4); // ~5 km/h walking
+      const durationSeconds = Math.round(distMeters / 1.4);
       return {
         fromIndex,
         toIndex,
@@ -135,7 +136,6 @@ export default function MapPage() {
         const fromB = resolveBuilding(from.location);
         const toB = resolveBuilding(to.location);
 
-        // Fall back to Geocoding API for buildings not in static DB
         const fromCoords = fromB
           ? { lat: fromB.lat, lng: fromB.lng }
           : await geocodeLocation(from.location);
@@ -145,17 +145,13 @@ export default function MapPage() {
 
         if (!fromCoords || !toCoords) continue;
 
-        // Skip if same building (exact coords match or same static code)
-        if (
-          fromB && toB && fromB.code === toB.code
-        ) continue;
+        if (fromB && toB && fromB.code === toB.code) continue;
         if (
           fromCoords.lat === toCoords.lat && fromCoords.lng === toCoords.lng
         ) continue;
 
         const gapSeconds = (to.start.getTime() - from.end.getTime()) / 1000;
 
-        // Try the Routes API via backend proxy; fall back to straight-line estimate on failure
         let usedFallback = false;
         try {
           const result = await trpcClient.schedule.route.query({
@@ -197,15 +193,12 @@ export default function MapPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoaded, events.length, date]);
 
-  // Advanced Markers Effect
   useEffect(() => {
     if (!map || events.length === 0) return;
 
-    // Clear existing markers
     markersRef.current.forEach(marker => marker.map = null);
     markersRef.current = [];
 
-    // Load marker library and create markers
     const createMarkers = async () => {
       const { AdvancedMarkerElement } = await google.maps.importLibrary('marker') as google.maps.MarkerLibrary;
 
@@ -217,13 +210,11 @@ export default function MapPage() {
         if (!coords) continue;
         const displayName = building?.name ?? event.location;
 
-
-        // Create custom content for the marker
         const content = document.createElement('div');
         content.style.color = 'white';
         content.style.fontWeight = 'bold';
         content.style.fontSize = '12px';
-        content.style.background = '#dc2626'; // ASU maroon
+        content.style.background = '#8C1D40';
         content.style.borderRadius = '50%';
         content.style.width = '24px';
         content.style.height = '24px';
@@ -231,11 +222,9 @@ export default function MapPage() {
         content.style.alignItems = 'center';
         content.style.justifyContent = 'center';
         content.style.border = '2px solid white';
-        content.style.zIndex = '1000'; // Ensure it's above the map
         content.style.position = 'relative';
-        content.textContent = String(i + 1 % 100); // Show event index (1-99) on marker
+        content.textContent = String(i + 1);
 
-        // Create the advanced marker
         const marker = new AdvancedMarkerElement({
           map,
           position: coords,
@@ -243,6 +232,7 @@ export default function MapPage() {
           title: `${event.summary} — ${displayName}`,
         });
 
+        marker.addListener("gmp-click", () => setActiveEventIndex(i));
         markersRef.current.push(marker);
       }
     };
@@ -253,16 +243,38 @@ export default function MapPage() {
   if (scheduleQuery.isPending) return <LoadingScreen message="Loading schedule…" />;
   if (!isLoaded) return <LoadingScreen message="Loading map…" />;
 
+  const allVirtual =
+    events.length > 0 &&
+    events.every((e) => {
+      const u = (e.location ?? "").toUpperCase();
+      return !e.location || u.includes("ONLINE") || u.includes("VIRTUAL") || u.includes("ZOOM");
+    });
+
+  const activeEvent = activeEventIndex !== null ? events[activeEventIndex] : null;
+  const activeBuilding = activeEvent ? resolveBuilding(activeEvent.location) : null;
+
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen overflow-hidden relative">
+      {/* Mobile backdrop */}
+      {sidebarOpen && (
+        <div
+          className="md:hidden absolute inset-0 bg-black/50 z-10"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside className="w-80 shrink-0 flex flex-col bg-gray-900 border-r border-white/10 overflow-y-auto">
+      <aside className={`
+        w-80 shrink-0 flex flex-col bg-gray-900 border-r border-white/10 overflow-y-auto
+        absolute md:relative inset-y-0 left-0 z-20 transition-transform duration-200
+        ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
+      `}>
         {/* Sidebar header */}
         <div className="p-4 border-b border-white/10 bg-asu-maroon">
           <div className="flex items-center justify-between mb-1">
             <span className="text-white font-bold">ASU Navigator</span>
             <button
-              onClick={() => navigate("/dashboard")}
+              onClick={() => navigate(`/dashboard?schedule=${scheduleId}&date=${date}`)}
               className="text-white/70 hover:text-white text-sm transition-colors"
             >
               ← Back
@@ -283,7 +295,7 @@ export default function MapPage() {
           </div>
         )}
 
-{/* Event list */}
+        {/* Event list */}
         <div className="flex-1 p-3 space-y-2">
           {events.length === 0 ? (
             <p className="text-gray-400 text-sm text-center mt-8">No classes on this day.</p>
@@ -293,10 +305,18 @@ export default function MapPage() {
               const seg = routeSegments.find((s) => s.fromIndex === i);
               const loc = (event.location ?? "").toUpperCase();
               const isVirtual = !event.location || loc.includes("ONLINE") || loc.includes("VIRTUAL") || loc.includes("ZOOM");
+              const isActive = activeEventIndex === i;
 
               return (
                 <div key={event.uid} className="space-y-1">
-                  <div className="bg-white/5 rounded-xl p-3 border border-white/10">
+                  <button
+                    onClick={() => setActiveEventIndex(isActive ? null : i)}
+                    className={`w-full text-left rounded-xl p-3 border transition-colors ${
+                      isActive
+                        ? "bg-asu-maroon/30 border-asu-maroon/60"
+                        : "bg-white/5 border-white/10 hover:bg-white/8"
+                    }`}
+                  >
                     <p className="text-white text-sm font-semibold truncate">{event.summary}</p>
                     <p className="text-gray-400 text-xs mt-0.5">
                       {formatTime(event.start)} – {formatTime(event.end)}
@@ -313,17 +333,15 @@ export default function MapPage() {
                         Online / Virtual
                       </span>
                     )}
-                  </div>
+                  </button>
 
                   {/* Route connector */}
                   {seg && (
-                    <div
-                      className={`mx-3 px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 ${
-                        seg.isTight
-                          ? "bg-red-900/30 border border-red-500/30 text-red-300"
-                          : "bg-blue-900/20 border border-blue-500/20 text-blue-300"
-                      }`}
-                    >
+                    <div className={`mx-3 px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 ${
+                      seg.isTight
+                        ? "bg-red-900/30 border border-red-500/30 text-red-300"
+                        : "bg-blue-900/20 border border-blue-500/20 text-blue-300"
+                    }`}>
                       {seg.isTight ? "⚠" : "🚶"}
                       <span>
                         {Math.round(seg.durationSeconds / 60)} min walk
@@ -343,18 +361,27 @@ export default function MapPage() {
       </aside>
 
       {/* Map */}
-      <div className="flex-1">
+      <div className="flex-1 relative">
+        {/* Mobile sidebar toggle */}
+        <button
+          className="md:hidden absolute top-4 left-4 z-10 bg-gray-900/90 border border-white/20 rounded-lg px-3 py-2 text-white text-sm font-medium shadow-lg"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          {sidebarOpen ? "✕ Close" : "☰ Classes"}
+        </button>
+
         <GoogleMap
           mapContainerStyle={{ width: "100%", height: "100%" }}
           center={{ lat: mapCenter.lat, lng: mapCenter.lng }}
           zoom={mapCenter.zoom}
           onLoad={(mapInstance) => setMap(mapInstance)}
+          onClick={() => setActiveEventIndex(null)}
           options={{
             disableDefaultUI: false,
             zoomControl: true,
             streetViewControl: false,
             mapTypeControl: false,
-            mapId: "bdfa66bd0ca03dc990ecaed7", //load map styles from Google Cloud Console with ASU branding and highlighted buildings
+            mapId: "bdfa66bd0ca03dc990ecaed7",
           }}
         >
           {/* Walking route polylines */}
@@ -373,6 +400,44 @@ export default function MapPage() {
             />
           ))}
         </GoogleMap>
+
+        {/* All-online empty state */}
+        {allVirtual && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="bg-gray-900/95 border border-white/20 rounded-2xl p-6 text-center max-w-xs shadow-xl">
+              <p className="text-3xl mb-2">💻</p>
+              <p className="text-white font-semibold">All classes online today</p>
+              <p className="text-gray-400 text-sm mt-1">No in-person locations to navigate to.</p>
+            </div>
+          </div>
+        )}
+
+        {/* Active marker info card */}
+        {activeEvent && (
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 border border-white/20 rounded-2xl p-4 shadow-xl w-72 z-10">
+            <div className="flex items-start justify-between gap-2">
+              <div className="flex-1 min-w-0">
+                <p className="text-white font-semibold text-sm truncate">{activeEvent.summary}</p>
+                <p className="text-gray-400 text-xs mt-0.5">
+                  {formatTime(activeEvent.start)} – {formatTime(activeEvent.end)}
+                </p>
+                {activeBuilding ? (
+                  <p className="text-gray-300 text-xs mt-1">
+                    {activeBuilding.name} · {CAMPUS_LABELS[activeBuilding.campus]}
+                  </p>
+                ) : (
+                  <p className="text-gray-500 text-xs mt-1 italic">{activeEvent.location}</p>
+                )}
+              </div>
+              <button
+                onClick={() => setActiveEventIndex(null)}
+                className="text-gray-500 hover:text-white text-lg leading-none shrink-0"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

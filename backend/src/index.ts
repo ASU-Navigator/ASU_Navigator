@@ -18,9 +18,6 @@ app.use(
 
 app.use(express.json());
 
-// ASU email guard — must be registered before the generic /api/auth handler.
-// Note: do NOT override req.url — better-call reconstructs the full path from
-// req.baseUrl + req.url, so overriding with req.originalUrl would double the prefix.
 app.post("/api/auth/sign-up/email", (req, res) => {
   const email = (req.body?.email as string | undefined)?.toLowerCase() ?? "";
   if (!email.endsWith("@asu.edu")) {
