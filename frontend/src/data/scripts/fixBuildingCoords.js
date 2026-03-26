@@ -1,7 +1,7 @@
 const axios = require("axios");
 const fs = require("fs");
 
-const API_KEY = "AIzaSyDOVkbo40I_RWjSepgRHrIl3cYtaRwFlaY";
+const API_KEY = "API_KEY_HERE";
 
 const buildings = [
   // === TEMPE CAMPUS ===
