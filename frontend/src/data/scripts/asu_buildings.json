@@ -1,0 +1,466 @@
+[
+  {
+    "code": "WGHL",
+    "name": "Wrigley Hall",
+    "campus": "tempe",
+    "lat": 33.4215137,
+    "lng": -111.9353282,
+    "place_id": "ChIJueZm4tsIK4cRp1UwxiptTbE"
+  },
+  {
+    "code": "ENGRC",
+    "name": "Engineering Research Center",
+    "campus": "tempe",
+    "lat": 33.4199737,
+    "lng": -111.9313448,
+    "place_id": "ChIJG7i9rN0IK4cRneHWQhe0SZE"
+  },
+  {
+    "code": "COOR",
+    "name": "Coor Hall",
+    "campus": "tempe",
+    "lat": 33.4194639,
+    "lng": -111.9379023,
+    "place_id": "ChIJ7z0cRtoIK4cRgzXqUlCFwOM"
+  },
+  {
+    "code": "PSY",
+    "name": "Psychology Building",
+    "campus": "tempe",
+    "lat": 33.4198736,
+    "lng": -111.9295509,
+    "place_id": "ChIJ2X7cdd0IK4cRNtUmCtgba7g"
+  },
+  {
+    "code": "LSE",
+    "name": "Life Sciences E",
+    "campus": "tempe",
+    "lat": 33.419568,
+    "lng": -111.9339088,
+    "place_id": "ChIJASxFrd0IK4cRIhRMAtKrrM0"
+  },
+  {
+    "code": "LSC",
+    "name": "Life Sciences Center",
+    "campus": "tempe",
+    "lat": 33.4199072,
+    "lng": -111.9333855,
+    "place_id": "ChIJYV11ZdwIK4cRDJW5KWC6n0A"
+  },
+  {
+    "code": "FULTN",
+    "name": "Fulton Center",
+    "campus": "tempe",
+    "lat": 33.4222222,
+    "lng": -111.9344444,
+    "place_id": "ChIJD1QzO9sIK4cR4W0_DpFHz_s"
+  },
+  {
+    "code": "ECG",
+    "name": "Engineering Center G-Wing",
+    "campus": "tempe",
+    "lat": 33.4201172,
+    "lng": -111.9321364,
+    "place_id": "ChIJPX2BUNwIK4cRTTOrQZM3A1I"
+  },
+  {
+    "code": "BYENG",
+    "name": "Brickyard Engineering",
+    "campus": "tempe",
+    "lat": 33.4235981,
+    "lng": -111.9395366,
+    "place_id": "ChIJyeSRMtgIK4cRKWNQZp2IPRU"
+  },
+  {
+    "code": "BRICKYARD",
+    "name": "Brickyard",
+    "campus": "tempe",
+    "lat": 33.4237121,
+    "lng": -111.9398219,
+    "place_id": "ChIJn3cKe6wJK4cRG91LRjr4GXI"
+  },
+  {
+    "code": "MU",
+    "name": "Memorial Union",
+    "campus": "tempe",
+    "lat": 33.4177504,
+    "lng": -111.9343818,
+    "place_id": "ChIJVa3mX9sIK4cRxyxpWfI_9S4"
+  },
+  {
+    "code": "NOBLE",
+    "name": "Noble Library",
+    "campus": "tempe",
+    "lat": 33.4199905,
+    "lng": -111.9306869,
+    "place_id": "ChIJj40Opt0IK4cRm2mKuB8TCGQ"
+  },
+  {
+    "code": "HAYDEN",
+    "name": "Hayden Library",
+    "campus": "tempe",
+    "lat": 33.4190234,
+    "lng": -111.9346091,
+    "place_id": "ChIJCWkre9sIK4cRuVWh49iRlsg"
+  },
+  {
+    "code": "MCLL",
+    "name": "Modern Languages",
+    "campus": "tempe",
+    "lat": 33.4207973,
+    "lng": -111.9345532,
+    "place_id": "ChIJobd-99sIK4cRC7zxylHVhug"
+  },
+  {
+    "code": "LSN",
+    "name": "Life Sciences North",
+    "campus": "tempe",
+    "lat": 33.419568,
+    "lng": -111.9339088,
+    "place_id": "ChIJASxFrd0IK4cRIhRMAtKrrM0"
+  },
+  {
+    "code": "ISTB4",
+    "name": "Interdisciplinary Science & Tech 4",
+    "campus": "tempe",
+    "lat": 33.4183097,
+    "lng": -111.9284055,
+    "place_id": "ChIJT91k-OcIK4cRj1nOEfynbVM"
+  },
+  {
+    "code": "BATMN",
+    "name": "Batman Building (ISTB4)",
+    "campus": "tempe",
+    "lat": 33.4183097,
+    "lng": -111.9284055,
+    "place_id": "ChIJT91k-OcIK4cRj1nOEfynbVM"
+  },
+  {
+    "code": "SANCA",
+    "name": "Santan A",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "ARTS",
+    "name": "Arts Building",
+    "campus": "tempe",
+    "lat": 33.4186906,
+    "lng": -111.9390401,
+    "place_id": "ChIJF50zRdoIK4cRWMY9O8bw-lc"
+  },
+  {
+    "code": "FA",
+    "name": "Fine Arts",
+    "campus": "tempe",
+    "lat": 33.4186906,
+    "lng": -111.9390401,
+    "place_id": "ChIJF50zRdoIK4cRWMY9O8bw-lc"
+  },
+  {
+    "code": "NEEB",
+    "name": "Neeb Hall",
+    "campus": "tempe",
+    "lat": 33.4203246,
+    "lng": -111.9368858,
+    "place_id": "ChIJ9222ztsIK4cRV_Yb8wQxAMM"
+  },
+  {
+    "code": "SS",
+    "name": "Social Sciences",
+    "campus": "tempe",
+    "lat": 33.41978,
+    "lng": -111.9345321,
+    "place_id": "ChIJBfbfuxIJK4cRrYBldlbvJpA"
+  },
+  {
+    "code": "SOSSB",
+    "name": "Social Sciences South B",
+    "campus": "tempe",
+    "lat": 33.41978,
+    "lng": -111.9345321,
+    "place_id": "ChIJBfbfuxIJK4cRrYBldlbvJpA"
+  },
+  {
+    "code": "BAC",
+    "name": "Business Administration C",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "BUSA",
+    "name": "Business Administration A",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "BUSN",
+    "name": "Business Administration N",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "TYLER",
+    "name": "Tyler Mall",
+    "campus": "tempe",
+    "lat": 33.4203091,
+    "lng": -111.9327203,
+    "place_id": "ChIJz_egyNsIK4cR17F4zrihdyY"
+  },
+  {
+    "code": "GWC",
+    "name": "Goldwater Center",
+    "campus": "tempe",
+    "lat": 33.4207797,
+    "lng": -111.9304963,
+    "place_id": "ChIJ_YCVgCwJK4cRQiO643_yUR0"
+  },
+  {
+    "code": "SCOB",
+    "name": "SCAI Building",
+    "campus": "tempe",
+    "lat": 33.42361160000001,
+    "lng": -111.9397511,
+    "place_id": "ChIJU0SqLdgIK4cRxEB-omIbhvg"
+  },
+  {
+    "code": "ECA",
+    "name": "Engineering Center A",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "ECF",
+    "name": "Engineering Center F",
+    "campus": "tempe",
+    "lat": 33.4197229,
+    "lng": -111.9326119,
+    "place_id": "ChIJDQmQNiEJK4cRLKYZZfGGvoM"
+  },
+  {
+    "code": "CAVC",
+    "name": "Career & Professional Development",
+    "campus": "tempe",
+    "lat": 33.4169733,
+    "lng": -111.9365104,
+    "place_id": "ChIJx3opOtsIK4cR91EifP9gfjU"
+  },
+  {
+    "code": "CPCOM",
+    "name": "Cronkite School",
+    "campus": "tempe",
+    "lat": 33.4536581,
+    "lng": -112.0736419,
+    "place_id": "ChIJgSMcxyISK4cRd2KXvtHLdSE"
+  },
+  {
+    "code": "HLTH",
+    "name": "Health North",
+    "campus": "tempe",
+    "lat": 33.4540505,
+    "lng": -112.0704802,
+    "place_id": "ChIJHbSoFhgSK4cRHe3KpB5IScs"
+  },
+  {
+    "code": "LAGUNA",
+    "name": "Laguna Hall",
+    "campus": "tempe",
+    "lat": 33.4207973,
+    "lng": -111.9345532,
+    "place_id": "ChIJrazSyOAJK4cROb1mkG8lHOk"
+  },
+  {
+    "code": "MOEUR",
+    "name": "Moeur Hall",
+    "campus": "tempe",
+    "lat": 33.4179923,
+    "lng": -111.9361833,
+    "place_id": "ChIJId506vkJK4cR7smPZLDXnzs"
+  },
+  {
+    "code": "PAYNE",
+    "name": "Payne Hall",
+    "campus": "tempe",
+    "lat": 33.4190089,
+    "lng": -111.9370295,
+    "place_id": "ChIJWf8wrNsIK4cRU2tK5EZxhpA"
+  },
+  {
+    "code": "FQST",
+    "name": "Farmer Education Building",
+    "campus": "tempe",
+    "lat": 33.4180342,
+    "lng": -111.9373076,
+    "place_id": "ChIJ79aFAtsIK4cRJ7REEGevmB4"
+  },
+  {
+    "code": "CHEM",
+    "name": "Chemistry Building",
+    "campus": "tempe",
+    "lat": 33.4212825,
+    "lng": -111.9320347,
+    "place_id": "ChIJXUyZMNwIK4cRBdqut1Pm51M"
+  },
+  {
+    "code": "PHYX",
+    "name": "Physical Sciences F Wing",
+    "campus": "tempe",
+    "lat": 33.4210023,
+    "lng": -111.9313576,
+    "place_id": "ChIJX6_GStwIK4cRYtpWOMYiNyE"
+  },
+  {
+    "code": "WXLR",
+    "name": "Walton Center for Planetary Health",
+    "campus": "tempe",
+    "lat": 33.4218577,
+    "lng": -111.9269701,
+    "place_id": "ChIJ0wmxbAAJK4cRMkJ6l7SDLSI"
+  },
+  {
+    "code": "CIDSE",
+    "name": "Computing & Informatics Design",
+    "campus": "tempe",
+    "lat": 33.42361160000001,
+    "lng": -111.9397511,
+    "place_id": "ChIJU0SqLdgIK4cRxEB-omIbhvg"
+  },
+  {
+    "code": "SEMTE",
+    "name": "SEMTE Building",
+    "campus": "tempe",
+    "lat": 33.4200883,
+    "lng": -111.9321079,
+    "place_id": "ChIJj-dvUNwIK4cRtRWOyfCzdiQ"
+  },
+  {
+    "code": "CLCC",
+    "name": "Classroom Central West",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "CAVC_W",
+    "name": "Community Collaboration Area",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "CCTC",
+    "name": "Classroom & Technology Center",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "UACB",
+    "name": "University Academic Center B",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "UACA",
+    "name": "University Academic Center A",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "LLAC",
+    "name": "Liberal Arts and Sciences",
+    "campus": "west",
+    "lat": 33.4175472,
+    "lng": -111.9290953,
+    "place_id": "ChIJNYPmUtkIK4cR7dbV7bcV0e0"
+  },
+  {
+    "code": "AAMU",
+    "name": "Academic Advising & Memorial Union",
+    "campus": "polytechnic",
+    "lat": 33.4177504,
+    "lng": -111.9343818,
+    "place_id": "ChIJVa3mX9sIK4cRxyxpWfI_9S4"
+  },
+  {
+    "code": "ALTEC",
+    "name": "ALTEC Building",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "SANTAN",
+    "name": "Santan Hall Polytechnic",
+    "campus": "polytechnic",
+    "lat": 33.3061241,
+    "lng": -111.6780116,
+    "place_id": "ChIJpQRmH4OtK4cRqlo8SJaRuqM"
+  },
+  {
+    "code": "POLY",
+    "name": "Polytechnic Academic Center",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "WANNER",
+    "name": "Wanner Engineering Center",
+    "campus": "polytechnic",
+    "lat": 33.3058931,
+    "lng": -111.677226,
+    "place_id": "ChIJ-drd2YKtK4cRzDE3UXmOrhY"
+  },
+  {
+    "code": "UCENT",
+    "name": "University Center Building",
+    "campus": "downtown",
+    "lat": 33.4529589,
+    "lng": -112.0734451,
+    "place_id": "ChIJK1U46SISK4cREele9krEAzI"
+  },
+  {
+    "code": "TCOM",
+    "name": "Technology Center",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "CITYSQ",
+    "name": "City Square",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "UNION",
+    "name": "University Center North",
+    "campus": "downtown",
+    "lat": 33.4529589,
+    "lng": -112.0734451,
+    "place_id": "ChIJK1U46SISK4cREele9krEAzI"
+  }
+]

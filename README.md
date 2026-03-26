@@ -21,6 +21,11 @@ pnpm install
 pnpm install axios
 pnpm run dev
 
+To run fixBuildingCoords.js script:
+cd .\ASU_Navigator\scripts
+node fixBuildingCoords.js
+Should create a new file with accurate building coordinates in a .json file
+
 Tech Stack:
 - frontend: HTML/CSS/TS
 - backend: tRPC
