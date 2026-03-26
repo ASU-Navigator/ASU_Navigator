@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { GoogleMap, Polyline, useJsApiLoader } from "@react-google-maps/api";
 import type { ParsedEvent } from "../types";
@@ -6,6 +6,7 @@ import { trpc, trpcClient } from "../utils/trpc/client";
 import { resolveBuilding } from "../utils/buildingLookup";
 import { CAMPUS_CENTERS, CAMPUS_LABELS, type Campus } from "../data/asuBuildings";
 import LoadingScreen from "../components/LoadingScreen";
+import { simulatedClassesToEvents, SIMULATE_KEY, type SimulatedClass } from "../utils/simulate";
 
 type RouteSegment = {
   fromIndex: number;
@@ -66,6 +67,8 @@ export default function MapPage() {
   const navigate = useNavigate();
   const date = searchParams.get("date") ?? todayStr();
   const scheduleId = searchParams.get("schedule") ?? "";
+  const mode = searchParams.get("mode") ?? "";
+  const isSimulate = mode === "simulate";
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string,
@@ -74,9 +77,21 @@ export default function MapPage() {
 
   const scheduleQuery = trpc.schedule.get.useQuery(
     { scheduleId, date },
-    { enabled: !!scheduleId },
+    { enabled: !!scheduleId && !isSimulate },
   );
-  const events: ParsedEvent[] = scheduleQuery.data?.events ?? [];
+
+  const simulateEvents = useMemo<ParsedEvent[]>(() => {
+    if (!isSimulate) return [];
+    try {
+      const raw = localStorage.getItem(SIMULATE_KEY);
+      const classes = raw ? (JSON.parse(raw) as SimulatedClass[]) : [];
+      return simulatedClassesToEvents(classes, date);
+    } catch {
+      return [];
+    }
+  }, [isSimulate, date]);
+
+  const events: ParsedEvent[] = isSimulate ? simulateEvents : (scheduleQuery.data?.events ?? []);
 
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
@@ -240,11 +255,11 @@ export default function MapPage() {
     createMarkers();
   }, [map, events]);
 
-  if (!scheduleId) {
+  if (!isSimulate && !scheduleId) {
     navigate("/dashboard", { replace: true });
     return null;
   }
-  if (scheduleQuery.isPending) return <LoadingScreen message="Loading schedule…" />;
+  if (!isSimulate && scheduleQuery.isPending) return <LoadingScreen message="Loading schedule…" />;
   if (!isLoaded) return <LoadingScreen message="Loading map…" />;
 
   const allVirtual =
@@ -278,7 +293,7 @@ export default function MapPage() {
           <div className="flex items-center justify-between mb-1">
             <span className="text-white font-bold">ASU Navigator</span>
             <button
-              onClick={() => navigate(`/dashboard?schedule=${scheduleId}&date=${date}`)}
+              onClick={() => navigate(isSimulate ? "/simulate" : `/dashboard?schedule=${scheduleId}&date=${date}`)}
               className="text-white/70 hover:text-white text-sm transition-colors"
             >
               ← Back
