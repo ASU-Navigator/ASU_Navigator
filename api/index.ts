@@ -1,2 +1,2 @@
-import app from "../backend/src/app";
+import app from "../backend/src/app.ts";
 export default app;
