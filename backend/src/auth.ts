@@ -10,8 +10,8 @@ export const auth = betterAuth({
     enabled: true,
   },
   session: {
-    expiresIn: 60 * 60 * 24 * 30, // 30 days
-    updateAge: 60 * 60 * 24,       // Refresh session cookie once per day
+    expiresIn: 60 * 60 * 24 * 30,
+    updateAge: 60 * 60 * 24,
   },
   trustedOrigins: [process.env.BETTER_AUTH_URL ?? "http://localhost:5173"],
 });

@@ -1,6 +1,28 @@
 {
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "vercel-build": "cd backend && npm install && npx prisma generate && cd ../frontend && npm install && npm run build"
+  },
   "dependencies": {
-    "axios": "^1.13.6",
-    "better-auth": "^1.4.19"
+    "@prisma/adapter-pg": "^7.4.1",
+    "@prisma/client": "^7.4.0",
+    "@trpc/server": "^11.10.0",
+    "better-auth": "^1.4.19",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "ical.js": "^2.2.1",
+    "pg": "^8.18.0",
+    "superjson": "^2.2.6",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.2",
+    "@types/pg": "^8.16.0",
+    "prisma": "^7.4.0"
   }
 }
