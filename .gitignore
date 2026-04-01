@@ -1,4 +1,3 @@
+node_modules
+api/index.js
 .env
-.gitattributes 
-.gitmodules 
-node_modules 
