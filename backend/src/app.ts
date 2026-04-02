@@ -47,4 +47,9 @@ app.use(
   }),
 );
 
+app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  console.error(err);
+  res.status(500).json({ error: String(err) });
+});
+
 export default app;
