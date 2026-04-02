@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "postinstall": "prisma generate --schema=backend/prisma/schema.prisma",
-    "vercel-build": "npx prisma generate --schema=backend/prisma/schema.prisma && npx esbuild api/_build.ts --bundle --platform=node --format=esm --packages=external --outfile=api/index.js && cd frontend && npm install && npx vite build"
+    "vercel-build": "npx prisma generate --schema=backend/prisma/schema.prisma && npx esbuild api/_build.ts --bundle --platform=node --format=esm --external:@prisma/client --outfile=api/index.js && cd frontend && npm install && npx vite build"
   },
   "dependencies": {
     "@prisma/client": "^7.4.0",
