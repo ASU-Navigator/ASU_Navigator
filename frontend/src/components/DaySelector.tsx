@@ -43,7 +43,7 @@ export default function DaySelector({ date, onChange }: Props) {
             className="text-xs px-2 py-0.5 rounded border transition-colors hover:bg-white/10"
             style={{ color: "var(--color-asu-gold)", borderColor: "var(--color-asu-gold)" }}
           >
-            Today
+            Jump to Today
           </button>
         )}
       </div>
