@@ -9,7 +9,7 @@ function nearestWeekday() {
   const day = d.getDay();
   if (day === 0) d.setDate(d.getDate() + 1);
   else if (day === 6) d.setDate(d.getDate() + 2);
-  return d.toISOString().split("T")[0];
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
 const CAMPUSES = ["tempe", "west", "polytechnic", "downtown"] as const;
