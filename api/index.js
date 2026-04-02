@@ -10,9 +10,7 @@ import { prismaAdapter } from "better-auth/adapters/prisma";
 
 // backend/src/prismaClient.ts
 import { PrismaClient } from "@prisma/client";
-var prisma = new PrismaClient(
-  { datasourceUrl: process.env.DATABASE_URL }
-);
+var prisma = new PrismaClient();
 
 // backend/src/auth.ts
 var auth = betterAuth({
