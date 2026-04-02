@@ -53,12 +53,17 @@ export function parseIcsContent(rawIcs: string): ParsedEvent[] {
   return events.sort((a, b) => a.start.getTime() - b.start.getTime());
 }
 
+// Arizona is UTC-7 with no DST. Midnight Arizona = 07:00 UTC.
+const ARIZONA_UTC_HOUR = 7;
+
 export function filterEventsForDate(events: ParsedEvent[], date: Date): ParsedEvent[] {
-  const y = date.getFullYear();
-  const m = date.getMonth();
-  const d = date.getDate();
+  const y = date.getUTCFullYear();
+  const m = date.getUTCMonth();
+  const d = date.getUTCDate();
+  const dayStart = Date.UTC(y, m, d, ARIZONA_UTC_HOUR, 0, 0);
+  const dayEnd = dayStart + 24 * 60 * 60 * 1000;
   return events.filter((e) => {
-    const s = e.start;
-    return s.getFullYear() === y && s.getMonth() === m && s.getDate() === d;
+    const t = e.start.getTime();
+    return t >= dayStart && t < dayEnd;
   });
 }

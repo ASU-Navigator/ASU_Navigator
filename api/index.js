@@ -90,13 +90,16 @@ function parseIcsContent(rawIcs) {
   }
   return events.sort((a, b) => a.start.getTime() - b.start.getTime());
 }
+var ARIZONA_UTC_HOUR = 7;
 function filterEventsForDate(events, date) {
-  const y = date.getFullYear();
-  const m = date.getMonth();
-  const d = date.getDate();
+  const y = date.getUTCFullYear();
+  const m = date.getUTCMonth();
+  const d = date.getUTCDate();
+  const dayStart = Date.UTC(y, m, d, ARIZONA_UTC_HOUR, 0, 0);
+  const dayEnd = dayStart + 24 * 60 * 60 * 1e3;
   return events.filter((e) => {
-    const s = e.start;
-    return s.getFullYear() === y && s.getMonth() === m && s.getDate() === d;
+    const t2 = e.start.getTime();
+    return t2 >= dayStart && t2 < dayEnd;
   });
 }
 
@@ -127,7 +130,7 @@ var scheduleRouter = router({
       where: { id: input.scheduleId, userId }
     });
     if (!schedule) return { hasSchedule: false, events: [] };
-    const targetDate = input.date ? new Date(input.date) : /* @__PURE__ */ new Date();
+    const targetDate = input.date ? /* @__PURE__ */ new Date(input.date + "T12:00:00Z") : /* @__PURE__ */ new Date();
     const allEvents = parseIcsContent(schedule.rawIcs);
     const dayEvents = filterEventsForDate(allEvents, targetDate);
     return { hasSchedule: true, events: dayEvents };

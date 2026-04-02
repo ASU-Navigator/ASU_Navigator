@@ -35,7 +35,7 @@ const scheduleRouter = router({
         where: { id: input.scheduleId, userId },
       });
       if (!schedule) return { hasSchedule: false, events: [] };
-      const targetDate = input.date ? new Date(input.date) : new Date();
+      const targetDate = input.date ? new Date(input.date + "T12:00:00Z") : new Date();
       const allEvents = parseIcsContent(schedule.rawIcs);
       const dayEvents = filterEventsForDate(allEvents, targetDate);
       return { hasSchedule: true, events: dayEvents };
