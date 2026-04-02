@@ -8,6 +8,7 @@
     "vercel-build": "npx prisma generate --schema=backend/prisma/schema.prisma && npx esbuild api/_build.ts --bundle --platform=node --format=esm --packages=external --outfile=api/index.js && cd frontend && npm install && npx vite build"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.6.0",
     "@prisma/client": "^7.4.0",
     "@trpc/server": "^11.10.0",
     "better-auth": "^1.4.19",
@@ -15,6 +16,7 @@
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "ical.js": "^2.2.1",
+    "pg": "^8.20.0",
     "superjson": "^2.2.6",
     "zod": "^4.3.6"
   },
@@ -22,6 +24,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.2.2",
+    "@types/pg": "^8.20.0",
     "esbuild": "^0.25.0",
     "prisma": "^7.4.0"
   }
