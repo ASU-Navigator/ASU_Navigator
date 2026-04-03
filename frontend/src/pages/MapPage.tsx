@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useRef, useMemo, useCallback } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { GoogleMap, Polyline, useJsApiLoader } from "@react-google-maps/api";
 import type { ParsedEvent } from "../types";
@@ -17,6 +17,14 @@ type RouteSegment = {
   isTight: boolean;
   isFallback?: boolean;
 };
+
+type StartLocation = {
+  lat: number;
+  lng: number;
+  label: string;
+};
+
+const START_LOCATION_KEY = "asuStartLocation";
 
 const geocodeCache = new Map<string, { lat: number; lng: number } | null>();
 
@@ -94,6 +102,39 @@ export default function MapPage() {
 
   const events: ParsedEvent[] = isSimulate ? simulateEvents : (scheduleQuery.data?.events ?? []);
 
+  const [startLocation, setStartLocationState] = useState<StartLocation | null>(() => {
+    try {
+      const raw = localStorage.getItem(START_LOCATION_KEY);
+      return raw ? (JSON.parse(raw) as StartLocation) : null;
+    } catch {
+      return null;
+    }
+  });
+  const [isPickingStart, setIsPickingStart] = useState(false);
+  const [isGeolocating, setIsGeolocating] = useState(false);
+  const startMarkerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(null);
+
+  function saveStartLocation(loc: StartLocation | null) {
+    if (loc) {
+      localStorage.setItem(START_LOCATION_KEY, JSON.stringify(loc));
+    } else {
+      localStorage.removeItem(START_LOCATION_KEY);
+    }
+    setStartLocationState(loc);
+  }
+
+  function useMyLocation() {
+    if (!navigator.geolocation) return;
+    setIsGeolocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        saveStartLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude, label: "My Location" });
+        setIsGeolocating(false);
+      },
+      () => setIsGeolocating(false),
+    );
+  }
+
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
   const [map, setMap] = useState<google.maps.Map | null>(null);
@@ -113,7 +154,7 @@ export default function MapPage() {
   })();
 
   useEffect(() => {
-    if (!isLoaded || events.length < 2) return;
+    if (!isLoaded || events.length === 0) return;
 
     function straightLineSegment(
       fromIndex: number,
@@ -142,63 +183,68 @@ export default function MapPage() {
       };
     }
 
+    async function fetchRoute(
+      fromIndex: number,
+      toIndex: number,
+      fromCoords: { lat: number; lng: number },
+      toCoords: { lat: number; lng: number },
+      gapSeconds: number,
+    ): Promise<RouteSegment> {
+      try {
+        const result = await trpcClient.schedule.route.query({
+          originLat: fromCoords.lat,
+          originLng: fromCoords.lng,
+          destLat: toCoords.lat,
+          destLng: toCoords.lng,
+        });
+        if (result.ok) {
+          const decoded = window.google.maps.geometry.encoding.decodePath(result.encodedPolyline);
+          return {
+            fromIndex,
+            toIndex,
+            path: decoded.map((pt) => ({ lat: pt.lat(), lng: pt.lng() })),
+            durationSeconds: result.durationSeconds,
+            gapSeconds,
+            isTight: result.durationSeconds > gapSeconds - 300,
+          };
+        }
+      } catch {
+        // fall through to straight line
+      }
+      return { ...straightLineSegment(fromIndex, toIndex, fromCoords.lat, fromCoords.lng, toCoords.lat, toCoords.lng, gapSeconds), isFallback: true };
+    }
+
     async function compute() {
       setIsComputingRoutes(true);
       const segments: RouteSegment[] = [];
 
+      // Start location → first class
+      if (startLocation && events.length > 0) {
+        const firstB = resolveBuilding(events[0].location);
+        const firstCoords = firstB ? { lat: firstB.lat, lng: firstB.lng } : await geocodeLocation(events[0].location);
+        if (firstCoords) {
+          const seg = await fetchRoute(-1, 0, startLocation, firstCoords, Infinity);
+          seg.isTight = false;
+          segments.push(seg);
+        }
+      }
+
+      // Class → class segments
       for (let i = 0; i < events.length - 1; i++) {
         const from = events[i];
         const to = events[i + 1];
         const fromB = resolveBuilding(from.location);
         const toB = resolveBuilding(to.location);
 
-        const fromCoords = fromB
-          ? { lat: fromB.lat, lng: fromB.lng }
-          : await geocodeLocation(from.location);
-        const toCoords = toB
-          ? { lat: toB.lat, lng: toB.lng }
-          : await geocodeLocation(to.location);
+        const fromCoords = fromB ? { lat: fromB.lat, lng: fromB.lng } : await geocodeLocation(from.location);
+        const toCoords = toB ? { lat: toB.lat, lng: toB.lng } : await geocodeLocation(to.location);
 
         if (!fromCoords || !toCoords) continue;
-
         if (fromB && toB && fromB.code === toB.code) continue;
-        if (
-          fromCoords.lat === toCoords.lat && fromCoords.lng === toCoords.lng
-        ) continue;
+        if (fromCoords.lat === toCoords.lat && fromCoords.lng === toCoords.lng) continue;
 
         const gapSeconds = (to.start.getTime() - from.end.getTime()) / 1000;
-
-        let usedFallback = false;
-        try {
-          const result = await trpcClient.schedule.route.query({
-            originLat: fromCoords.lat,
-            originLng: fromCoords.lng,
-            destLat: toCoords.lat,
-            destLng: toCoords.lng,
-          });
-          if (!result.ok) {
-            usedFallback = true;
-          } else {
-            const decoded = window.google.maps.geometry.encoding.decodePath(
-              result.encodedPolyline,
-            );
-            const path = decoded.map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
-            segments.push({
-              fromIndex: i,
-              toIndex: i + 1,
-              path,
-              durationSeconds: result.durationSeconds,
-              gapSeconds,
-              isTight: result.durationSeconds > gapSeconds - 300,
-            });
-          }
-        } catch {
-          usedFallback = true;
-        }
-
-        if (usedFallback) {
-          segments.push({ ...straightLineSegment(i, i + 1, fromCoords.lat, fromCoords.lng, toCoords.lat, toCoords.lng, gapSeconds), isFallback: true });
-        }
+        segments.push(await fetchRoute(i, i + 1, fromCoords, toCoords, gapSeconds));
       }
 
       setRouteSegments(segments);
@@ -207,8 +253,9 @@ export default function MapPage() {
 
     void compute();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoaded, events.length, date]);
+  }, [isLoaded, events.length, date, startLocation]);
 
+  // Class markers
   useEffect(() => {
     if (!map || events.length === 0) return;
 
@@ -216,7 +263,7 @@ export default function MapPage() {
     markersRef.current = [];
 
     const createMarkers = async () => {
-      const { AdvancedMarkerElement } = await google.maps.importLibrary('marker') as google.maps.MarkerLibrary;
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
 
       for (const [i, event] of events.entries()) {
         const building = resolveBuilding(event.location);
@@ -226,19 +273,18 @@ export default function MapPage() {
         if (!coords) continue;
         const displayName = building?.name ?? event.location;
 
-        const content = document.createElement('div');
-        content.style.color = 'white';
-        content.style.fontWeight = 'bold';
-        content.style.fontSize = '12px';
-        content.style.background = '#8C1D40';
-        content.style.borderRadius = '50%';
-        content.style.width = '24px';
-        content.style.height = '24px';
-        content.style.display = 'flex';
-        content.style.alignItems = 'center';
-        content.style.justifyContent = 'center';
-        content.style.border = '2px solid white';
-        content.style.position = 'relative';
+        const content = document.createElement("div");
+        content.style.color = "white";
+        content.style.fontWeight = "bold";
+        content.style.fontSize = "12px";
+        content.style.background = "#8C1D40";
+        content.style.borderRadius = "50%";
+        content.style.width = "24px";
+        content.style.height = "24px";
+        content.style.display = "flex";
+        content.style.alignItems = "center";
+        content.style.justifyContent = "center";
+        content.style.border = "2px solid white";
         content.textContent = String(i + 1);
 
         const marker = new AdvancedMarkerElement({
@@ -256,6 +302,53 @@ export default function MapPage() {
     createMarkers();
   }, [map, events]);
 
+  // Start location marker
+  useEffect(() => {
+    if (!map || !isLoaded) return;
+
+    if (startMarkerRef.current) {
+      startMarkerRef.current.map = null;
+      startMarkerRef.current = null;
+    }
+
+    if (!startLocation) return;
+
+    const createStartMarker = async () => {
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
+
+      const content = document.createElement("div");
+      content.style.background = "#FFC627";
+      content.style.borderRadius = "50%";
+      content.style.width = "28px";
+      content.style.height = "28px";
+      content.style.display = "flex";
+      content.style.alignItems = "center";
+      content.style.justifyContent = "center";
+      content.style.border = "3px solid white";
+      content.style.fontSize = "14px";
+      content.textContent = "⚑";
+
+      startMarkerRef.current = new AdvancedMarkerElement({
+        map,
+        position: startLocation,
+        content,
+        title: startLocation.label,
+      });
+    };
+
+    createStartMarker();
+  }, [map, isLoaded, startLocation]);
+
+  const handleMapClick = useCallback((e: google.maps.MapMouseEvent) => {
+    if (isPickingStart && e.latLng) {
+      saveStartLocation({ lat: e.latLng.lat(), lng: e.latLng.lng(), label: "Custom Pin" });
+      setIsPickingStart(false);
+    } else {
+      setActiveEventIndex(null);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isPickingStart]);
+
   if (!isSimulate && !scheduleId) {
     navigate("/dashboard", { replace: true });
     return null;
@@ -272,6 +365,7 @@ export default function MapPage() {
 
   const activeEvent = activeEventIndex !== null ? events[activeEventIndex] : null;
   const activeBuilding = activeEvent ? resolveBuilding(activeEvent.location) : null;
+  const startSeg = routeSegments.find((s) => s.fromIndex === -1);
 
   return (
     <div className="flex h-screen overflow-hidden relative">
@@ -304,6 +398,52 @@ export default function MapPage() {
               day: "numeric",
             })}
           </p>
+        </div>
+
+        {/* Starting location */}
+        <div className="p-3 border-b border-white/10">
+          <p className="text-gray-400 text-xs font-medium mb-2 uppercase tracking-wide">Starting From</p>
+          {startLocation ? (
+            <div className="bg-asu-gold/10 border border-asu-gold/30 rounded-xl p-3">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-asu-gold text-sm shrink-0">⚑</span>
+                  <p className="text-white text-sm truncate">{startLocation.label}</p>
+                </div>
+                <button
+                  onClick={() => saveStartLocation(null)}
+                  className="text-gray-500 hover:text-red-400 transition-colors text-sm shrink-0"
+                >
+                  ✕
+                </button>
+              </div>
+              {startSeg && (
+                <p className="text-asu-gold/70 text-xs mt-1.5">
+                  {Math.round(startSeg.durationSeconds / 60)} min walk to first class
+                </p>
+              )}
+            </div>
+          ) : (
+            <div className="space-y-2">
+              <button
+                onClick={() => { setIsPickingStart(true); setSidebarOpen(false); }}
+                className={`w-full text-left px-3 py-2 rounded-lg text-sm border transition-colors ${
+                  isPickingStart
+                    ? "bg-asu-gold/20 border-asu-gold/40 text-asu-gold"
+                    : "bg-white/5 border-white/10 text-gray-300 hover:bg-white/8"
+                }`}
+              >
+                {isPickingStart ? "Click anywhere on the map…" : "📍 Click map to pin start"}
+              </button>
+              <button
+                onClick={useMyLocation}
+                disabled={isGeolocating}
+                className="w-full text-left px-3 py-2 rounded-lg text-sm bg-white/5 border border-white/10 text-gray-300 hover:bg-white/8 transition-colors disabled:opacity-50"
+              >
+                {isGeolocating ? "Getting location…" : "⊕ Use my current location"}
+              </button>
+            </div>
+          )}
         </div>
 
         {isComputingRoutes && (
@@ -383,18 +523,25 @@ export default function MapPage() {
           {sidebarOpen ? "✕ Close" : "☰ Classes"}
         </button>
 
+        {isPickingStart && (
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10 bg-asu-gold text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg pointer-events-none">
+            Click anywhere on the map to set your start
+          </div>
+        )}
+
         <GoogleMap
           mapContainerStyle={{ width: "100%", height: "100%" }}
           center={{ lat: mapCenter.lat, lng: mapCenter.lng }}
           zoom={mapCenter.zoom}
           onLoad={(mapInstance) => setMap(mapInstance)}
-          onClick={() => setActiveEventIndex(null)}
+          onClick={handleMapClick}
           options={{
             disableDefaultUI: false,
             zoomControl: true,
             streetViewControl: false,
             mapTypeControl: false,
             mapId: "bdfa66bd0ca03dc990ecaed7",
+            cursor: isPickingStart ? "crosshair" : undefined,
           }}
         >
           {routeSegments.map((seg) => (
@@ -402,7 +549,7 @@ export default function MapPage() {
               key={`${seg.fromIndex}-${seg.toIndex}`}
               path={seg.path}
               options={{
-                strokeColor: seg.isTight ? "#EF4444" : "#3B82F6",
+                strokeColor: seg.fromIndex === -1 ? "#FFC627" : seg.isTight ? "#EF4444" : "#3B82F6",
                 strokeWeight: seg.isFallback ? 3 : 5,
                 strokeOpacity: seg.isFallback ? 0.55 : 0.85,
                 icons: seg.isFallback
