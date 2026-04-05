@@ -265,6 +265,7 @@ export default function MapPage() {
 
     async function compute() {
       setIsComputingRoutes(true);
+      setRouteSegments([]);
       const segments: RouteSegment[] = [];
 
       if (startLocation && events.length > 0) {
@@ -465,11 +466,6 @@ export default function MapPage() {
                     ✕
                   </button>
                 </div>
-                {startSeg && (
-                  <p className="text-asu-gold/70 text-xs mt-1.5">
-                    {Math.round(startSeg.durationSeconds / 60)} min walk to first class
-                  </p>
-                )}
               </div>
 
               {!isCurrentPinSaved && (
@@ -572,6 +568,11 @@ export default function MapPage() {
 
               return (
                 <div key={event.uid} className="space-y-1">
+                  {i === 0 && startSeg && (
+                    <div className="mx-3 px-3 py-1.5 rounded-lg text-xs flex items-center gap-2 bg-asu-gold/10 border border-asu-gold/20 text-asu-gold">
+                      ⚑ <span>{Math.round(startSeg.durationSeconds / 60)} min walk to class</span>
+                    </div>
+                  )}
                   <button
                     onClick={() => setActiveEventIndex(isActive ? null : i)}
                     className={`w-full text-left rounded-xl p-3 border transition-colors ${
