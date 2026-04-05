@@ -3,10 +3,14 @@ type Props = {
   onChange: (date: string) => void;
 };
 
+function localDateStr(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
 function offsetDate(dateStr: string, days: number): string {
-  const d = new Date(dateStr + "T12:00:00"); // noon to avoid DST edge cases
+  const d = new Date(dateStr + "T12:00:00");
   d.setDate(d.getDate() + days);
-  return d.toISOString().split("T")[0];
+  return localDateStr(d);
 }
 
 function formatDisplay(dateStr: string): string {
@@ -19,7 +23,7 @@ function formatDisplay(dateStr: string): string {
 }
 
 function todayStr(): string {
-  return new Date().toISOString().split("T")[0];
+  return localDateStr(new Date());
 }
 
 export default function DaySelector({ date, onChange }: Props) {
