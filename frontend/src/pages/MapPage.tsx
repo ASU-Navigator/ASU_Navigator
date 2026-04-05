@@ -450,8 +450,8 @@ export default function MapPage() {
         <div className="p-3 border-b border-white/10">
           <p className="text-gray-400 text-xs font-medium mb-2 uppercase tracking-wide">Starting From</p>
 
-          {startLocation ? (
-            <div className="space-y-2">
+          {startLocation && (
+            <div className="space-y-2 mb-2">
               <div className="bg-asu-gold/10 border border-asu-gold/30 rounded-xl p-3">
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2 min-w-0">
@@ -492,27 +492,27 @@ export default function MapPage() {
                 </div>
               )}
             </div>
-          ) : (
-            <div className="space-y-2">
-              <button
-                onClick={() => { setIsPickingStart(true); setSidebarOpen(false); }}
-                className={`w-full text-left px-3 py-2 rounded-lg text-sm border transition-colors ${
-                  isPickingStart
-                    ? "bg-asu-gold/20 border-asu-gold/40 text-asu-gold"
-                    : "bg-white/5 border-white/10 text-gray-300 hover:bg-white/8"
-                }`}
-              >
-                {isPickingStart ? "Click anywhere on the map…" : "📍 Click map to pin start"}
-              </button>
-              <button
-                onClick={useMyLocation}
-                disabled={isGeolocating}
-                className="w-full text-left px-3 py-2 rounded-lg text-sm bg-white/5 border border-white/10 text-gray-300 hover:bg-white/8 transition-colors disabled:opacity-50"
-              >
-                {isGeolocating ? "Getting location…" : "⊕ Use my current location"}
-              </button>
-            </div>
           )}
+
+          <div className="space-y-2">
+            <button
+              onClick={() => { setIsPickingStart(true); setSidebarOpen(false); }}
+              className={`w-full text-left px-3 py-2 rounded-lg text-sm border transition-colors ${
+                isPickingStart
+                  ? "bg-asu-gold/20 border-asu-gold/40 text-asu-gold"
+                  : "bg-white/5 border-white/10 text-gray-300 hover:bg-white/8"
+              }`}
+            >
+              {isPickingStart ? "Click anywhere on the map…" : "📍 Click map to pin start"}
+            </button>
+            <button
+              onClick={useMyLocation}
+              disabled={isGeolocating}
+              className="w-full text-left px-3 py-2 rounded-lg text-sm bg-white/5 border border-white/10 text-gray-300 hover:bg-white/8 transition-colors disabled:opacity-50"
+            >
+              {isGeolocating ? "Getting location…" : "⊕ Use my current location"}
+            </button>
+          </div>
 
           {savedPins.length > 0 && (
             <div className="mt-3 space-y-1">
