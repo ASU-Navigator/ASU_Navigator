@@ -9,6 +9,7 @@ import LoadingScreen from "../components/LoadingScreen";
 import { trpc } from "../utils/trpc/client";
 import { resolveBuilding } from "../utils/buildingLookup";
 import type { ParsedEvent } from "../types";
+import { START_LOCATION_KEY } from "./MapPage";
 
 function todayStr() {
   const d = new Date();
@@ -108,6 +109,8 @@ export default function Dashboard() {
   const schedules = listQuery.data ?? [];
   const hasSchedules = schedules.length > 0;
   const physicalEvents = events.filter((e) => isPhysical(e.location));
+  const hasStartPin = !!localStorage.getItem(START_LOCATION_KEY);
+  const canViewRoute = physicalEvents.length >= 2 || (physicalEvents.length === 1 && hasStartPin);
 
   return (
     <div className="min-h-screen" style={{ background: "linear-gradient(to bottom right, #0f0f1a, #1e1e2f)" }}>
@@ -201,9 +204,9 @@ export default function Dashboard() {
                   </button>
                   <button
                     onClick={() => navigate(`/map?date=${date}&schedule=${scheduleId}`)}
-                    disabled={physicalEvents.length < 2}
+                    disabled={!canViewRoute}
                     className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity disabled:opacity-40 bg-asu-maroon"
-                    title={physicalEvents.length < 2 ? "Need at least 2 in-person classes to view a route" : ""}
+                    title={!canViewRoute ? "Need at least 2 in-person classes, or 1 class with a start pin set" : ""}
                   >
                     🗺 View Route
                   </button>

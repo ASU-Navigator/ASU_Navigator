@@ -18,13 +18,22 @@ type RouteSegment = {
   isFallback?: boolean;
 };
 
-type StartLocation = {
+export type StartLocation = {
   lat: number;
   lng: number;
   label: string;
+  savedId?: string;
 };
 
-const START_LOCATION_KEY = "asuStartLocation";
+export type SavedPin = {
+  id: string;
+  label: string;
+  lat: number;
+  lng: number;
+};
+
+export const START_LOCATION_KEY = "asuStartLocation";
+export const SAVED_PINS_KEY = "asuSavedPins";
 
 const geocodeCache = new Map<string, { lat: number; lng: number } | null>();
 
@@ -110,17 +119,54 @@ export default function MapPage() {
       return null;
     }
   });
+
+  const [savedPins, setSavedPinsState] = useState<SavedPin[]>(() => {
+    try {
+      const raw = localStorage.getItem(SAVED_PINS_KEY);
+      return raw ? (JSON.parse(raw) as SavedPin[]) : [];
+    } catch {
+      return [];
+    }
+  });
+
   const [isPickingStart, setIsPickingStart] = useState(false);
   const [isGeolocating, setIsGeolocating] = useState(false);
+  const [savePinLabel, setSavePinLabel] = useState("");
   const startMarkerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(null);
 
-  function saveStartLocation(loc: StartLocation | null) {
-    if (loc) {
-      localStorage.setItem(START_LOCATION_KEY, JSON.stringify(loc));
-    } else {
-      localStorage.removeItem(START_LOCATION_KEY);
-    }
+  function persistStartLocation(loc: StartLocation | null) {
+    if (loc) localStorage.setItem(START_LOCATION_KEY, JSON.stringify(loc));
+    else localStorage.removeItem(START_LOCATION_KEY);
     setStartLocationState(loc);
+  }
+
+  function persistSavedPins(pins: SavedPin[]) {
+    localStorage.setItem(SAVED_PINS_KEY, JSON.stringify(pins));
+    setSavedPinsState(pins);
+  }
+
+  function saveCurrentPin() {
+    if (!startLocation || !savePinLabel.trim()) return;
+    const pin: SavedPin = {
+      id: crypto.randomUUID(),
+      label: savePinLabel.trim(),
+      lat: startLocation.lat,
+      lng: startLocation.lng,
+    };
+    persistSavedPins([...savedPins, pin]);
+    persistStartLocation({ ...startLocation, label: pin.label, savedId: pin.id });
+    setSavePinLabel("");
+  }
+
+  function loadSavedPin(pin: SavedPin) {
+    persistStartLocation({ lat: pin.lat, lng: pin.lng, label: pin.label, savedId: pin.id });
+  }
+
+  function deleteSavedPin(id: string) {
+    persistSavedPins(savedPins.filter((p) => p.id !== id));
+    if (startLocation?.savedId === id) {
+      persistStartLocation({ ...startLocation, savedId: undefined });
+    }
   }
 
   function useMyLocation() {
@@ -128,7 +174,7 @@ export default function MapPage() {
     setIsGeolocating(true);
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        saveStartLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude, label: "My Location" });
+        persistStartLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude, label: "My Location" });
         setIsGeolocating(false);
       },
       () => setIsGeolocating(false),
@@ -211,14 +257,16 @@ export default function MapPage() {
       } catch {
         // fall through to straight line
       }
-      return { ...straightLineSegment(fromIndex, toIndex, fromCoords.lat, fromCoords.lng, toCoords.lat, toCoords.lng, gapSeconds), isFallback: true };
+      return {
+        ...straightLineSegment(fromIndex, toIndex, fromCoords.lat, fromCoords.lng, toCoords.lat, toCoords.lng, gapSeconds),
+        isFallback: true,
+      };
     }
 
     async function compute() {
       setIsComputingRoutes(true);
       const segments: RouteSegment[] = [];
 
-      // Start location → first class
       if (startLocation && events.length > 0) {
         const firstB = resolveBuilding(events[0].location);
         const firstCoords = firstB ? { lat: firstB.lat, lng: firstB.lng } : await geocodeLocation(events[0].location);
@@ -229,7 +277,6 @@ export default function MapPage() {
         }
       }
 
-      // Class → class segments
       for (let i = 0; i < events.length - 1; i++) {
         const from = events[i];
         const to = events[i + 1];
@@ -255,11 +302,10 @@ export default function MapPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoaded, events.length, date, startLocation]);
 
-  // Class markers
   useEffect(() => {
     if (!map || events.length === 0) return;
 
-    markersRef.current.forEach(marker => marker.map = null);
+    markersRef.current.forEach((m) => (m.map = null));
     markersRef.current = [];
 
     const createMarkers = async () => {
@@ -302,7 +348,6 @@ export default function MapPage() {
     createMarkers();
   }, [map, events]);
 
-  // Start location marker
   useEffect(() => {
     if (!map || !isLoaded) return;
 
@@ -341,7 +386,7 @@ export default function MapPage() {
 
   const handleMapClick = useCallback((e: google.maps.MapMouseEvent) => {
     if (isPickingStart && e.latLng) {
-      saveStartLocation({ lat: e.latLng.lat(), lng: e.latLng.lng(), label: "Custom Pin" });
+      persistStartLocation({ lat: e.latLng.lat(), lng: e.latLng.lng(), label: "Custom Pin" });
       setIsPickingStart(false);
     } else {
       setActiveEventIndex(null);
@@ -366,6 +411,7 @@ export default function MapPage() {
   const activeEvent = activeEventIndex !== null ? events[activeEventIndex] : null;
   const activeBuilding = activeEvent ? resolveBuilding(activeEvent.location) : null;
   const startSeg = routeSegments.find((s) => s.fromIndex === -1);
+  const isCurrentPinSaved = !!startLocation?.savedId && savedPins.some((p) => p.id === startLocation.savedId);
 
   return (
     <div className="flex h-screen overflow-hidden relative">
@@ -403,24 +449,47 @@ export default function MapPage() {
         {/* Starting location */}
         <div className="p-3 border-b border-white/10">
           <p className="text-gray-400 text-xs font-medium mb-2 uppercase tracking-wide">Starting From</p>
+
           {startLocation ? (
-            <div className="bg-asu-gold/10 border border-asu-gold/30 rounded-xl p-3">
-              <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="text-asu-gold text-sm shrink-0">⚑</span>
-                  <p className="text-white text-sm truncate">{startLocation.label}</p>
+            <div className="space-y-2">
+              <div className="bg-asu-gold/10 border border-asu-gold/30 rounded-xl p-3">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="text-asu-gold text-sm shrink-0">⚑</span>
+                    <p className="text-white text-sm truncate">{startLocation.label}</p>
+                  </div>
+                  <button
+                    onClick={() => persistStartLocation(null)}
+                    className="text-gray-500 hover:text-red-400 transition-colors text-sm shrink-0"
+                  >
+                    ✕
+                  </button>
                 </div>
-                <button
-                  onClick={() => saveStartLocation(null)}
-                  className="text-gray-500 hover:text-red-400 transition-colors text-sm shrink-0"
-                >
-                  ✕
-                </button>
+                {startSeg && (
+                  <p className="text-asu-gold/70 text-xs mt-1.5">
+                    {Math.round(startSeg.durationSeconds / 60)} min walk to first class
+                  </p>
+                )}
               </div>
-              {startSeg && (
-                <p className="text-asu-gold/70 text-xs mt-1.5">
-                  {Math.round(startSeg.durationSeconds / 60)} min walk to first class
-                </p>
+
+              {!isCurrentPinSaved && (
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    placeholder="Name this pin…"
+                    value={savePinLabel}
+                    onChange={(e) => setSavePinLabel(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && saveCurrentPin()}
+                    className="flex-1 bg-white/5 border border-white/20 rounded-lg px-2 py-1.5 text-white text-xs placeholder-gray-500 focus:outline-none focus:border-white/40"
+                  />
+                  <button
+                    onClick={saveCurrentPin}
+                    disabled={!savePinLabel.trim()}
+                    className="px-2 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs disabled:opacity-40 transition-colors"
+                  >
+                    Save
+                  </button>
+                </div>
               )}
             </div>
           ) : (
@@ -442,6 +511,44 @@ export default function MapPage() {
               >
                 {isGeolocating ? "Getting location…" : "⊕ Use my current location"}
               </button>
+            </div>
+          )}
+
+          {savedPins.length > 0 && (
+            <div className="mt-3 space-y-1">
+              <p className="text-gray-500 text-xs mb-1.5">Saved pins</p>
+              {savedPins.map((pin) => {
+                const isActive = startLocation?.savedId === pin.id;
+                return (
+                  <div
+                    key={pin.id}
+                    className={`flex items-center gap-2 px-2 py-1.5 rounded-lg border text-sm ${
+                      isActive
+                        ? "bg-asu-gold/10 border-asu-gold/30"
+                        : "bg-white/3 border-white/10"
+                    }`}
+                  >
+                    <span className={isActive ? "text-asu-gold" : "text-gray-500"}>⚑</span>
+                    <span className={`flex-1 truncate text-xs ${isActive ? "text-white" : "text-gray-300"}`}>
+                      {pin.label}
+                    </span>
+                    {!isActive && (
+                      <button
+                        onClick={() => loadSavedPin(pin)}
+                        className="text-xs text-gray-400 hover:text-white transition-colors"
+                      >
+                        Use
+                      </button>
+                    )}
+                    <button
+                      onClick={() => deleteSavedPin(pin.id)}
+                      className="text-gray-600 hover:text-red-400 transition-colors text-xs"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           )}
         </div>

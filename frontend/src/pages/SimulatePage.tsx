@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { ASU_BUILDINGS, CAMPUS_LABELS } from "../data/asuBuildings";
 import { type SimulatedClass, DAYS, DAY_LABELS, SIMULATE_KEY } from "../utils/simulate";
+import { START_LOCATION_KEY } from "./MapPage";
 
 function nearestWeekday() {
   const d = new Date();
@@ -188,8 +189,8 @@ export default function SimulatePage() {
           </button>
           <button
             onClick={viewOnMap}
-            disabled={classes.length < 2}
-            title={classes.length < 2 ? "Add at least 2 classes to view a route" : ""}
+            disabled={classes.length === 0 || (classes.length < 2 && !localStorage.getItem(START_LOCATION_KEY))}
+            title={classes.length === 0 ? "Add at least 1 class to view a route" : classes.length < 2 && !localStorage.getItem(START_LOCATION_KEY) ? "Add another class, or set a start pin on the map" : ""}
             className="px-4 py-2 rounded-lg text-sm font-semibold text-white bg-asu-maroon transition-opacity disabled:opacity-40"
           >
             🗺 View Route
