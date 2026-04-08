@@ -165,9 +165,16 @@ export default function Dashboard() {
                     className="bg-transparent outline-none border-b border-white/50 text-white w-28"
                   />
                 ) : (
-                  <span onDoubleClick={(e) => startRename(s, e)} title="Double-click to rename">
-                    {s.label}
-                  </span>
+                  <>
+                    <span>{s.label}</span>
+                    <button
+                      onClick={(e) => startRename(s, e)}
+                      title="Rename schedule"
+                      className="opacity-40 hover:opacity-100 leading-none text-xs transition-opacity"
+                    >
+                      ✏
+                    </button>
+                  </>
                 )}
                 <button
                   className="opacity-50 hover:opacity-100 leading-none text-base"

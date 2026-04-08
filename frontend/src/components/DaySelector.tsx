@@ -58,7 +58,7 @@ export default function DaySelector({ date, onChange }: Props) {
     const d = new Date(date + "T12:00:00");
     setViewYear(d.getFullYear());
     setViewMonth(d.getMonth());
-    setShowCal(true);
+    setShowCal((v) => !v);
   }
 
   function prevMonth() {
@@ -79,7 +79,7 @@ export default function DaySelector({ date, onChange }: Props) {
   const cells = buildCalendarDays(viewYear, viewMonth);
 
   return (
-    <div className="flex items-center gap-3" ref={containerRef}>
+    <div className="flex items-center gap-2" ref={containerRef}>
       <button
         onClick={() => onChange(offsetDate(date, -1))}
         className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
@@ -89,11 +89,18 @@ export default function DaySelector({ date, onChange }: Props) {
       </button>
 
       <div className="relative flex items-center gap-2">
+        <span className="text-white font-medium">
+          {selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}
+        </span>
+
         <button
           onClick={openCal}
-          className="text-white font-medium hover:text-asu-gold transition-colors"
+          title="Open calendar"
+          className={`w-7 h-7 rounded-lg flex items-center justify-center transition-colors text-sm ${
+            showCal ? "bg-asu-maroon text-white" : "bg-white/10 hover:bg-white/20 text-gray-300"
+          }`}
         >
-          {selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}
+          📅
         </button>
 
         {!isToday && (
@@ -108,21 +115,18 @@ export default function DaySelector({ date, onChange }: Props) {
 
         {showCal && (
           <div className="absolute top-full left-0 mt-2 z-50 bg-gray-900 border border-white/20 rounded-2xl shadow-2xl p-4 w-72">
-            {/* Month navigation */}
             <div className="flex items-center justify-between mb-3">
               <button onClick={prevMonth} className="w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">‹</button>
               <span className="text-white font-semibold text-sm">{MONTH_NAMES[viewMonth]} {viewYear}</span>
               <button onClick={nextMonth} className="w-7 h-7 rounded-lg bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">›</button>
             </div>
 
-            {/* Day headers */}
             <div className="grid grid-cols-7 mb-1">
               {DAY_HEADERS.map((h) => (
                 <div key={h} className="text-center text-gray-500 text-xs py-1">{h}</div>
               ))}
             </div>
 
-            {/* Day cells */}
             <div className="grid grid-cols-7 gap-y-1">
               {cells.map((cell, i) => {
                 if (!cell) return <div key={i} />;
