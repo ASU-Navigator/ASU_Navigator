@@ -135,6 +135,14 @@ var scheduleRouter = router({
     const dayEvents = filterEventsForDate(allEvents, targetDate);
     return { hasSchedule: true, events: dayEvents };
   }),
+  rename: protectedProcedure.input(z.object({ scheduleId: z.string(), label: z.string().min(1).max(60) })).mutation(async ({ ctx, input }) => {
+    const userId = ctx.session.user.id;
+    await prisma.schedule.updateMany({
+      where: { id: input.scheduleId, userId },
+      data: { label: input.label }
+    });
+    return { success: true };
+  }),
   delete: protectedProcedure.input(z.object({ scheduleId: z.string() })).mutation(async ({ ctx, input }) => {
     const userId = ctx.session.user.id;
     await prisma.schedule.deleteMany({ where: { id: input.scheduleId, userId } });

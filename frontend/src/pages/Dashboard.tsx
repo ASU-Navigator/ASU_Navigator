@@ -51,6 +51,8 @@ export default function Dashboard() {
 
   const [showUpload, setShowUpload] = useState(false);
   const [newLabel, setNewLabel] = useState(defaultLabel);
+  const [renamingId, setRenamingId] = useState<string | null>(null);
+  const [renameValue, setRenameValue] = useState("");
 
   const listQuery = trpc.schedule.list.useQuery();
   const scheduleQuery = trpc.schedule.get.useQuery(
@@ -74,6 +76,24 @@ export default function Dashboard() {
     },
     onError: (err) => toast.error(err.message || "Failed to upload schedule."),
   });
+
+  const renameMutation = trpc.schedule.rename.useMutation({
+    onSuccess: () => void listQuery.refetch(),
+  });
+
+  function startRename(s: { id: string; label: string }, e: React.MouseEvent) {
+    e.stopPropagation();
+    setRenamingId(s.id);
+    setRenameValue(s.label);
+  }
+
+  function commitRename(id: string) {
+    const trimmed = renameValue.trim();
+    if (trimmed && trimmed !== schedules.find((s) => s.id === id)?.label) {
+      renameMutation.mutate({ scheduleId: id, label: trimmed });
+    }
+    setRenamingId(null);
+  }
 
   const deleteMutation = trpc.schedule.delete.useMutation({
     onSuccess: async (_, vars) => {
@@ -124,14 +144,31 @@ export default function Dashboard() {
             {schedules.map((s) => (
               <div
                 key={s.id}
-                onClick={() => setSearchParams((p) => { p.set("schedule", s.id); return p; })}
+                onClick={() => { if (renamingId !== s.id) setSearchParams((p) => { p.set("schedule", s.id); return p; }); }}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm cursor-pointer transition-colors select-none ${
                   scheduleId === s.id
                     ? "bg-asu-maroon border-asu-maroon text-white"
                     : "border-white/20 text-gray-400 hover:text-white hover:border-white/40"
                 }`}
               >
-                <span>{s.label}</span>
+                {renamingId === s.id ? (
+                  <input
+                    autoFocus
+                    value={renameValue}
+                    onChange={(e) => setRenameValue(e.target.value)}
+                    onBlur={() => commitRename(s.id)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") commitRename(s.id);
+                      if (e.key === "Escape") setRenamingId(null);
+                    }}
+                    onClick={(e) => e.stopPropagation()}
+                    className="bg-transparent outline-none border-b border-white/50 text-white w-28"
+                  />
+                ) : (
+                  <span onDoubleClick={(e) => startRename(s, e)} title="Double-click to rename">
+                    {s.label}
+                  </span>
+                )}
                 <button
                   className="opacity-50 hover:opacity-100 leading-none text-base"
                   onClick={(e) => { e.stopPropagation(); deleteMutation.mutate({ scheduleId: s.id }); }}
