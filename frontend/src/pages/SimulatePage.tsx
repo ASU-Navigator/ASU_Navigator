@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { ASU_BUILDINGS, CAMPUS_LABELS } from "../data/asuBuildings";
@@ -18,7 +18,14 @@ const CAMPUSES = ["tempe", "west", "polytechnic", "downtown"] as const;
 export default function SimulatePage() {
   const navigate = useNavigate();
 
-  const [classes, setClasses] = useState<SimulatedClass[]>([]);
+  const [classes, setClasses] = useState<SimulatedClass[]>(() => {
+    try {
+      const raw = localStorage.getItem(SIMULATE_KEY);
+      return raw ? (JSON.parse(raw) as SimulatedClass[]) : [];
+    } catch {
+      return [];
+    }
+  });
   const [name, setName] = useState("");
   const [buildingCode, setBuildingCode] = useState(ASU_BUILDINGS[0]?.code ?? "");
   const [room, setRoom] = useState("");
@@ -26,6 +33,10 @@ export default function SimulatePage() {
   const [endTime, setEndTime] = useState("09:50");
   const [selectedDays, setSelectedDays] = useState<string[]>(["M", "W", "F"]);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    localStorage.setItem(SIMULATE_KEY, JSON.stringify(classes));
+  }, [classes]);
 
   function toggleDay(day: string) {
     setSelectedDays((prev) =>
@@ -55,8 +66,12 @@ export default function SimulatePage() {
   }
 
   function viewOnMap() {
-    localStorage.setItem(SIMULATE_KEY, JSON.stringify(classes));
     navigate(`/map?mode=simulate&date=${nearestWeekday()}`);
+  }
+
+  function exitSimulate() {
+    localStorage.removeItem(SIMULATE_KEY);
+    navigate("/dashboard");
   }
 
   return (
@@ -182,7 +197,7 @@ export default function SimulatePage() {
 
         <div className="flex gap-3">
           <button
-            onClick={() => navigate("/dashboard")}
+            onClick={exitSimulate}
             className="px-4 py-2 rounded-lg text-sm text-gray-400 border border-white/20 hover:text-white hover:border-white/40 transition-colors"
           >
             ← Back
