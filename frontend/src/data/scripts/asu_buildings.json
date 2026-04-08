@@ -112,7 +112,7 @@
     "place_id": "ChIJj40Opt0IK4cRm2mKuB8TCGQ"
   },
   {
-    "code": "HAYDEN",
+    "code": "LIB",
     "name": "Hayden Library",
     "campus": "tempe",
     "lat": 33.4190234,
@@ -357,6 +357,14 @@
     "campus": "tempe",
     "lat": 33.4200883,
     "lng": -111.9321079,
+    "place_id": "ChIJj-dvUNwIK4cRtRWOyfCzdiQ"
+  },
+  {
+    "code": "WLSN",
+    "name": "Wilson Hall",
+    "campus": "tempe",
+    "lat": 33.4185263,
+    "lng": -111.9359934,
     "place_id": "ChIJj-dvUNwIK4cRtRWOyfCzdiQ"
   },
   {

@@ -17,7 +17,7 @@ const buildings = [
   { code: "BRICKYARD", name: "Brickyard",                           campus: "tempe"},
   { code: "MU",      name: "Memorial Union",                        campus: "tempe"},
   { code: "NOBLE",   name: "Noble Library",                         campus: "tempe"},
-  { code: "HAYDEN",  name: "Hayden Library",                        campus: "tempe"},
+  { code: "LIB",  name: "Hayden Library",                        campus: "tempe"},
   { code: "MCLL",    name: "Modern Languages",                      campus: "tempe"},
   { code: "LSN",     name: "Life Sciences North",                   campus: "tempe"},
   { code: "ISTB4",   name: "Interdisciplinary Science & Tech 4",    campus: "tempe"},
@@ -48,6 +48,8 @@ const buildings = [
   { code: "WXLR",    name: "Walton Center for Planetary Health",    campus: "tempe"},
   { code: "CIDSE",   name: "Computing & Informatics Design",        campus: "tempe"},
   { code: "SEMTE",   name: "SEMTE Building",                        campus: "tempe"},
+  { code: "WLSN",    name: "Wilson Hall",                           campus: "tempe"},
+  
     // === WEST CAMPUS ===
   { code: "CLCC",    name: "Classroom Central West",               campus: "west"},
   { code: "CAVC_W",  name: "Community Collaboration Area",         campus: "west"},
