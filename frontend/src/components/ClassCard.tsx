@@ -9,6 +9,18 @@ const CAMPUS_COLORS: Record<string, string> = {
   downtown: "bg-purple-600/30 text-purple-300",
 };
 
+const dayNames: Record<string, string> = {
+  MO: 'Monday',
+  TU: 'Tuesday',
+  WE: 'Wednesday',
+  TH: 'Thursday',
+  FR: 'Friday',
+  SA: 'Saturday',
+  SU: 'Sunday',
+};
+
+const weekdayOrder = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
+
 function formatTime(date: Date): string {
   return date.toLocaleTimeString("en-US", {
     hour: "numeric",
@@ -26,6 +38,15 @@ type Props = {
 export default function ClassCard({ event, isTight, walkMinutes }: Props) {
   const building = resolveBuilding(event.location);
   const room = extractRoom(event.location);
+  const sortedDays = [...event.daysOfWeek].sort((a, b) => {
+    const aIndex = weekdayOrder.indexOf(a);
+    const bIndex = weekdayOrder.indexOf(b);
+    if (aIndex === -1 && bIndex === -1) return 0;
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  });
+  const formattedDays = sortedDays.map(day => dayNames[day] || day).join(', ');
 
   return (
     <div className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/8 transition-colors">
@@ -42,6 +63,11 @@ export default function ClassCard({ event, isTight, walkMinutes }: Props) {
           <p className="text-gray-400 text-xs mt-1">
             {formatTime(event.start)} – {formatTime(event.end)}
           </p>
+          {event.daysOfWeek.length > 0 && (
+            <p className="text-gray-400 text-xs mt-1">
+              {formattedDays}
+            </p>
+          )}
           {building ? (
             <p className="text-gray-300 text-xs mt-1">
               {building.name}{room ? ` · Room ${room}` : ""}

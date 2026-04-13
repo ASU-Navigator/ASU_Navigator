@@ -1,0 +1,4477 @@
+[
+  {
+    "code": "FM13",
+    "name": "Facilities Management 13",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X78",
+    "name": "Parking Lot 59 South Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "BEE",
+    "name": "Bee Lab",
+    "campus": "tempe"
+  },
+  {
+    "code": "LAB1",
+    "name": "Field Lab",
+    "campus": "tempe"
+  },
+  {
+    "code": "LAV2",
+    "name": "Restrooms At L813",
+    "campus": "tempe"
+  },
+  {
+    "code": "TC3",
+    "name": "Tennis Court 3",
+    "campus": "tempe"
+  },
+  {
+    "code": "SMP",
+    "name": "South Mt. - Phoenix",
+    "campus": "downtown"
+  },
+  {
+    "code": "BUTTE",
+    "name": "Shaw Butte - Phoenix",
+    "campus": "downtown"
+  },
+  {
+    "code": "BILLW",
+    "name": "Bill Williams Mt. - Williams",
+    "campus": "tempe"
+  },
+  {
+    "code": "CGP",
+    "name": "Asu Casa Grande Preparatory Academy",
+    "campus": "tempe"
+  },
+  {
+    "code": "SICB4",
+    "name": "Asu Scottsdale Innovation Center Building Four",
+    "campus": "scottsdale"
+  },
+  {
+    "code": "TKRHA",
+    "name": "Tooker House A",
+    "campus": "tempe"
+  },
+  {
+    "code": "TKRHB",
+    "name": "Tooker House B",
+    "campus": "tempe"
+  },
+  {
+    "code": "MSHAL",
+    "name": "Hav- Mesquite Hall (F Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "TKRHC",
+    "name": "Tooker House C",
+    "campus": "tempe"
+  },
+  {
+    "code": "TKRHD",
+    "name": "Tooker House Dining",
+    "campus": "tempe"
+  },
+  {
+    "code": "ASUPD",
+    "name": "Asu Police",
+    "campus": "tempe"
+  },
+  {
+    "code": "STPV",
+    "name": "Student Pavilion",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSB",
+    "name": "Vista Del Sol B",
+    "campus": "tempe"
+  },
+  {
+    "code": "SAF",
+    "name": "Student Athlete Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "ANX",
+    "name": "The Annex",
+    "campus": "tempe"
+  },
+  {
+    "code": "BDB",
+    "name": "Biodesign Institute Bldg B",
+    "campus": "tempe"
+  },
+  {
+    "code": "BDC",
+    "name": "Biodesign Institute Bldg C",
+    "campus": "tempe"
+  },
+  {
+    "code": "GGMA",
+    "name": "Grady Gammage Memorial Auditorium",
+    "campus": "tempe"
+  },
+  {
+    "code": "INTDSB",
+    "name": "Interdisciplinary B",
+    "campus": "tempe"
+  },
+  {
+    "code": "SHESC",
+    "name": "School Of Human Evolution And Social Change",
+    "campus": "tempe"
+  },
+  {
+    "code": "SS",
+    "name": "Social Sciences Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "ED",
+    "name": "Farmer Education Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "EDB",
+    "name": "Payne Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "EDC",
+    "name": "Education Lecture Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTBX",
+    "name": "Interdisciplinary Science And Technology Building 10",
+    "campus": "tempe"
+  },
+  {
+    "code": "CHAPL",
+    "name": "Danforth Chapel",
+    "campus": "tempe"
+  },
+  {
+    "code": "GHALL",
+    "name": "Dixie Gammage Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "LIB",
+    "name": "Hayden Library",
+    "campus": "tempe"
+  },
+  {
+    "code": "UCLUB",
+    "name": "University Club",
+    "campus": "tempe"
+  },
+  {
+    "code": "DH",
+    "name": "Durham Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSY",
+    "name": "Psychology Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "HAYDN",
+    "name": "Hayden Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "HHE",
+    "name": "Hayden Hall East",
+    "campus": "tempe"
+  },
+  {
+    "code": "HHW",
+    "name": "Hayden Hall West",
+    "campus": "tempe"
+  },
+  {
+    "code": "CP",
+    "name": "Central Plant",
+    "campus": "tempe"
+  },
+  {
+    "code": "UTN",
+    "name": "University Tunnel Network",
+    "campus": "tempe"
+  },
+  {
+    "code": "COWDN",
+    "name": "Cowden Family Resources Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "CFS",
+    "name": "Center For Family Studies",
+    "campus": "tempe"
+  },
+  {
+    "code": "RSS1",
+    "name": "Research Support Services 1",
+    "campus": "tempe"
+  },
+  {
+    "code": "MUR",
+    "name": "Murdock Lecture Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "STAUF",
+    "name": "Stauffer Communication Arts A",
+    "campus": "tempe"
+  },
+  {
+    "code": "STAUF",
+    "name": "Stauffer Communication Arts B",
+    "campus": "tempe"
+  },
+  {
+    "code": "HSB",
+    "name": "Health Service",
+    "campus": "tempe"
+  },
+  {
+    "code": "IRISH",
+    "name": "Irish Hall A (Academic Offices)",
+    "campus": "tempe"
+  },
+  {
+    "code": "IRISH",
+    "name": "Irish Hall B (Northwest)",
+    "campus": "tempe"
+  },
+  {
+    "code": "IRISH",
+    "name": "Irish Hall C (Southwest)",
+    "campus": "tempe"
+  },
+  {
+    "code": "LYC",
+    "name": "Lyceum Theatre",
+    "campus": "tempe"
+  },
+  {
+    "code": "MCL",
+    "name": "Mcclintock Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSYN",
+    "name": "Psychology North",
+    "campus": "tempe"
+  },
+  {
+    "code": "MAIN",
+    "name": "Old Main",
+    "campus": "tempe"
+  },
+  {
+    "code": "MHALL",
+    "name": "Matthews Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "L32",
+    "name": "Grant Street Studios Support Lot",
+    "campus": "downtown"
+  },
+  {
+    "code": "CBBGSFL",
+    "name": "Cbbg Soils Field Laboratory",
+    "campus": "tempe"
+  },
+  {
+    "code": "STADNL",
+    "name": "Stadium North Lockerroom",
+    "campus": "tempe"
+  },
+  {
+    "code": "STADIP",
+    "name": "Stadium Ice Production",
+    "campus": "tempe"
+  },
+  {
+    "code": "CHPF",
+    "name": "Combined Heat And Power Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "MCENT",
+    "name": "Matthews Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "MU",
+    "name": "Memorial Union",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDH",
+    "name": "Sun Devil Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "MOEUR",
+    "name": "Moeur Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "MB",
+    "name": "Best Hall A",
+    "campus": "tempe"
+  },
+  {
+    "code": "MB",
+    "name": "Best Hall B",
+    "campus": "tempe"
+  },
+  {
+    "code": "MB",
+    "name": "Best Hall C",
+    "campus": "tempe"
+  },
+  {
+    "code": "BKSTR",
+    "name": "Bookstore",
+    "campus": "tempe"
+  },
+  {
+    "code": "BA",
+    "name": "Business Administration",
+    "campus": "tempe"
+  },
+  {
+    "code": "BAC",
+    "name": "Business Administration C Wing",
+    "campus": "tempe"
+  },
+  {
+    "code": "MCRD",
+    "name": "Mccord Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "BDH",
+    "name": "Bulldog Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PWH",
+    "name": "Piper Writers House",
+    "campus": "tempe"
+  },
+  {
+    "code": "ARM",
+    "name": "Armstrong Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "DISCVRY",
+    "name": "Discovery Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "SSV",
+    "name": "Student Services Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDFCT",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe"
+  },
+  {
+    "code": "NOBLE",
+    "name": "Noble Science Library",
+    "campus": "tempe"
+  },
+  {
+    "code": "FAC",
+    "name": "Nelson Fine Arts Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "WHALL",
+    "name": "West Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PVE",
+    "name": "Palo Verde East (F)",
+    "campus": "tempe"
+  },
+  {
+    "code": "PVW",
+    "name": "Palo Verde West (G)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECA",
+    "name": "Engineering Center A",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECB",
+    "name": "Engineering Center B",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECC",
+    "name": "Engineering Center C",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECD",
+    "name": "Engineering Center D",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECE",
+    "name": "Engineering Center E",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECF",
+    "name": "Engineering Center F",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECG",
+    "name": "Engineering Center G",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTB2",
+    "name": "Interdisciplinary Science And Technology Building Ii",
+    "campus": "tempe"
+  },
+  {
+    "code": "054A",
+    "name": "Interdisciplinary Science And Technology Bldg Ii Support",
+    "campus": "tempe"
+  },
+  {
+    "code": "SCOB",
+    "name": "Schwada Classroom Office Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "LSA",
+    "name": "Life Sciences Center A",
+    "campus": "tempe"
+  },
+  {
+    "code": "LSB",
+    "name": "Life Sciences Center B-Animal Care",
+    "campus": "tempe"
+  },
+  {
+    "code": "LSC",
+    "name": "Life Sciences Center C",
+    "campus": "tempe"
+  },
+  {
+    "code": "LSD",
+    "name": "Life Sciences Center D-Aquatic Terrestrial",
+    "campus": "tempe"
+  },
+  {
+    "code": "LSE",
+    "name": "Life Sciences Tower E-Wing",
+    "campus": "tempe"
+  },
+  {
+    "code": "WXLR",
+    "name": "Wexler Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSB",
+    "name": "Bateman Physical Sciences Center B",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSC",
+    "name": "Bateman Physical Sciences Center C",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSD",
+    "name": "Bateman Physical Sciences Center D",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSE",
+    "name": "Bateman Physical Sciences Center E",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSF",
+    "name": "Bateman Physical Sciences Center F",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSG",
+    "name": "Bateman Chemical Storage Building (G)",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSH",
+    "name": "Bateman Physical Sciences Center H",
+    "campus": "tempe"
+  },
+  {
+    "code": "MAS",
+    "name": "Mountain America Stadium",
+    "campus": "tempe"
+  },
+  {
+    "code": "CSAC",
+    "name": "Carson Student Athlete Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "STADS",
+    "name": "Stadium Suites",
+    "campus": "tempe"
+  },
+  {
+    "code": "MANZH",
+    "name": "Manzanita Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "ENGRC",
+    "name": "Engineering Research Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "COOR",
+    "name": "Coor Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PBS",
+    "name": "Packard Baseball Stadium",
+    "campus": "tempe"
+  },
+  {
+    "code": "DFA",
+    "name": "Desert Financial Arena",
+    "campus": "tempe"
+  },
+  {
+    "code": "AQUAT",
+    "name": "Mona Plummer Aquatic Complex",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTB5",
+    "name": "Interdisciplinary Science And Technology Building V",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTB4",
+    "name": "Interdisciplinary Science And Technology Building 4",
+    "campus": "tempe"
+  },
+  {
+    "code": "USE",
+    "name": "Urban Systems Engineering",
+    "campus": "tempe"
+  },
+  {
+    "code": "MUSIC",
+    "name": "Music Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "GWC",
+    "name": "Goldwater Center For Science & Engineering",
+    "campus": "tempe"
+  },
+  {
+    "code": "NEEB",
+    "name": "Neeb Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "ART",
+    "name": "Art Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "CDS",
+    "name": "Design South",
+    "campus": "tempe"
+  },
+  {
+    "code": "ARWH",
+    "name": "Art Warehouse",
+    "campus": "tempe"
+  },
+  {
+    "code": "WTC",
+    "name": "Whiteman Tennis Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "RFPF",
+    "name": "Robson Family Player Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "BBTS",
+    "name": "Band Bldg., Toilets & Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "TRACK",
+    "name": "Sun Angel Stadium",
+    "campus": "tempe"
+  },
+  {
+    "code": "MANZY",
+    "name": "Manzy Cafe",
+    "campus": "tempe"
+  },
+  {
+    "code": "BDA",
+    "name": "Biodesign Institute Bldg A",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTB1",
+    "name": "Interdisciplinary Science And Technology Building I",
+    "campus": "tempe"
+  },
+  {
+    "code": "CDN",
+    "name": "Design North",
+    "campus": "tempe"
+  },
+  {
+    "code": "FMMEY",
+    "name": "Fm Materials And Equipment Yard",
+    "campus": "tempe"
+  },
+  {
+    "code": "HOBBS",
+    "name": "Hobbs House",
+    "campus": "tempe"
+  },
+  {
+    "code": "128H",
+    "name": "South Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "CSB",
+    "name": "Community Services Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "MSB",
+    "name": "Material Services Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "CRTVC",
+    "name": "Creativity Commons",
+    "campus": "tempe"
+  },
+  {
+    "code": "CPS",
+    "name": "Central Plant South",
+    "campus": "tempe"
+  },
+  {
+    "code": "SONX",
+    "name": "Sonora Annex",
+    "campus": "tempe"
+  },
+  {
+    "code": "SCD",
+    "name": "Sonora Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECANX",
+    "name": "Engineering Center Annex",
+    "campus": "tempe"
+  },
+  {
+    "code": "HBH",
+    "name": "Harrington-Birchett House",
+    "campus": "tempe"
+  },
+  {
+    "code": "WG",
+    "name": "West Garage",
+    "campus": "tempe"
+  },
+  {
+    "code": "UNIVT",
+    "name": "University Towers",
+    "campus": "tempe"
+  },
+  {
+    "code": "RBHL",
+    "name": "Ross-Blakley Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "CSSB",
+    "name": "Community Services Storage Bldg. No. 2",
+    "campus": "tempe"
+  },
+  {
+    "code": "USB",
+    "name": "University Services",
+    "campus": "tempe"
+  },
+  {
+    "code": "PABLO",
+    "name": "San Pablo Residence Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PABLO",
+    "name": "San Pablo Residence Hall (Classroom)",
+    "campus": "tempe"
+  },
+  {
+    "code": "MERCA",
+    "name": "Mercado A",
+    "campus": "downtown"
+  },
+  {
+    "code": "MERCB",
+    "name": "Mercado B",
+    "campus": "downtown"
+  },
+  {
+    "code": "MERCC",
+    "name": "Mercado C",
+    "campus": "tempe"
+  },
+  {
+    "code": "MERCD",
+    "name": "Mercado D",
+    "campus": "tempe"
+  },
+  {
+    "code": "MERCE",
+    "name": "Mercado E",
+    "campus": "tempe"
+  },
+  {
+    "code": "MERCF",
+    "name": "Mercado F",
+    "campus": "tempe"
+  },
+  {
+    "code": "ALBER",
+    "name": "Farrington Softball Stadium",
+    "campus": "tempe"
+  },
+  {
+    "code": "SLSTDM",
+    "name": "Soccer & Lacrosse Stadium",
+    "campus": "tempe"
+  },
+  {
+    "code": "WTF",
+    "name": "Wrestling Training Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADEAB",
+    "name": "Adelphi Commons (Wings A/B)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADELM",
+    "name": "Adelphi Commons (Wings L/M)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADEHJK",
+    "name": "Adelphi Commons (Wings H/J/K)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADEEFG",
+    "name": "Adelphi Commons (Wings E/F/G)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADECD",
+    "name": "Adelphi Commons (Wings C/D)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADEN",
+    "name": "Adelphi Commons (Wing N)",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDSP",
+    "name": "Sun Devil Sports Performance",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADEPQR",
+    "name": "Adelphi Ii Commons (Wings P/Q/R)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADESTU",
+    "name": "Adelphi Ii Commons (Wings S/T/U)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADEV",
+    "name": "Adelphi Ii Commons Community Center (Wing V)",
+    "campus": "tempe"
+  },
+  {
+    "code": "MVHAL",
+    "name": "Hav- Mohave Hall (A Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ARHAL",
+    "name": "Hav- Arroyo Hall (B Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "JOBA",
+    "name": "Hav- Jojoba Hall (C Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "CHUPA",
+    "name": "Hav- Chuparosa Hall (D Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ACACI",
+    "name": "Hav- Acacia Hall (E Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "VBHAL",
+    "name": "Hav- Verbena Hall (G Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "ACHAL",
+    "name": "Hav- Acourtia Hall (H Wing)",
+    "campus": "tempe"
+  },
+  {
+    "code": "WGTF",
+    "name": "Womens Gymnastics Training Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSC",
+    "name": "Vista Del Sol C",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSD",
+    "name": "Vista Del Sol D",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSE",
+    "name": "Vista Del Sol E",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSF",
+    "name": "Vista Del Sol F",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSG",
+    "name": "Vista Del Sol G",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSH",
+    "name": "Vista Del Sol H",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSI",
+    "name": "Vista Del Sol I",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSJ",
+    "name": "Vista Del Sol J - West Tower",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSK",
+    "name": "Vista Del Sol K - East Tower",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSCC",
+    "name": "Vista Del Sol Community Center (A)",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSCB",
+    "name": "Vista Del Sol Cabana/Pump House",
+    "campus": "tempe"
+  },
+  {
+    "code": "SGHAL",
+    "name": "Barrett College Sage Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "AGVHAL",
+    "name": "Barrett College Agave Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "CERHAL",
+    "name": "Barrett College Cereus Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "CWHAL",
+    "name": "Barrett College Cottonwood Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "JNHAL",
+    "name": "Barrett College Juniper Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "RWHAL",
+    "name": "Barrett College Rosewood Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "WILOHAL",
+    "name": "Barrett College Willow Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "HONHAL",
+    "name": "Barrett College Honors Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "173J",
+    "name": "Barrett College Fire Pump House",
+    "campus": "tempe"
+  },
+  {
+    "code": "WUC",
+    "name": "Weatherup Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDDM",
+    "name": "Verde Dickey Dome",
+    "campus": "tempe"
+  },
+  {
+    "code": "176",
+    "name": "Grounds Maintenance Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "VVDS",
+    "name": "Villas @ Vista Del Sol",
+    "campus": "tempe"
+  },
+  {
+    "code": "HLMK",
+    "name": "Helmick Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "CTRPT",
+    "name": "Centerpoint Bldg. A",
+    "campus": "tempe"
+  },
+  {
+    "code": "UNCTRA",
+    "name": "University Center Bldg. A",
+    "campus": "tempe"
+  },
+  {
+    "code": "UNCTRB",
+    "name": "University Center Bldg. B",
+    "campus": "tempe"
+  },
+  {
+    "code": "UNCTRC",
+    "name": "University Center Bldg. C",
+    "campus": "tempe"
+  },
+  {
+    "code": "NCP",
+    "name": "Northern Chiller Plant",
+    "campus": "tempe"
+  },
+  {
+    "code": "ABC1",
+    "name": "Arizona Biomedical Collaborative",
+    "campus": "tempe"
+  },
+  {
+    "code": "UAADM",
+    "name": "Ua College Of Medicine - Phoenix (Administration)",
+    "campus": "downtown"
+  },
+  {
+    "code": "UAAUD",
+    "name": "Ua College Of Medicine - Phoenix (Auditorium)",
+    "campus": "downtown"
+  },
+  {
+    "code": "UASTD",
+    "name": "Ua College Of Medicine - Phoenix (Student Bldg)",
+    "campus": "downtown"
+  },
+  {
+    "code": "HSEB",
+    "name": "Health Sciences Education Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "UCENT",
+    "name": "University Center",
+    "campus": "downtown"
+  },
+  {
+    "code": "HLTHS",
+    "name": "Health South",
+    "campus": "tempe"
+  },
+  {
+    "code": "GRDNC",
+    "name": "Gordon Commons (South Tower)",
+    "campus": "downtown"
+  },
+  {
+    "code": "GRDNC",
+    "name": "Gordon Commons (North Tower)",
+    "campus": "tempe"
+  },
+  {
+    "code": "HLTHN",
+    "name": "Health North",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDFCD",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe"
+  },
+  {
+    "code": "BCLS",
+    "name": "Beus Center For Law And Society",
+    "campus": "tempe"
+  },
+  {
+    "code": "KERRC",
+    "name": "Kerr Cultural Center A - Offices",
+    "campus": "scottsdale"
+  },
+  {
+    "code": "KERRC",
+    "name": "Kerr Cultural Center B - Studio",
+    "campus": "scottsdale"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Units C,D,E,F",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Dining Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Executive Lodge",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Hilltop Dormitory",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Sparkys Den",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Workshop",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Sun Devil Lodge",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Pump House",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Valve House",
+    "campus": "tempe"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Sun Angel Lodge",
+    "campus": "tempe"
+  },
+  {
+    "code": "522",
+    "name": "Tontozona - Caretakers Cabin",
+    "campus": "tempe"
+  },
+  {
+    "code": "523",
+    "name": "Tontozona - Creekside Cabin",
+    "campus": "tempe"
+  },
+  {
+    "code": "524",
+    "name": "Tontozona - Little Creek Lodge",
+    "campus": "tempe"
+  },
+  {
+    "code": "525",
+    "name": "Tontozona - Tall Pines Lodge",
+    "campus": "tempe"
+  },
+  {
+    "code": "539",
+    "name": "Community Services Storage Bldg. No. 3",
+    "campus": "tempe"
+  },
+  {
+    "code": "DVPP",
+    "name": "Deer Valley Petroglyph Preserve",
+    "campus": "tempe"
+  },
+  {
+    "code": "ALMDB",
+    "name": "Alameda Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "HALHH",
+    "name": "Havasu - Lake Havasu Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSHED",
+    "name": "Packard Stadium Shed (Nw)",
+    "campus": "tempe"
+  },
+  {
+    "code": "CSCM",
+    "name": "Community Services Center-Maintenance Bldg",
+    "campus": "tempe"
+  },
+  {
+    "code": "TYLER",
+    "name": "Tyler Mall Cantina",
+    "campus": "tempe"
+  },
+  {
+    "code": "FLHLB",
+    "name": "Fletcher Library",
+    "campus": "west"
+  },
+  {
+    "code": "SANDS",
+    "name": "Sands Classroom & Lecture Hall",
+    "campus": "west"
+  },
+  {
+    "code": "CPL",
+    "name": "Central Plant",
+    "campus": "tempe"
+  },
+  {
+    "code": "WCB",
+    "name": "University Tunnel Network",
+    "campus": "tempe"
+  },
+  {
+    "code": "UCB",
+    "name": "University Center",
+    "campus": "west"
+  },
+  {
+    "code": "FAB",
+    "name": "Faculty Office/Administration",
+    "campus": "west"
+  },
+  {
+    "code": "CLCC",
+    "name": "Classroom/Lab/Computer Classroom",
+    "campus": "west"
+  },
+  {
+    "code": "CSC",
+    "name": "Central Services Complex",
+    "campus": "tempe"
+  },
+  {
+    "code": "906X",
+    "name": "West Campus Infrastructure",
+    "campus": "tempe"
+  },
+  {
+    "code": "STOR",
+    "name": "Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "LECT",
+    "name": "Lecture Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "NSB",
+    "name": "North Services Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "CDOR",
+    "name": "Casa De Oro",
+    "campus": "tempe"
+  },
+  {
+    "code": "VRDE",
+    "name": "Verde Dining Pavilion",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDFCW",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe"
+  },
+  {
+    "code": "CASAB",
+    "name": "Las Casas - B Wing (Ne)",
+    "campus": "tempe"
+  },
+  {
+    "code": "CASAC",
+    "name": "Las Casas - Pool",
+    "campus": "tempe"
+  },
+  {
+    "code": "CASAD",
+    "name": "Las Casas Community Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "ADMIN",
+    "name": "Administration",
+    "campus": "tempe"
+  },
+  {
+    "code": "CNTR",
+    "name": "Academic Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "FM15",
+    "name": "Facilities Management 15",
+    "campus": "tempe"
+  },
+  {
+    "code": "E1007",
+    "name": "Ammo Bunker 1",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "E1008",
+    "name": "Ammo Bunker 2",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FS",
+    "name": "Facility Services",
+    "campus": "tempe"
+  },
+  {
+    "code": "FM8",
+    "name": "Facilities Management 8",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "WCBGC",
+    "name": "Wms Campus Boys & Girls Club",
+    "campus": "tempe"
+  },
+  {
+    "code": "FM14",
+    "name": "Facilities Management 14",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "QUAD4",
+    "name": "Quad 4",
+    "campus": "tempe"
+  },
+  {
+    "code": "QUAD1",
+    "name": "Quad 1",
+    "campus": "tempe"
+  },
+  {
+    "code": "QUAD3",
+    "name": "Quad 3",
+    "campus": "tempe"
+  },
+  {
+    "code": "QUAD2",
+    "name": "Quad 2",
+    "campus": "tempe"
+  },
+  {
+    "code": "ALTCH",
+    "name": "Altitude Chamber",
+    "campus": "tempe"
+  },
+  {
+    "code": "CRHL",
+    "name": "Creativity Hall",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "CRHLS",
+    "name": "Creativity Hall Services",
+    "campus": "tempe"
+  },
+  {
+    "code": "CRHLA",
+    "name": "Creativity Hall Administration",
+    "campus": "tempe"
+  },
+  {
+    "code": "UNON2",
+    "name": "Student Union Annex",
+    "campus": "tempe"
+  },
+  {
+    "code": "SIM",
+    "name": "Simulator Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "CDRHL",
+    "name": "Cedar Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "SACTN",
+    "name": "Sacaton Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "RINCN",
+    "name": "Rincon Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "TLABS",
+    "name": "Technology Innovation Labs",
+    "campus": "tempe"
+  },
+  {
+    "code": "CLRB",
+    "name": "Classroom Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "SUTON",
+    "name": "Sutton Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "BELL",
+    "name": "Bell Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "WANER",
+    "name": "Wanner Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "DEAN",
+    "name": "Dean Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PALOB",
+    "name": "Palo Blanco Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "TAYLO",
+    "name": "Taylor Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "POLYPD2",
+    "name": "Polytechnic Police Department Support 2",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "IRNWD",
+    "name": "Ironwood Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "POLYPD",
+    "name": "Polytechnic Police Department",
+    "campus": "tempe"
+  },
+  {
+    "code": "E715",
+    "name": "Water Tower Pump Bldg.",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "POLYPD3",
+    "name": "Polytechnic Police Department Support 3",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "POLYPD4",
+    "name": "Polytechnic Police Department Support 4",
+    "campus": "tempe"
+  },
+  {
+    "code": "COMUN",
+    "name": "Communications",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FM3",
+    "name": "Facilities Management 3",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FM1",
+    "name": "Facilities Management 1",
+    "campus": "tempe"
+  },
+  {
+    "code": "FM4",
+    "name": "Facilities Management 4",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FM9",
+    "name": "Facilities Management 9",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FM10",
+    "name": "Facilities Management 10",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FM11",
+    "name": "Facilities Management 11",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FM17",
+    "name": "Facilities Management 17",
+    "campus": "tempe"
+  },
+  {
+    "code": "AGBC",
+    "name": "Agribusiness Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "ENGR",
+    "name": "Engineering Studio",
+    "campus": "tempe"
+  },
+  {
+    "code": "FM5",
+    "name": "Facilities Management 5",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FM2",
+    "name": "Facilities Management 2",
+    "campus": "tempe"
+  },
+  {
+    "code": "ECET",
+    "name": "Ecet Research",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "TECH",
+    "name": "Technology Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "ARAVA",
+    "name": "Aravaipa Auditorium",
+    "campus": "tempe"
+  },
+  {
+    "code": "RECVG",
+    "name": "Polytechnic Central Receiving",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "GRNHS",
+    "name": "Greenhouse",
+    "campus": "tempe"
+  },
+  {
+    "code": "ULA",
+    "name": "University Library Archives",
+    "campus": "tempe"
+  },
+  {
+    "code": "UNION",
+    "name": "Student Union",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTB3",
+    "name": "Interdisciplinary Science And Technology Building Iii",
+    "campus": "tempe"
+  },
+  {
+    "code": "GRNT",
+    "name": "Teaching Greenhouse",
+    "campus": "tempe"
+  },
+  {
+    "code": "GRNH",
+    "name": "Headhouse",
+    "campus": "tempe"
+  },
+  {
+    "code": "GRNR",
+    "name": "Research Greenhouse",
+    "campus": "tempe"
+  },
+  {
+    "code": "BEE2",
+    "name": "Bee Lab Annex",
+    "campus": "tempe"
+  },
+  {
+    "code": "BEE3",
+    "name": "Bee Lab Apiary",
+    "campus": "tempe"
+  },
+  {
+    "code": "PRLTA",
+    "name": "Peralta Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "PICHO",
+    "name": "Picacho Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "SANTN",
+    "name": "Santan Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "SANCA",
+    "name": "Santa Catalina Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "AAPAV",
+    "name": "Applied Arts Pavilion",
+    "campus": "tempe"
+  },
+  {
+    "code": "CWP",
+    "name": "Chilled Water Plant",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "CNTRY",
+    "name": "Century Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "CITRS",
+    "name": "Citrus Dining Pavilion",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDFCP",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900N",
+    "name": "North Desert Village",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "E900S",
+    "name": "South Desert Village",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "E900W",
+    "name": "West Desert Village",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Unim6909-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Unim6915-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Unim6921-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Unim6927-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6966-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6960-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6954-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6948-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6942-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6936-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6928-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6922-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6916-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6910-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6911-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6917-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6923-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6929-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6935-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6941-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6953-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6957-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6961-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6965-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6340-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6344-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6348-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6352-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6359-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6353-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6347-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6341-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venb6940-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venb6934-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6412-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6418-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6424-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6430-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6436-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6442-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6448-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6447-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6439-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6427-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6419-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venb6933-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venb6939-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6464-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6506-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6512-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6518-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6524-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6511-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6505-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6465-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6457-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6463-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6503-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6509-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6515-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6521-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6527-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6510-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6504-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6462-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6456-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6453-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6459-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6507-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6514-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6508-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6502-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6460-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6454-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6848-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6856-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6864-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6865-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6857-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6849-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Verr6846-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Verr6854-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Verr6862-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6907-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6915-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6554-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6560-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6561-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6555-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6931-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6939-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6947-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6955-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6963-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6908-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6916-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6924-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6932-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6940-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6948-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6956-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6964-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7011-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7019-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7027-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6538-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6544-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6550-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6551-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6545-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6539-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7035-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7041-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6540-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6546-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6552-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6553-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6547-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6541-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7045-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7053-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7061-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7064-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7058-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7052-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7046-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7040-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7034-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7028-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7022-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7016-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7010-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vanc7009-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vanc7015-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vanc7021-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vanc7029-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6355-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6351-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6347-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6343-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6342-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6348-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6354-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6362-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6344-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6348-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6352-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6356-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7147-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7153-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7159-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6345-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6351-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6357-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6363-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6352-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6346-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6347-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6353-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6359-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7154-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7160-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7202-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7208-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6360-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6354-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6348-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6347-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6353-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6359-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6365-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7215-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7209-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7203-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7218-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7224-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7230-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7236-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7225-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6448-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6442-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6436-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6430-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6424-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6425-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6437-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6449-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6406-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7265-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7257-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7249-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7241-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7233-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7232-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7240-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7248-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7256-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7264-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6348-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6342-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6349-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6355-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6361-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6504-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6516-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6523-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6517-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6511-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6505-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravj6506-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravj6512-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7163-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7157-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravt6549-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravt6555-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravt6548-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7141-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7125-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7117-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7109-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7110-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7118-G",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7126-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7134-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7142-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7150-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7158-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7164-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7204-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7212-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7220-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7228-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7236-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7244-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7243-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7231-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7219-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7207-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6515-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6509-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6503-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6455-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6456-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6462-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6504-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6510-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6516-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6522-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6528-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6534-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6529-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6521-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6513-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6505-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6463-F",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6457-H",
+    "campus": "tempe"
+  },
+  {
+    "code": "E9551",
+    "name": "Wch Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7063-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7064-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7049-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7050-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7035-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7036-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7021-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7022-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7007-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss6960-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss6955-K",
+    "campus": "tempe"
+  },
+  {
+    "code": "L01",
+    "name": "Antenna - Stauffer Hall West",
+    "campus": "tempe"
+  },
+  {
+    "code": "L03",
+    "name": "Aquatic Complex - Main Area",
+    "campus": "tempe"
+  },
+  {
+    "code": "L04",
+    "name": "N.E. Fields - Kajikawa Football Practice Fields",
+    "campus": "tempe"
+  },
+  {
+    "code": "L05",
+    "name": "N.E. Fields - Band Practice Field",
+    "campus": "tempe"
+  },
+  {
+    "code": "L07",
+    "name": "N.E. Fields - Softball",
+    "campus": "tempe"
+  },
+  {
+    "code": "L09",
+    "name": "Sun Angel Stadium - Yard",
+    "campus": "tempe"
+  },
+  {
+    "code": "L100",
+    "name": "Flagpole",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "WCBGC2",
+    "name": "Boys & Girls Club Playground",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "CHOLL",
+    "name": "Cholla Ballfield",
+    "campus": "tempe"
+  },
+  {
+    "code": "TRACK",
+    "name": "Track",
+    "campus": "tempe"
+  },
+  {
+    "code": "L14",
+    "name": "Engineering Gas Canister Stor.",
+    "campus": "tempe"
+  },
+  {
+    "code": "L16",
+    "name": "Sonora - East Area",
+    "campus": "tempe"
+  },
+  {
+    "code": "L167",
+    "name": "213/215 E. Sixth St.",
+    "campus": "tempe"
+  },
+  {
+    "code": "L19",
+    "name": "Soccer & Lacrosse Field",
+    "campus": "tempe"
+  },
+  {
+    "code": "L20",
+    "name": "Desert Arboretum Park",
+    "campus": "tempe"
+  },
+  {
+    "code": "L22",
+    "name": "Grounds Fenced Yard 'Boneyard'",
+    "campus": "tempe"
+  },
+  {
+    "code": "L28",
+    "name": "Us Weather Station",
+    "campus": "tempe"
+  },
+  {
+    "code": "COMPK",
+    "name": "Asu/Cop Community Park",
+    "campus": "tempe"
+  },
+  {
+    "code": "L31",
+    "name": "T-Mobile Monopalm At Karsten Gc",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDFCTF",
+    "name": "Sdfc Intramural Fields",
+    "campus": "tempe"
+  },
+  {
+    "code": "L517",
+    "name": "Tontozona Football Field 1",
+    "campus": "tempe"
+  },
+  {
+    "code": "TTZN",
+    "name": "Tontozona Football Field 2",
+    "campus": "tempe"
+  },
+  {
+    "code": "L539E",
+    "name": "Tlab Field East",
+    "campus": "tempe"
+  },
+  {
+    "code": "L539W",
+    "name": "Tlab Field West",
+    "campus": "tempe"
+  },
+  {
+    "code": "L801",
+    "name": "Sonoran Arroyo Mall",
+    "campus": "tempe"
+  },
+  {
+    "code": "L802",
+    "name": "Sun Devil Mall",
+    "campus": "tempe"
+  },
+  {
+    "code": "L814",
+    "name": "Entry Sign",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "L815",
+    "name": "Roundabout",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "L820",
+    "name": "Greenhouse Field",
+    "campus": "tempe"
+  },
+  {
+    "code": "L832",
+    "name": "Date Grove",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "L87A",
+    "name": "Phoenix Municipal Ballfield",
+    "campus": "downtown"
+  },
+  {
+    "code": "L87B",
+    "name": "Phoenix Municipal East Practice Ballfield",
+    "campus": "downtown"
+  },
+  {
+    "code": "PS1",
+    "name": "Apache Blvd. Parking Structure (Apache & College)",
+    "campus": "tempe"
+  },
+  {
+    "code": "PS2",
+    "name": "Tyler Street Parking Structure (Mcallister & Tyler)",
+    "campus": "tempe"
+  },
+  {
+    "code": "PS3",
+    "name": "Myrtle Avenue Parking Structure",
+    "campus": "tempe"
+  },
+  {
+    "code": "PS4",
+    "name": "Rural Road Parking Structure (Rural Road)",
+    "campus": "tempe"
+  },
+  {
+    "code": "PS5",
+    "name": "Stadium Parking Structure (Veterans Way)",
+    "campus": "tempe"
+  },
+  {
+    "code": "PS6",
+    "name": "University Towers Parking Structure (Towers)",
+    "campus": "tempe"
+  },
+  {
+    "code": "PS7",
+    "name": "Packard Drive Parking Structure",
+    "campus": "tempe"
+  },
+  {
+    "code": "P31",
+    "name": "426 N. 1St Street",
+    "campus": "tempe"
+  },
+  {
+    "code": "SSW",
+    "name": "340 N Commerce Park Loop, Ste. 250, Tucson 85745",
+    "campus": "tempe"
+  },
+  {
+    "code": "BYENG",
+    "name": "Bank Of America At The Brickyard",
+    "campus": "tempe"
+  },
+  {
+    "code": "BYAC",
+    "name": "Artisan Court At The Brickyard",
+    "campus": "tempe"
+  },
+  {
+    "code": "BYOH",
+    "name": "Orchidhouse At The Brickyard",
+    "campus": "tempe"
+  },
+  {
+    "code": "FULTN",
+    "name": "Fulton Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "CAM",
+    "name": "College Avenue Market Place",
+    "campus": "tempe"
+  },
+  {
+    "code": "AEEB",
+    "name": "A. E. England Bldg.",
+    "campus": "tempe"
+  },
+  {
+    "code": "KAETT",
+    "name": "Kaet Transmitter @ South Mt.",
+    "campus": "downtown"
+  },
+  {
+    "code": "PAR22",
+    "name": "Parcel 22 @ Williams Gateway Airport (Flight Program)",
+    "campus": "tempe"
+  },
+  {
+    "code": "R39",
+    "name": "64 E. Broadway Road. - Wells Fargo",
+    "campus": "tempe"
+  },
+  {
+    "code": "APMA",
+    "name": "Asu Performing & Media Arts",
+    "campus": "tempe"
+  },
+  {
+    "code": "SICB1",
+    "name": "Asu Scottsdale Innovation Center Building One",
+    "campus": "scottsdale"
+  },
+  {
+    "code": "R51",
+    "name": "Asu/Cop Community Park Restroom",
+    "campus": "tempe"
+  },
+  {
+    "code": "R61",
+    "name": "Holbrook Warehouse",
+    "campus": "tempe"
+  },
+  {
+    "code": "AZCNTR",
+    "name": "Garden Office Space Lease - Arizona Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "ACIC",
+    "name": "Asu Chandler Innovation Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "SICB3",
+    "name": "Asu Scottsdale Innovation Center Building Three",
+    "campus": "scottsdale"
+  },
+  {
+    "code": "R87",
+    "name": "Phoenix Municipal Stadium",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87A",
+    "name": "Home Locker/Concessions",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87B",
+    "name": "South Restrooms",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87C",
+    "name": "Stadium Management",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87D",
+    "name": "West Restrooms",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87E",
+    "name": "Box Office/Team Shop",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87F",
+    "name": "Visitor Locker/Concessions",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87G",
+    "name": "Stadium Support",
+    "campus": "downtown"
+  },
+  {
+    "code": "R87M",
+    "name": "Official'S Locker/Maintenance",
+    "campus": "downtown"
+  },
+  {
+    "code": "BOWC",
+    "name": "Barrett & O'Connor Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "CLBC",
+    "name": "Collaboratory On Central",
+    "campus": "downtown"
+  },
+  {
+    "code": "PHXPACA",
+    "name": "Asu Ppa - Academics",
+    "campus": "tempe"
+  },
+  {
+    "code": "PHXPADM",
+    "name": "Asu Ppa - Administration",
+    "campus": "tempe"
+  },
+  {
+    "code": "PHXPAUD",
+    "name": "Asu Ppa - Auditorium",
+    "campus": "downtown"
+  },
+  {
+    "code": "PHXPMUS",
+    "name": "Asu Ppa - Music",
+    "campus": "tempe"
+  },
+  {
+    "code": "PHXPGYM",
+    "name": "Asu Ppa - Gymnasium",
+    "campus": "tempe"
+  },
+  {
+    "code": "PHXPDIN",
+    "name": "Asu Ppa - Dining",
+    "campus": "tempe"
+  },
+  {
+    "code": "RP01",
+    "name": "Fulton Center Parking Structure",
+    "campus": "tempe"
+  },
+  {
+    "code": "RP02",
+    "name": "Brickyard Parking Garage",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSPS",
+    "name": "Vista Del Sol Parking Structure",
+    "campus": "tempe"
+  },
+  {
+    "code": "THERM",
+    "name": "Thermal Energy Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "GDSMH",
+    "name": "Good Samaritan Hospital",
+    "campus": "downtown"
+  },
+  {
+    "code": "ABORP",
+    "name": "Board Of Regents (Phoenix)",
+    "campus": "downtown"
+  },
+  {
+    "code": "X07",
+    "name": "Mt. Francis - Prescott",
+    "campus": "downtown"
+  },
+  {
+    "code": "MINGS",
+    "name": "Mingus Mt. - Cottonwood",
+    "campus": "tempe"
+  },
+  {
+    "code": "TCK",
+    "name": "Tower Mt. - Crown King",
+    "campus": "tempe"
+  },
+  {
+    "code": "GL813",
+    "name": "Gazebo At L813",
+    "campus": "tempe"
+  },
+  {
+    "code": "CSG",
+    "name": "Carol Springs - Globe",
+    "campus": "tempe"
+  },
+  {
+    "code": "HELM",
+    "name": "Helium Recovery Shed - Adj 57B&C",
+    "campus": "tempe"
+  },
+  {
+    "code": "TMSS",
+    "name": "Tontozona - Metal Storage Shed",
+    "campus": "tempe"
+  },
+  {
+    "code": "X21",
+    "name": "2055 Centennial Dr. - Research Park",
+    "campus": "tempe"
+  },
+  {
+    "code": "BTPS",
+    "name": "Batting Tunnels @ Packard Stadium",
+    "campus": "tempe"
+  },
+  {
+    "code": "X28",
+    "name": "Src Pump House",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSJAC",
+    "name": "Vista Del Sol Jacuzzi",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSGAZ",
+    "name": "Vista Del Sol Pavilion",
+    "campus": "tempe"
+  },
+  {
+    "code": "VDSTC",
+    "name": "Vista Del Sol Trash Compaction",
+    "campus": "tempe"
+  },
+  {
+    "code": "TALON",
+    "name": "Talon Residence Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "EAGLE",
+    "name": "Eagle Residence Hall",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "VDSDM",
+    "name": "Vista Del Sol Dome",
+    "campus": "tempe"
+  },
+  {
+    "code": "PHANT",
+    "name": "Phantom Residence Hall",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "FALCO",
+    "name": "Falcon Residence Hall",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "MUSTA",
+    "name": "Mustang Residence Hall",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X39",
+    "name": "Grounds Department Agricultural Chemical Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "X40",
+    "name": "West Sub-Station (Meter At Cp)",
+    "campus": "tempe"
+  },
+  {
+    "code": "X41",
+    "name": "North Sub-Station (Meter #E68972)",
+    "campus": "tempe"
+  },
+  {
+    "code": "X410",
+    "name": "Bluford Hall",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X42",
+    "name": "South Sub-Station (Meter #J77961)",
+    "campus": "tempe"
+  },
+  {
+    "code": "X46",
+    "name": "Gray Hawk Nature Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "FC",
+    "name": "Physical Education Center",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "SCIL",
+    "name": "Thomas Hall",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X48",
+    "name": "West Solar Parking 1, 2, & 3",
+    "campus": "downtown"
+  },
+  {
+    "code": "FST",
+    "name": "Baylor Hall South",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "GS",
+    "name": "Baylor Hall North",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X49",
+    "name": "West Solar Ground Mount",
+    "campus": "downtown"
+  },
+  {
+    "code": "X51",
+    "name": "Underground Thermal Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "X52",
+    "name": "Central Plant Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "X56",
+    "name": "City Of Phoenix Enzyme Storage Tank At Csc",
+    "campus": "tempe"
+  },
+  {
+    "code": "X61",
+    "name": "City Of Phoenix Communications Site",
+    "campus": "tempe"
+  },
+  {
+    "code": "X62",
+    "name": "Skyspace Ramada",
+    "campus": "tempe"
+  },
+  {
+    "code": "X63",
+    "name": "Parking Lot 59 North Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X632A",
+    "name": "Solar Fuel Cell",
+    "campus": "tempe"
+  },
+  {
+    "code": "X64",
+    "name": "Polytechnic Solar Ground Mount 1",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X65",
+    "name": "Polytechnic Solar Ground Mount 2",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "GE664",
+    "name": "Gazebo At E633",
+    "campus": "tempe"
+  },
+  {
+    "code": "RES1C",
+    "name": "Res1 Chiller",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "GE711",
+    "name": "Gazebo At E711",
+    "campus": "tempe"
+  },
+  {
+    "code": "X72",
+    "name": "Gammage Pkwy Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X724",
+    "name": "Water Tower",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X73",
+    "name": "Orange - Cady Malls Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X74",
+    "name": "Parking Lot 11 Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X75",
+    "name": "Parking Lot 19 Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X76",
+    "name": "Parking Lot 41 Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X77",
+    "name": "Parking Lot 58 Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X80",
+    "name": "Parking Lot 45 Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "SVE",
+    "name": "Soil Vapor Extraction Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "X80",
+    "name": "Parking Lot 55 West Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "POST",
+    "name": "Post Office",
+    "campus": "downtown"
+  },
+  {
+    "code": "304X",
+    "name": "Downtown Phoenix Campus Infrastructure",
+    "campus": "downtown"
+  },
+  {
+    "code": "CRONK",
+    "name": "Cronkite/Arizona Pbs",
+    "campus": "downtown"
+  },
+  {
+    "code": "E712X",
+    "name": "Polytechnic Campus Infrastructure",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "MTW",
+    "name": "Macrotechnology Works",
+    "campus": "tempe"
+  },
+  {
+    "code": "CUB",
+    "name": "Central Utilities Bldg For Mtw",
+    "campus": "tempe"
+  },
+  {
+    "code": "X85",
+    "name": "Micro-Grid Test Bed Modular",
+    "campus": "tempe"
+  },
+  {
+    "code": "ZWO",
+    "name": "Zero Waste Office",
+    "campus": "tempe"
+  },
+  {
+    "code": "CBBGL",
+    "name": "Cbbg Laboratory",
+    "campus": "tempe"
+  },
+  {
+    "code": "GLVCC",
+    "name": "Glv Community Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "GLVA",
+    "name": "Greek Leadership Village - Bldg A",
+    "campus": "tempe"
+  },
+  {
+    "code": "GLVB",
+    "name": "Greek Leadership Village - Bldg B",
+    "campus": "tempe"
+  },
+  {
+    "code": "GLVC",
+    "name": "Greek Leadership Village - Bldg C",
+    "campus": "tempe"
+  },
+  {
+    "code": "GLVD",
+    "name": "Greek Leadership Village - Bldg D",
+    "campus": "tempe"
+  },
+  {
+    "code": "PPAHS",
+    "name": "Asu Prep Poly Stem Hs",
+    "campus": "tempe"
+  },
+  {
+    "code": "INTDSA",
+    "name": "Interdisciplinary A",
+    "campus": "tempe"
+  },
+  {
+    "code": "916",
+    "name": "South Fields' Restrooms",
+    "campus": "tempe"
+  },
+  {
+    "code": "HYSA",
+    "name": "Herberger Young Scholars Academy",
+    "campus": "tempe"
+  },
+  {
+    "code": "CASAA",
+    "name": "Las Casas - A Wing (Se)",
+    "campus": "tempe"
+  },
+  {
+    "code": "X80",
+    "name": "Parking Lot 55 East Solar",
+    "campus": "tempe"
+  },
+  {
+    "code": "X816A",
+    "name": "Interdisciplinary Science & Technology Building Iii Support",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "STADTN",
+    "name": "Stadium Ticket Trailer-N",
+    "campus": "tempe"
+  },
+  {
+    "code": "HALHH",
+    "name": "Havasu - Lake Havasu Hall (2- Story)",
+    "campus": "tempe"
+  },
+  {
+    "code": "GSS",
+    "name": "Grant Street Studios",
+    "campus": "tempe"
+  },
+  {
+    "code": "TGC",
+    "name": "The Bird",
+    "campus": "tempe"
+  },
+  {
+    "code": "HFC",
+    "name": "Health Futures Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "PASPI",
+    "name": "Asu Preparatory Academy South Phoenix - Primary/Intermediate",
+    "campus": "downtown"
+  },
+  {
+    "code": "PASPH",
+    "name": "Asu Preparatory Academy South Phoenix - High School",
+    "campus": "tempe"
+  },
+  {
+    "code": "CCB",
+    "name": "Asu California Center Broadway",
+    "campus": "tempe"
+  },
+  {
+    "code": "R74",
+    "name": "Alliance",
+    "campus": "downtown"
+  },
+  {
+    "code": "579",
+    "name": "624 House",
+    "campus": "downtown"
+  },
+  {
+    "code": "579A",
+    "name": "624 Garage",
+    "campus": "downtown"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Well #2 - Pump House",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTB8",
+    "name": "Interdisciplinary Science And Technology Building 8",
+    "campus": "tempe"
+  },
+  {
+    "code": "BOWCNX",
+    "name": "1776 Eye Street Nw",
+    "campus": "tempe"
+  },
+  {
+    "code": "LNTAHL",
+    "name": "Lantana Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "MIX",
+    "name": "Media And Immersive Experience Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "MRBLA",
+    "name": "Asu At Mirabella",
+    "campus": "tempe"
+  },
+  {
+    "code": "TGHB",
+    "name": "Thunderbird Global Headquarters Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "PS8",
+    "name": "Novus Parking Structure",
+    "campus": "tempe"
+  },
+  {
+    "code": "CWP2",
+    "name": "Chilled Water Plant 2",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "SICB5",
+    "name": "Asu Scottsdale Innovation Center Building Five",
+    "campus": "scottsdale"
+  },
+  {
+    "code": "L34",
+    "name": "Field 1",
+    "campus": "tempe"
+  },
+  {
+    "code": "L35",
+    "name": "Field 2",
+    "campus": "tempe"
+  },
+  {
+    "code": "L36",
+    "name": "Field 3",
+    "campus": "tempe"
+  },
+  {
+    "code": "L37",
+    "name": "Field 4",
+    "campus": "tempe"
+  },
+  {
+    "code": "183",
+    "name": "Recreation And Sports Fields Restroom",
+    "campus": "tempe"
+  },
+  {
+    "code": "X88",
+    "name": "Pump & Electrical Station",
+    "campus": "tempe"
+  },
+  {
+    "code": "FOF",
+    "name": "Fusion On First",
+    "campus": "tempe"
+  },
+  {
+    "code": "PWOP",
+    "name": "Palm Walk Overpass",
+    "campus": "tempe"
+  },
+  {
+    "code": "BRO",
+    "name": "Bro Softball Hitting Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "X89",
+    "name": "Mt. Elden",
+    "campus": "tempe"
+  },
+  {
+    "code": "X90",
+    "name": "Porter Mountain",
+    "campus": "tempe"
+  },
+  {
+    "code": "X91",
+    "name": "Telegraph Pass",
+    "campus": "tempe"
+  },
+  {
+    "code": "X92",
+    "name": "Madera Peak",
+    "campus": "tempe"
+  },
+  {
+    "code": "R98",
+    "name": "Nau Communications Bldg. 16",
+    "campus": "tempe"
+  },
+  {
+    "code": "NVS1",
+    "name": "777 Tower At Novus",
+    "campus": "tempe"
+  },
+  {
+    "code": "184",
+    "name": "Recreation Storage Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "L53",
+    "name": "Tree Research Platform",
+    "campus": "tempe"
+  },
+  {
+    "code": "WCPH",
+    "name": "Walton Center For Planetary Health",
+    "campus": "tempe"
+  },
+  {
+    "code": "SICB2",
+    "name": "Asu Scottsdale Innovation Center Building Two",
+    "campus": "scottsdale"
+  },
+  {
+    "code": "X94",
+    "name": "Grounds Storage",
+    "campus": "tempe"
+  },
+  {
+    "code": "X95",
+    "name": "Carbon Tree",
+    "campus": "tempe"
+  },
+  {
+    "code": "MSHAL",
+    "name": "Hav- Mesquite Outdoor Room",
+    "campus": "tempe"
+  },
+  {
+    "code": "INTDSA",
+    "name": "Interdisciplinary A Outdoor Room",
+    "campus": "tempe"
+  },
+  {
+    "code": "SCOB",
+    "name": "Schwada Outdoor Room",
+    "campus": "tempe"
+  },
+  {
+    "code": "PSC",
+    "name": "Physical Sciences C Outdoor Room",
+    "campus": "tempe"
+  },
+  {
+    "code": "R101",
+    "name": "922 Place",
+    "campus": "tempe"
+  },
+  {
+    "code": "MA",
+    "name": "Mullett Arena",
+    "campus": "tempe"
+  },
+  {
+    "code": "R103",
+    "name": "Asu At St. Luke\ufffdS Medical Pavilion",
+    "campus": "tempe"
+  },
+  {
+    "code": "X96",
+    "name": "University Drive Pedestrian Bridge",
+    "campus": "tempe"
+  },
+  {
+    "code": "FAB",
+    "name": "Fab Outdoor Room",
+    "campus": "tempe"
+  },
+  {
+    "code": "186A",
+    "name": "Brix Apartments A",
+    "campus": "tempe"
+  },
+  {
+    "code": "186B",
+    "name": "Brix Apartments B",
+    "campus": "tempe"
+  },
+  {
+    "code": "580",
+    "name": "88-180 Kai Ave.; Captain Cook; Hi; 96704",
+    "campus": "tempe"
+  },
+  {
+    "code": "X97",
+    "name": "(Clcc Outdoor Research Pad)",
+    "campus": "tempe"
+  },
+  {
+    "code": "SDBVF",
+    "name": "Sun Devil Beach Volleyball Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "WLSN",
+    "name": "Wilson Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "E716",
+    "name": "Water Tower Maintenance Bldg.",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "PS9",
+    "name": "Mill Avenue Parking Structure",
+    "campus": "tempe"
+  },
+  {
+    "code": "185A",
+    "name": "Locker Annex",
+    "campus": "tempe"
+  },
+  {
+    "code": "R87H",
+    "name": "Pitching Lab",
+    "campus": "downtown"
+  },
+  {
+    "code": "R105",
+    "name": "Rosewood Office Plaza",
+    "campus": "tempe"
+  },
+  {
+    "code": "R107",
+    "name": "The Studios At Mesa City Center",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "B01",
+    "name": "Langton Villa (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B02",
+    "name": "Cherry Tree (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B03",
+    "name": "Casa Linda (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B04",
+    "name": "Carriage House (Marlin/Dolphin/Bonita/Porpoise Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B05",
+    "name": "Nautilus Staff Housing Complex (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B06",
+    "name": "Topside/Below (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B07",
+    "name": "Big Wind (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B08",
+    "name": "Generator",
+    "campus": "tempe"
+  },
+  {
+    "code": "B09",
+    "name": "Marine Operations Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "B10",
+    "name": "Storage Containers",
+    "campus": "tempe"
+  },
+  {
+    "code": "B11",
+    "name": "Maintenance Workshop And Warehouse",
+    "campus": "tempe"
+  },
+  {
+    "code": "B12",
+    "name": "Office & Storage Containers",
+    "campus": "tempe"
+  },
+  {
+    "code": "B14",
+    "name": "Chemical Storage Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "B15",
+    "name": "Mcnichols Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "B16",
+    "name": "Hanson Hall/Reception",
+    "campus": "tempe"
+  },
+  {
+    "code": "B17",
+    "name": "Reception",
+    "campus": "tempe"
+  },
+  {
+    "code": "B18",
+    "name": "Portable Offices",
+    "campus": "tempe"
+  },
+  {
+    "code": "B19",
+    "name": "Administration And Library - Alfred C. Redfield Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "B20",
+    "name": "Naess Laboratory",
+    "campus": "tempe"
+  },
+  {
+    "code": "B21",
+    "name": "Scott Teaching Lab/Marine Services Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "B22",
+    "name": "Reiss-Conklin Laboratory",
+    "campus": "tempe"
+  },
+  {
+    "code": "B23",
+    "name": "Wright Hall",
+    "campus": "tempe"
+  },
+  {
+    "code": "B24",
+    "name": "Visitor Housing",
+    "campus": "tempe"
+  },
+  {
+    "code": "B25",
+    "name": "Downwind (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B26",
+    "name": "Driftwood (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B27",
+    "name": "Lower Reach (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B28",
+    "name": "Middle Reach (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B29",
+    "name": "Upper Reach (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B30",
+    "name": "Jet Stream (Residence)",
+    "campus": "tempe"
+  },
+  {
+    "code": "B31",
+    "name": "Mesocosm Pump House",
+    "campus": "tempe"
+  },
+  {
+    "code": "B32",
+    "name": "Satellite Dish",
+    "campus": "tempe"
+  },
+  {
+    "code": "UGB",
+    "name": "University Gateway Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "X501",
+    "name": "East Valley Institute Of Technology Building 1",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X502",
+    "name": "East Valley Institute Of Technology Building 2",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X503",
+    "name": "East Valley Institute Of Technology Building 3",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X504",
+    "name": "Evit Parking Structure Building 4",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X505",
+    "name": "Evit Aviation Education Building 5",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X506",
+    "name": "Evit Veterinarian Assistant Building 6 (Building A)",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "X507",
+    "name": "Evit Engineering Building 7 (Building B)",
+    "campus": "polytechnic"
+  },
+  {
+    "code": "CDV",
+    "name": "Casa Del Valle",
+    "campus": "tempe"
+  },
+  {
+    "code": "FSYARD",
+    "name": "Facilities Service Yard",
+    "campus": "tempe"
+  },
+  {
+    "code": "P32",
+    "name": "Taylor Street Parking Structure",
+    "campus": "tempe"
+  },
+  {
+    "code": "AOB",
+    "name": "Academic And Office Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "E835",
+    "name": "Polytechnic Environmental Services Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "ISTB12",
+    "name": "Interdisciplinary Science And Technology Building 12",
+    "campus": "tempe"
+  },
+  {
+    "code": "MASH",
+    "name": "Mill Avenue Student Housing",
+    "campus": "tempe"
+  },
+  {
+    "code": "190",
+    "name": "(Tempe District Utility Plant)",
+    "campus": "tempe"
+  },
+  {
+    "code": "CCG",
+    "name": "Asu California Center Grand",
+    "campus": "tempe"
+  },
+  {
+    "code": "X98",
+    "name": "Omni Tempe Hotel",
+    "campus": "tempe"
+  },
+  {
+    "code": "X99",
+    "name": "Clcc Astronomy Pad",
+    "campus": "tempe"
+  },
+  {
+    "code": "X100",
+    "name": "Spider/Lizard Enclosure",
+    "campus": "tempe"
+  },
+  {
+    "code": "X835A",
+    "name": "Polytechnic Central Accumulation Area Unit 1",
+    "campus": "tempe"
+  },
+  {
+    "code": "X835B",
+    "name": "Polytechnic Central Accumulation Area Unit 2",
+    "campus": "tempe"
+  },
+  {
+    "code": "X835C",
+    "name": "Polytechnic Central Accumulation Area Unit 3",
+    "campus": "tempe"
+  },
+  {
+    "code": "X835D",
+    "name": "Polytechnic Central Accumulation Area Unit 4",
+    "campus": "tempe"
+  },
+  {
+    "code": "X835E",
+    "name": "Polytechnic Central Accumulation Area Unit 5",
+    "campus": "tempe"
+  },
+  {
+    "code": "X835F",
+    "name": "Polytechnic Central Accumulation Area Unit 6",
+    "campus": "tempe"
+  },
+  {
+    "code": "R109A",
+    "name": "Broadway Palace Apts (North Building)",
+    "campus": "tempe"
+  },
+  {
+    "code": "R109B",
+    "name": "Broadway Palace Apts (South Building)",
+    "campus": "tempe"
+  },
+  {
+    "code": "R110",
+    "name": "Yuma Office",
+    "campus": "tempe"
+  },
+  {
+    "code": "R112",
+    "name": "Pleasanton Office",
+    "campus": "tempe"
+  },
+  {
+    "code": "R113",
+    "name": "Nelha Hawaii",
+    "campus": "tempe"
+  },
+  {
+    "code": "R114",
+    "name": "Asu At Five West Mountain Fayetteville",
+    "campus": "tempe"
+  },
+  {
+    "code": "E836",
+    "name": "Polytechnic Utilities Expansion",
+    "campus": "tempe"
+  },
+  {
+    "code": "MRIFAC",
+    "name": "Mri Facility",
+    "campus": "tempe"
+  },
+  {
+    "code": "R116",
+    "name": "First Christian Church Of Tempe",
+    "campus": "tempe"
+  },
+  {
+    "code": "548",
+    "name": "Arizona Golf House",
+    "campus": "tempe"
+  },
+  {
+    "code": "LACS",
+    "name": "La Center Studios",
+    "campus": "tempe"
+  },
+  {
+    "code": "R119",
+    "name": "Asu Local Hawaii",
+    "campus": "tempe"
+  },
+  {
+    "code": "L40",
+    "name": "Novus Place Park",
+    "campus": "tempe"
+  },
+  {
+    "code": "R120",
+    "name": "Asu Local Yuma",
+    "campus": "tempe"
+  },
+  {
+    "code": "E837",
+    "name": "(Student Union Expansion)",
+    "campus": "tempe"
+  },
+  {
+    "code": "X138",
+    "name": "Beach Volleyball Shed",
+    "campus": "tempe"
+  },
+  {
+    "code": "313",
+    "name": "Asu Health Building",
+    "campus": "tempe"
+  },
+  {
+    "code": "191",
+    "name": "Mccain Center",
+    "campus": "tempe"
+  },
+  {
+    "code": "X101",
+    "name": "Irrigation Pump House",
+    "campus": "tempe"
+  }
+]

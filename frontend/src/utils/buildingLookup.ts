@@ -16,21 +16,29 @@ export function resolveBuilding(locationString: string): Building | null {
     if (found) return found;
   }
 
-  // Priority 2: code at start followed by space+digits (e.g. "COOR 174")
-  const prefixMatch = upper.match(/^([A-Z][A-Z0-9]{1,7})\s+\d/);
+  // Priority 2: psCode from LOCATION URL metadata
+  const psCodeMatch = upper.match(/PSCODE=([A-Z0-9]+)/);
+  if (psCodeMatch) {
+    const found = ASU_BUILDINGS.find((b) => b.code === psCodeMatch[1]);
+    if (found) return found;
+  }
+
+  // Priority 3: code anywhere followed by room number (e.g. "WLSN 105")
+  const prefixMatch = upper.match(/\b([A-Z][A-Z0-9]{1,7})\s+\d/);
   if (prefixMatch) {
     const found = ASU_BUILDINGS.find((b) => b.code === prefixMatch[1]);
     if (found) return found;
   }
 
-  // Priority 3: exact code anywhere in string
+  // Priority 4: exact code anywhere in string
   for (const building of ASU_BUILDINGS) {
-    if (upper.includes(building.code + " ") || upper.includes(building.code + ",")) {
+    const codeRegex = new RegExp(`\\b${building.code}\\b`);
+    if (codeRegex.test(upper)) {
       return building;
     }
   }
 
-  // Priority 4: building name contains check
+  // Priority 5: building name contains check
   return (
     ASU_BUILDINGS.find((b) => upper.includes(b.name.toUpperCase())) ?? null
   );

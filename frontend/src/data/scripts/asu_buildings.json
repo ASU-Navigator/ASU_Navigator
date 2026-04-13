@@ -1,27 +1,883 @@
 [
   {
+    "code": "FM13",
+    "name": "Facilities Management 13",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "X78",
+    "name": "Parking Lot 59 South Solar",
+    "campus": "tempe",
+    "lat": 33.4277133,
+    "lng": -111.9298253,
+    "place_id": "ChIJbW3GnN8IK4cRQ-dWbLAw1hw"
+  },
+  {
+    "code": "BEE",
+    "name": "Bee Lab",
+    "campus": "tempe",
+    "lat": 33.2929248,
+    "lng": -111.6845066,
+    "place_id": "ChIJYRGGGHKtK4cRGBCw98vo0ks"
+  },
+  {
+    "code": "LAB1",
+    "name": "Field Lab",
+    "campus": "tempe",
+    "lat": 33.3839239,
+    "lng": -111.9342822,
+    "place_id": "ChIJRxk_VbQHK4cRvmYj0orBKto"
+  },
+  {
+    "code": "LAV2",
+    "name": "Restrooms At L813",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "TC3",
+    "name": "Tennis Court 3",
+    "campus": "tempe",
+    "lat": 33.4248326,
+    "lng": -111.9276674,
+    "place_id": "ChIJ57CMkuAIK4cRl2ZlKA225hM"
+  },
+  {
+    "code": "SMP",
+    "name": "South Mt. - Phoenix",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "BUTTE",
+    "name": "Shaw Butte - Phoenix",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "CGP",
+    "name": "Asu Casa Grande Preparatory Academy",
+    "campus": "tempe",
+    "lat": 32.8805287,
+    "lng": -111.8446907,
+    "place_id": "ChIJK9gKkZutK4cRgahlFJ6CZxU"
+  },
+  {
+    "code": "SICB4",
+    "name": "Asu Scottsdale Innovation Center Building Four",
+    "campus": "scottsdale",
+    "lat": 33.4635741,
+    "lng": -111.9226498,
+    "place_id": "ChIJfb98NSgJK4cRdQLiCUh4JRs"
+  },
+  {
+    "code": "TKRHA",
+    "name": "Tooker House A",
+    "campus": "tempe",
+    "lat": 33.423218,
+    "lng": -111.9328685,
+    "place_id": "ChIJAQbTv94IK4cR997TfeShTl8"
+  },
+  {
+    "code": "TKRHB",
+    "name": "Tooker House B",
+    "campus": "tempe",
+    "lat": 33.423218,
+    "lng": -111.9328685,
+    "place_id": "ChIJAQbTv94IK4cR997TfeShTl8"
+  },
+  {
+    "code": "MSHAL",
+    "name": "Hav- Mesquite Hall (F Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "TKRHC",
+    "name": "Tooker House C",
+    "campus": "tempe",
+    "lat": 33.423218,
+    "lng": -111.9328685,
+    "place_id": "ChIJAQbTv94IK4cR997TfeShTl8"
+  },
+  {
+    "code": "TKRHD",
+    "name": "Tooker House Dining",
+    "campus": "tempe",
+    "lat": 33.4230436,
+    "lng": -111.9325381,
+    "place_id": "ChIJxy13D94JK4cRaBOzMFAm0pA"
+  },
+  {
+    "code": "ASUPD",
+    "name": "Asu Police",
+    "campus": "tempe",
+    "lat": 33.4143327,
+    "lng": -111.9344567,
+    "place_id": "ChIJn-LAgsQIK4cRGQ3dFJVJSYg"
+  },
+  {
+    "code": "STPV",
+    "name": "Student Pavilion",
+    "campus": "tempe",
+    "lat": 33.4185542,
+    "lng": -111.9337034,
+    "place_id": "ChIJXzC1mtwIK4cR4_yfQ9tMZWQ"
+  },
+  {
+    "code": "VDSB",
+    "name": "Vista Del Sol B",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "SAF",
+    "name": "Student Athlete Facility",
+    "campus": "tempe",
+    "lat": 33.4251163,
+    "lng": -111.9330867,
+    "place_id": "ChIJcfCHIt8IK4cR_RdZ4nxxjvE"
+  },
+  {
+    "code": "ANX",
+    "name": "The Annex",
+    "campus": "tempe",
+    "lat": 33.4238482,
+    "lng": -111.9347356,
+    "place_id": "ChIJ9Wd6mGYGK4cRiWd0_bkohHg"
+  },
+  {
+    "code": "BDB",
+    "name": "Biodesign Institute Bldg B",
+    "campus": "tempe",
+    "lat": 33.4197842,
+    "lng": -111.9283747,
+    "place_id": "ChIJeVdlh-cIK4cRRqyCtRseH_A"
+  },
+  {
+    "code": "BDC",
+    "name": "Biodesign Institute Bldg C",
+    "campus": "tempe",
+    "lat": 33.4199975,
+    "lng": -111.9279187,
+    "place_id": "ChIJv8ESuOYJK4cRnhKvn2Ccv90"
+  },
+  {
+    "code": "GGMA",
+    "name": "Grady Gammage Memorial Auditorium",
+    "campus": "tempe",
+    "lat": 33.4162651,
+    "lng": -111.9380015,
+    "place_id": "ChIJZeQR0NoIK4cR8QuZMAjEjLI"
+  },
+  {
+    "code": "INTDSB",
+    "name": "Interdisciplinary B",
+    "campus": "tempe",
+    "lat": 33.4172228,
+    "lng": -111.9356162,
+    "place_id": "ChIJr9wzQdsIK4cRvl0Jm62GIZA"
+  },
+  {
+    "code": "SHESC",
+    "name": "School Of Human Evolution And Social Change",
+    "campus": "tempe",
+    "lat": 33.4205958,
+    "lng": -111.9355567,
+    "place_id": "ChIJ8cVd6dsIK4cR-La6Ino4ylU"
+  },
+  {
+    "code": "SS",
+    "name": "Social Sciences Bldg.",
+    "campus": "tempe",
+    "lat": 33.41978,
+    "lng": -111.9345321,
+    "place_id": "ChIJBfbfuxIJK4cRrYBldlbvJpA"
+  },
+  {
+    "code": "ED",
+    "name": "Farmer Education Bldg.",
+    "campus": "tempe",
+    "lat": 33.4180342,
+    "lng": -111.9373076,
+    "place_id": "ChIJ79aFAtsIK4cRJ7REEGevmB4"
+  },
+  {
+    "code": "EDB",
+    "name": "Payne Hall",
+    "campus": "tempe",
+    "lat": 33.4190089,
+    "lng": -111.9370295,
+    "place_id": "ChIJWf8wrNsIK4cRU2tK5EZxhpA"
+  },
+  {
+    "code": "EDC",
+    "name": "Education Lecture Hall",
+    "campus": "tempe",
+    "lat": 33.4179169,
+    "lng": -111.9378426,
+    "place_id": "ChIJbS8O-9oIK4cRUimsh4zm8gw"
+  },
+  {
+    "code": "ISTBX",
+    "name": "Interdisciplinary Science And Technology Building 10",
+    "campus": "tempe",
+    "lat": 33.4184681,
+    "lng": -111.9315321,
+    "place_id": "ChIJVwhR4NwIK4cRt1LT9wXkMUw"
+  },
+  {
+    "code": "CHAPL",
+    "name": "Danforth Chapel",
+    "campus": "tempe",
+    "lat": 33.4185253,
+    "lng": -111.9353406,
+    "place_id": "ChIJ6askcdsIK4cRTisq8CQUCIc"
+  },
+  {
+    "code": "GHALL",
+    "name": "Dixie Gammage Hall",
+    "campus": "tempe",
+    "lat": 33.4191163,
+    "lng": -111.9362436,
+    "place_id": "ChIJcf38o9sIK4cRC0PAkreeNl0"
+  },
+  {
+    "code": "LIB",
+    "name": "Hayden Library",
+    "campus": "tempe",
+    "lat": 33.4190234,
+    "lng": -111.9346091,
+    "place_id": "ChIJCWkre9sIK4cRuVWh49iRlsg"
+  },
+  {
+    "code": "UCLUB",
+    "name": "University Club",
+    "campus": "tempe",
+    "lat": 33.420969,
+    "lng": -111.9335213,
+    "place_id": "ChIJVbSFp94IK4cR50Grjshhvno"
+  },
+  {
+    "code": "DH",
+    "name": "Durham Hall",
+    "campus": "tempe",
+    "lat": 33.4207973,
+    "lng": -111.9345532,
+    "place_id": "ChIJrazSyOAJK4cROb1mkG8lHOk"
+  },
+  {
+    "code": "PSY",
+    "name": "Psychology Bldg.",
+    "campus": "tempe",
+    "lat": 33.4198736,
+    "lng": -111.9295509,
+    "place_id": "ChIJ2X7cdd0IK4cRNtUmCtgba7g"
+  },
+  {
+    "code": "HAYDN",
+    "name": "Hayden Hall",
+    "campus": "tempe",
+    "lat": 33.4152081,
+    "lng": -111.9353476,
+    "place_id": "ChIJJyMLv8QIK4cRX3rPGvk86b0"
+  },
+  {
+    "code": "HHE",
+    "name": "Hayden Hall East",
+    "campus": "tempe",
+    "lat": 33.4190234,
+    "lng": -111.9346091,
+    "place_id": "ChIJCWkre9sIK4cRuVWh49iRlsg"
+  },
+  {
+    "code": "HHW",
+    "name": "Hayden Hall West",
+    "campus": "tempe",
+    "lat": 33.4190234,
+    "lng": -111.9346091,
+    "place_id": "ChIJCWkre9sIK4cRuVWh49iRlsg"
+  },
+  {
+    "code": "CP",
+    "name": "Central Plant",
+    "campus": "tempe",
+    "lat": 33.4190946,
+    "lng": -111.933535,
+    "place_id": "ChIJY09giNwIK4cRvZLLS8vzOrQ"
+  },
+  {
+    "code": "UTN",
+    "name": "University Tunnel Network",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "COWDN",
+    "name": "Cowden Family Resources Bldg.",
+    "campus": "tempe",
+    "lat": 33.4210967,
+    "lng": -111.9355431,
+    "place_id": "ChIJebiR5tsIK4cRHHXU0PNsJb4"
+  },
+  {
+    "code": "CFS",
+    "name": "Center For Family Studies",
+    "campus": "tempe",
+    "lat": 33.4209762,
+    "lng": -111.9362731,
+    "place_id": "ChIJ5cf5LxoJK4cRQeXPaG7C9Tc"
+  },
+  {
+    "code": "RSS1",
+    "name": "Research Support Services 1",
+    "campus": "tempe",
+    "lat": 33.336607,
+    "lng": -111.897189,
+    "place_id": "ChIJqQ1eDRsHK4cRALfLeid_PoY"
+  },
+  {
+    "code": "MUR",
+    "name": "Murdock Lecture Hall",
+    "campus": "tempe",
+    "lat": 33.4186496,
+    "lng": -111.9330532,
+    "place_id": "ChIJZ0X1JDsJK4cRl4brbU0_IpY"
+  },
+  {
+    "code": "STAUF",
+    "name": "Stauffer Communication Arts A",
+    "campus": "tempe",
+    "lat": 33.41985,
+    "lng": -111.9371092,
+    "place_id": "ChIJT46XtdsIK4cRDqKy922lFC4"
+  },
+  {
+    "code": "STAUF",
+    "name": "Stauffer Communication Arts B",
+    "campus": "tempe",
+    "lat": 33.41985,
+    "lng": -111.9371092,
+    "place_id": "ChIJT46XtdsIK4cRDqKy922lFC4"
+  },
+  {
+    "code": "HSB",
+    "name": "Health Service",
+    "campus": "tempe",
+    "lat": 33.4213317,
+    "lng": -111.9330443,
+    "place_id": "ChIJvVIjHNwIK4cR1bA2nzsojXc"
+  },
+  {
+    "code": "IRISH",
+    "name": "Irish Hall A (Academic Offices)",
+    "campus": "tempe",
+    "lat": 33.4157613,
+    "lng": -111.9352951,
+    "place_id": "ChIJq6qqscQIK4cRjuh1d2-neNc"
+  },
+  {
+    "code": "IRISH",
+    "name": "Irish Hall B (Northwest)",
+    "campus": "tempe",
+    "lat": 33.4157613,
+    "lng": -111.9352951,
+    "place_id": "ChIJq6qqscQIK4cRjuh1d2-neNc"
+  },
+  {
+    "code": "IRISH",
+    "name": "Irish Hall C (Southwest)",
+    "campus": "tempe",
+    "lat": 33.4157613,
+    "lng": -111.9352951,
+    "place_id": "ChIJq6qqscQIK4cRjuh1d2-neNc"
+  },
+  {
+    "code": "LYC",
+    "name": "Lyceum Theatre",
+    "campus": "tempe",
+    "lat": 33.4205407,
+    "lng": -111.9363781,
+    "place_id": "ChIJbe8JsNsIK4cR87mgteyxvvg"
+  },
+  {
+    "code": "MCL",
+    "name": "Mcclintock Hall",
+    "campus": "tempe",
+    "lat": 33.4195438,
+    "lng": -111.9360947,
+    "place_id": "ChIJC31_pdsIK4cRxrlpgsYqaSY"
+  },
+  {
+    "code": "PSYN",
+    "name": "Psychology North",
+    "campus": "tempe",
+    "lat": 33.4206512,
+    "lng": -111.9295819,
+    "place_id": "ChIJM5jimd0IK4cRtxIIQuE9FG8"
+  },
+  {
+    "code": "MAIN",
+    "name": "Old Main",
+    "campus": "tempe",
+    "lat": 33.4205406,
+    "lng": -111.9339714,
+    "place_id": "ChIJh3-Lc9wIK4cR4UV8QO_X2mg"
+  },
+  {
+    "code": "MHALL",
+    "name": "Matthews Hall",
+    "campus": "tempe",
+    "lat": 33.4201087,
+    "lng": -111.9361342,
+    "place_id": "ChIJaf-ewNsIK4cRucmDp7nqkxY"
+  },
+  {
+    "code": "L32",
+    "name": "Grant Street Studios Support Lot",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "CBBGSFL",
+    "name": "Cbbg Soils Field Laboratory",
+    "campus": "tempe",
+    "lat": 33.4233407,
+    "lng": -111.935413,
+    "place_id": "ChIJ819WYdUJK4cR3wTBii1B9_4"
+  },
+  {
+    "code": "STADNL",
+    "name": "Stadium North Lockerroom",
+    "campus": "tempe",
+    "lat": 33.4241527,
+    "lng": -111.9331805,
+    "place_id": "ChIJYx-_3N4IK4cRSH5howqg4Ic"
+  },
+  {
+    "code": "STADIP",
+    "name": "Stadium Ice Production",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "CHPF",
+    "name": "Combined Heat And Power Facility",
+    "campus": "tempe",
+    "lat": 33.4169562,
+    "lng": -111.9283777,
+    "place_id": "ChIJ350mqMIIK4cRa6ExRlCIiDs"
+  },
+  {
+    "code": "MCENT",
+    "name": "Matthews Center",
+    "campus": "tempe",
+    "lat": 33.4199425,
+    "lng": -111.9355031,
+    "place_id": "ChIJAQBAlNsIK4cRPRd4ZknPXLk"
+  },
+  {
+    "code": "MU",
+    "name": "Memorial Union",
+    "campus": "tempe",
+    "lat": 33.4177504,
+    "lng": -111.9343818,
+    "place_id": "ChIJVa3mX9sIK4cRxyxpWfI_9S4"
+  },
+  {
+    "code": "SDH",
+    "name": "Sun Devil Hall",
+    "campus": "tempe",
+    "lat": 33.4183445,
+    "lng": -111.932997,
+    "place_id": "ChIJw8AcMO4JK4cRgn5SBKlzJZs"
+  },
+  {
+    "code": "MOEUR",
+    "name": "Moeur Bldg.",
+    "campus": "tempe",
+    "lat": 33.4179923,
+    "lng": -111.9361833,
+    "place_id": "ChIJId506vkJK4cR7smPZLDXnzs"
+  },
+  {
+    "code": "MB",
+    "name": "Best Hall A",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "MB",
+    "name": "Best Hall B",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "MB",
+    "name": "Best Hall C",
+    "campus": "tempe",
+    "lat": 33.423218,
+    "lng": -111.9328685,
+    "place_id": "ChIJAQbTv94IK4cR997TfeShTl8"
+  },
+  {
+    "code": "BKSTR",
+    "name": "Bookstore",
+    "campus": "tempe",
+    "lat": 33.4178293,
+    "lng": -111.9318581,
+    "place_id": "ChIJnwTZ69wIK4cRTHpqFB_NOoo"
+  },
+  {
+    "code": "BA",
+    "name": "Business Administration",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "BAC",
+    "name": "Business Administration C Wing",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "MCRD",
+    "name": "Mccord Hall",
+    "campus": "tempe",
+    "lat": 33.417008,
+    "lng": -111.933274,
+    "place_id": "ChIJU3NhtNwIK4cRNnNYmhlhV3o"
+  },
+  {
     "code": "BDH",
     "name": "Bulldog Hall",
     "campus": "tempe",
-    "lat": 33.41782719433897,
-    "lng": -111.9307780827746,
-    "place_id": ""
+    "lat": 33.417814,
+    "lng": -111.9307753,
+    "place_id": "ChIJjWCAIt0IK4cRBsgTAVYSAmA"
   },
   {
-    "code": "SGHAL",
-    "name": "Sage Hall",
+    "code": "PWH",
+    "name": "Piper Writers House",
     "campus": "tempe",
-    "lat": 33.41561,
-    "lng": -111.92849,
-    "place_id": ""
+    "lat": 33.4205345,
+    "lng": -111.9330361,
+    "place_id": "ChIJU1ZYatwIK4cRcCl-LbKcodY"
   },
   {
-    "code": "WGHL",
-    "name": "Wrigley Hall",
+    "code": "ARM",
+    "name": "Armstrong Hall",
     "campus": "tempe",
-    "lat": 33.4215137,
-    "lng": -111.9353282,
-    "place_id": "ChIJueZm4tsIK4cRp1UwxiptTbE"
+    "lat": 33.4178808,
+    "lng": -111.929473,
+    "place_id": "ChIJE5BTTt0IK4cR0mZNlPsd_EA"
+  },
+  {
+    "code": "DISCVRY",
+    "name": "Discovery Hall",
+    "campus": "tempe",
+    "lat": 33.4161911,
+    "lng": -111.9363371,
+    "place_id": "ChIJQykWAz8JK4cRVZEylyaZ9gw"
+  },
+  {
+    "code": "SSV",
+    "name": "Student Services Bldg.",
+    "campus": "tempe",
+    "lat": 33.4169752,
+    "lng": -111.9362889,
+    "place_id": "ChIJZwMpOtsIK4cRBM_HuCpfeQk"
+  },
+  {
+    "code": "SDFCT",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe",
+    "lat": 33.4152209,
+    "lng": -111.932521,
+    "place_id": "ChIJm0cHEsMIK4cRQmfsvOBArrs"
+  },
+  {
+    "code": "NOBLE",
+    "name": "Noble Science Library",
+    "campus": "tempe",
+    "lat": 33.4199905,
+    "lng": -111.9306869,
+    "place_id": "ChIJj40Opt0IK4cRm2mKuB8TCGQ"
+  },
+  {
+    "code": "FAC",
+    "name": "Nelson Fine Arts Center",
+    "campus": "tempe",
+    "lat": 33.4188446,
+    "lng": -111.9386525,
+    "place_id": "ChIJF50zRdoIK4cRI37Ug9ckFXg"
+  },
+  {
+    "code": "WHALL",
+    "name": "West Hall",
+    "campus": "tempe",
+    "lat": 33.4190884,
+    "lng": -111.9358236,
+    "place_id": "ChIJueBVn9sIK4cRspZygpIwYmw"
+  },
+  {
+    "code": "PVE",
+    "name": "Palo Verde East (F)",
+    "campus": "tempe",
+    "lat": 33.4224401,
+    "lng": -111.9320562,
+    "place_id": "ChIJI29dg94IK4cRl7NGspgdhN0"
+  },
+  {
+    "code": "PVW",
+    "name": "Palo Verde West (G)",
+    "campus": "tempe",
+    "lat": 33.4224407,
+    "lng": -111.933432,
+    "place_id": "ChIJAZmEpd4IK4cRrvx5vnPP800"
+  },
+  {
+    "code": "ECA",
+    "name": "Engineering Center A",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "ECB",
+    "name": "Engineering Center B",
+    "campus": "tempe",
+    "lat": 33.4189519,
+    "lng": -111.9324765,
+    "place_id": "ChIJsTCxFbAJK4cRcyeW4DXcuvo"
+  },
+  {
+    "code": "ECC",
+    "name": "Engineering Center C",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "ECD",
+    "name": "Engineering Center D",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "ECE",
+    "name": "Engineering Center E",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "ECF",
+    "name": "Engineering Center F",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "ECG",
+    "name": "Engineering Center G",
+    "campus": "tempe",
+    "lat": 33.4200582,
+    "lng": -111.9321076,
+    "place_id": "ChIJP32BUNwIK4cR8IrG63Nh0uo"
+  },
+  {
+    "code": "ISTB2",
+    "name": "Interdisciplinary Science And Technology Building Ii",
+    "campus": "tempe",
+    "lat": 33.4210215,
+    "lng": -111.9293248,
+    "place_id": "ChIJNbCBkd0IK4cRTmdS9AamlYk"
+  },
+  {
+    "code": "054A",
+    "name": "Interdisciplinary Science And Technology Bldg Ii Support",
+    "campus": "tempe",
+    "lat": 33.4210215,
+    "lng": -111.9293248,
+    "place_id": "ChIJNbCBkd0IK4cRTmdS9AamlYk"
+  },
+  {
+    "code": "SCOB",
+    "name": "Schwada Classroom Office Bldg.",
+    "campus": "tempe",
+    "lat": 33.4186266,
+    "lng": -111.9305783,
+    "place_id": "ChIJvbSDEN0IK4cR8a9Yt9_TTsE"
+  },
+  {
+    "code": "LSA",
+    "name": "Life Sciences Center A",
+    "campus": "tempe",
+    "lat": 33.419568,
+    "lng": -111.9339088,
+    "place_id": "ChIJASxFrd0IK4cRIhRMAtKrrM0"
+  },
+  {
+    "code": "LSB",
+    "name": "Life Sciences Center B-Animal Care",
+    "campus": "tempe",
+    "lat": 33.4200274,
+    "lng": -111.9338331,
+    "place_id": "ChIJ47NvmeoJK4cRoBSPgJTdiOQ"
+  },
+  {
+    "code": "LSC",
+    "name": "Life Sciences Center C",
+    "campus": "tempe",
+    "lat": 33.419568,
+    "lng": -111.9339088,
+    "place_id": "ChIJASxFrd0IK4cRIhRMAtKrrM0"
+  },
+  {
+    "code": "LSD",
+    "name": "Life Sciences Center D-Aquatic Terrestrial",
+    "campus": "tempe",
+    "lat": 33.419568,
+    "lng": -111.9339088,
+    "place_id": "ChIJASxFrd0IK4cRIhRMAtKrrM0"
+  },
+  {
+    "code": "LSE",
+    "name": "Life Sciences Tower E-Wing",
+    "campus": "tempe",
+    "lat": 33.4195973,
+    "lng": -111.9339027,
+    "place_id": "ChIJJUWRYNEJK4cRefgQoajqI0w"
+  },
+  {
+    "code": "WXLR",
+    "name": "Wexler Hall",
+    "campus": "tempe",
+    "lat": 33.4206241,
+    "lng": -111.9323805,
+    "place_id": "ChIJ-UXNo9EJK4cRCUpQiL0tctY"
+  },
+  {
+    "code": "PSB",
+    "name": "Bateman Physical Sciences Center B",
+    "campus": "tempe",
+    "lat": 33.4216607,
+    "lng": -111.9317646,
+    "place_id": "ChIJ1x2ryt0IK4cRSyJqA8BLIg8"
+  },
+  {
+    "code": "PSC",
+    "name": "Bateman Physical Sciences Center C",
+    "campus": "tempe",
+    "lat": 33.4216607,
+    "lng": -111.9317646,
+    "place_id": "ChIJ1x2ryt0IK4cRSyJqA8BLIg8"
+  },
+  {
+    "code": "PSD",
+    "name": "Bateman Physical Sciences Center D",
+    "campus": "tempe",
+    "lat": 33.4216607,
+    "lng": -111.9317646,
+    "place_id": "ChIJ1x2ryt0IK4cRSyJqA8BLIg8"
+  },
+  {
+    "code": "PSE",
+    "name": "Bateman Physical Sciences Center E",
+    "campus": "tempe",
+    "lat": 33.4212825,
+    "lng": -111.9320347,
+    "place_id": "ChIJubGENtwIK4cR3RmX7I3IFEg"
+  },
+  {
+    "code": "PSF",
+    "name": "Bateman Physical Sciences Center F",
+    "campus": "tempe",
+    "lat": 33.4216607,
+    "lng": -111.9317646,
+    "place_id": "ChIJ1x2ryt0IK4cRSyJqA8BLIg8"
+  },
+  {
+    "code": "PSG",
+    "name": "Bateman Chemical Storage Building (G)",
+    "campus": "tempe",
+    "lat": 33.4208495,
+    "lng": -111.9321245,
+    "place_id": "ChIJNwSUyZYJK4cRz7-u3aNyIh4"
+  },
+  {
+    "code": "PSH",
+    "name": "Bateman Physical Sciences Center H",
+    "campus": "tempe",
+    "lat": 33.4216607,
+    "lng": -111.9317646,
+    "place_id": "ChIJ1x2ryt0IK4cRSyJqA8BLIg8"
+  },
+  {
+    "code": "MAS",
+    "name": "Mountain America Stadium",
+    "campus": "tempe",
+    "lat": 33.426453,
+    "lng": -111.9325733,
+    "place_id": "ChIJ0RwU--MIK4cRIiUjb2Qdiw0"
+  },
+  {
+    "code": "CSAC",
+    "name": "Carson Student Athlete Center",
+    "campus": "tempe",
+    "lat": 33.4251163,
+    "lng": -111.9330867,
+    "place_id": "ChIJcfCHIt8IK4cR_RdZ4nxxjvE"
+  },
+  {
+    "code": "STADS",
+    "name": "Stadium Suites",
+    "campus": "tempe",
+    "lat": 33.4266392,
+    "lng": -111.9337298,
+    "place_id": "ChIJZaBg7KEJK4cRgoSU9r3Emyg"
+  },
+  {
+    "code": "MANZH",
+    "name": "Manzanita Hall",
+    "campus": "tempe",
+    "lat": 33.4226259,
+    "lng": -111.9303734,
+    "place_id": "ChIJWzhb2t0IK4cR-yMckjhjNSA"
   },
   {
     "code": "ENGRC",
@@ -40,140 +896,68 @@
     "place_id": "ChIJ7z0cRtoIK4cRgzXqUlCFwOM"
   },
   {
-    "code": "PSY",
-    "name": "Psychology Building",
+    "code": "PBS",
+    "name": "Packard Baseball Stadium",
     "campus": "tempe",
-    "lat": 33.4198736,
-    "lng": -111.9295509,
-    "place_id": "ChIJ2X7cdd0IK4cRNtUmCtgba7g"
+    "lat": 33.4276807,
+    "lng": -111.9279877,
+    "place_id": "ChIJsTJSE-AIK4cR8SnZexeX0Ks"
   },
   {
-    "code": "LSE",
-    "name": "Life Sciences E",
+    "code": "DFA",
+    "name": "Desert Financial Arena",
     "campus": "tempe",
-    "lat": 33.419568,
-    "lng": -111.9339088,
-    "place_id": "ChIJASxFrd0IK4cRIhRMAtKrrM0"
+    "lat": 33.424495,
+    "lng": -111.9310002,
+    "place_id": "ChIJX5ZIZd4IK4cRR_tnmenmfD4"
   },
   {
-    "code": "LSC",
-    "name": "Life Sciences Center",
+    "code": "AQUAT",
+    "name": "Mona Plummer Aquatic Complex",
     "campus": "tempe",
-    "lat": 33.4199072,
-    "lng": -111.9333855,
-    "place_id": "ChIJYV11ZdwIK4cRDJW5KWC6n0A"
+    "lat": 33.4241259,
+    "lng": -111.9341606,
+    "place_id": "ChIJdd550t4IK4cRGOrzQ7V6zrI"
   },
   {
-    "code": "FULTN",
-    "name": "Fulton Center",
+    "code": "ISTB5",
+    "name": "Interdisciplinary Science And Technology Building V",
     "campus": "tempe",
-    "lat": 33.4222222,
-    "lng": -111.9344444,
-    "place_id": "ChIJD1QzO9sIK4cR4W0_DpFHz_s"
-  },
-  {
-    "code": "ECG",
-    "name": "Engineering Center G-Wing",
-    "campus": "tempe",
-    "lat": 33.4201172,
-    "lng": -111.9321364,
-    "place_id": "ChIJPX2BUNwIK4cRTTOrQZM3A1I"
-  },
-  {
-    "code": "BYENG",
-    "name": "Brickyard Engineering",
-    "campus": "tempe",
-    "lat": 33.4235981,
-    "lng": -111.9395366,
-    "place_id": "ChIJyeSRMtgIK4cRKWNQZp2IPRU"
-  },
-  {
-    "code": "BRICKYARD",
-    "name": "Brickyard",
-    "campus": "tempe",
-    "lat": 33.4237121,
-    "lng": -111.9398219,
-    "place_id": "ChIJn3cKe6wJK4cRG91LRjr4GXI"
-  },
-  {
-    "code": "MU",
-    "name": "Memorial Union",
-    "campus": "tempe",
-    "lat": 33.4177504,
-    "lng": -111.9343818,
-    "place_id": "ChIJVa3mX9sIK4cRxyxpWfI_9S4"
-  },
-  {
-    "code": "NOBLE",
-    "name": "Noble Library",
-    "campus": "tempe",
-    "lat": 33.4199905,
-    "lng": -111.9306869,
-    "place_id": "ChIJj40Opt0IK4cRm2mKuB8TCGQ"
-  },
-  {
-    "code": "LIB",
-    "name": "Hayden Library",
-    "campus": "tempe",
-    "lat": 33.4190234,
-    "lng": -111.9346091,
-    "place_id": "ChIJCWkre9sIK4cRuVWh49iRlsg"
-  },
-  {
-    "code": "MCLL",
-    "name": "Modern Languages",
-    "campus": "tempe",
-    "lat": 33.4207973,
-    "lng": -111.9345532,
-    "place_id": "ChIJobd-99sIK4cRC7zxylHVhug"
-  },
-  {
-    "code": "LSN",
-    "name": "Life Sciences North",
-    "campus": "tempe",
-    "lat": 33.419568,
-    "lng": -111.9339088,
-    "place_id": "ChIJASxFrd0IK4cRIhRMAtKrrM0"
+    "lat": 33.4184681,
+    "lng": -111.9315321,
+    "place_id": "ChIJVwhR4NwIK4cRt1LT9wXkMUw"
   },
   {
     "code": "ISTB4",
-    "name": "Interdisciplinary Science & Tech 4",
+    "name": "Interdisciplinary Science And Technology Building 4",
     "campus": "tempe",
     "lat": 33.4183097,
     "lng": -111.9284055,
     "place_id": "ChIJT91k-OcIK4cRj1nOEfynbVM"
   },
   {
-    "code": "BATMN",
-    "name": "Batman Building (ISTB4)",
+    "code": "USE",
+    "name": "Urban Systems Engineering",
     "campus": "tempe",
-    "lat": 33.4183097,
-    "lng": -111.9284055,
-    "place_id": "ChIJT91k-OcIK4cRj1nOEfynbVM"
+    "lat": 33.4216759,
+    "lng": -111.9294334,
+    "place_id": "ChIJAQAA7d0IK4cRc8Lbkst3woA"
   },
   {
-    "code": "SANCA",
-    "name": "Santan A",
+    "code": "MUSIC",
+    "name": "Music Bldg.",
     "campus": "tempe",
-    "lat": 33.42166,
-    "lng": -111.9349746,
-    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+    "lat": 33.417774,
+    "lng": -111.9386103,
+    "place_id": "ChIJzbNn8toIK4cRWxL_qeeZNmU"
   },
   {
-    "code": "ARTS",
-    "name": "Arts Building",
+    "code": "GWC",
+    "name": "Goldwater Center For Science & Engineering",
     "campus": "tempe",
-    "lat": 33.4186906,
-    "lng": -111.9390401,
-    "place_id": "ChIJF50zRdoIK4cRWMY9O8bw-lc"
-  },
-  {
-    "code": "FA",
-    "name": "Fine Arts",
-    "campus": "tempe",
-    "lat": 33.4186906,
-    "lng": -111.9390401,
-    "place_id": "ChIJF50zRdoIK4cRWMY9O8bw-lc"
+    "lat": 33.4207748,
+    "lng": -111.930326,
+    "place_id": "ChIJWVcvut0IK4cR9Mo9QPeiXLA"
   },
   {
     "code": "NEEB",
@@ -184,103 +968,767 @@
     "place_id": "ChIJ9222ztsIK4cRV_Yb8wQxAMM"
   },
   {
-    "code": "SS",
-    "name": "Social Sciences",
+    "code": "ART",
+    "name": "Art Bldg.",
     "campus": "tempe",
-    "lat": 33.41978,
-    "lng": -111.9345321,
-    "place_id": "ChIJBfbfuxIJK4cRrYBldlbvJpA"
+    "lat": 33.4205008,
+    "lng": -111.9373344,
+    "place_id": "ChIJVW5hb_QJK4cR9UiBWlBO8-0"
   },
   {
-    "code": "SOSSB",
-    "name": "Social Sciences South B",
+    "code": "CDS",
+    "name": "Design South",
     "campus": "tempe",
-    "lat": 33.41978,
-    "lng": -111.9345321,
-    "place_id": "ChIJBfbfuxIJK4cRrYBldlbvJpA"
+    "lat": 33.4213268,
+    "lng": -111.9368026,
+    "place_id": "ChIJUVPv1XQJK4cRrWTeLE9yLMc"
   },
   {
-    "code": "BAC",
-    "name": "Business Administration C",
+    "code": "ARWH",
+    "name": "Art Warehouse",
     "campus": "tempe",
-    "lat": 33.41654,
-    "lng": -111.9338448,
-    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+    "lat": 33.4209988,
+    "lng": -111.9380085,
+    "place_id": "ChIJzW1Wy7EJK4cR1zt9tVhUWMw"
   },
   {
-    "code": "BUSA",
-    "name": "Business Administration A",
+    "code": "WTC",
+    "name": "Whiteman Tennis Center",
     "campus": "tempe",
-    "lat": 33.41654,
-    "lng": -111.9338448,
-    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+    "lat": 33.4248326,
+    "lng": -111.9276674,
+    "place_id": "ChIJ57CMkuAIK4cRl2ZlKA225hM"
   },
   {
-    "code": "BUSN",
-    "name": "Business Administration N",
+    "code": "RFPF",
+    "name": "Robson Family Player Facility",
     "campus": "tempe",
-    "lat": 33.41654,
-    "lng": -111.9338448,
-    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
   },
   {
-    "code": "TYLER",
-    "name": "Tyler Mall",
+    "code": "BBTS",
+    "name": "Band Bldg., Toilets & Storage",
     "campus": "tempe",
-    "lat": 33.4203091,
-    "lng": -111.9327203,
-    "place_id": "ChIJz_egyNsIK4cR17F4zrihdyY"
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
   },
   {
-    "code": "GWC",
-    "name": "Goldwater Center",
+    "code": "TRACK",
+    "name": "Sun Angel Stadium",
     "campus": "tempe",
-    "lat": 33.4207797,
-    "lng": -111.9304963,
-    "place_id": "ChIJ_YCVgCwJK4cRQiO643_yUR0"
+    "lat": 33.4265337,
+    "lng": -111.9272354,
+    "place_id": "ChIJ0TRQb-AIK4cRH7bYtMV80pY"
   },
   {
-    "code": "SCOB",
-    "name": "SCAI Building",
+    "code": "MANZY",
+    "name": "Manzy Cafe",
     "campus": "tempe",
-    "lat": 33.42361160000001,
-    "lng": -111.9397511,
-    "place_id": "ChIJU0SqLdgIK4cRxEB-omIbhvg"
+    "lat": 33.4226259,
+    "lng": -111.9303734,
+    "place_id": "ChIJ59pZjjQJK4cRxRCeP1cETx4"
   },
   {
-    "code": "ECA",
-    "name": "Engineering Center A",
+    "code": "BDA",
+    "name": "Biodesign Institute Bldg A",
+    "campus": "tempe",
+    "lat": 33.4194179,
+    "lng": -111.9283165,
+    "place_id": "ChIJmf2CYt0IK4cRoUxdMvK2GtI"
+  },
+  {
+    "code": "ISTB1",
+    "name": "Interdisciplinary Science And Technology Building I",
+    "campus": "tempe",
+    "lat": 33.4184681,
+    "lng": -111.9315321,
+    "place_id": "ChIJVwhR4NwIK4cRt1LT9wXkMUw"
+  },
+  {
+    "code": "CDN",
+    "name": "Design North",
+    "campus": "tempe",
+    "lat": 33.4215572,
+    "lng": -111.9370626,
+    "place_id": "ChIJR-8VXqYJK4cRPheZxJLo_08"
+  },
+  {
+    "code": "FMMEY",
+    "name": "Fm Materials And Equipment Yard",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "HOBBS",
+    "name": "Hobbs House",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "128H",
+    "name": "South Storage",
+    "campus": "tempe",
+    "lat": 33.3918486,
+    "lng": -111.9360171,
+    "place_id": "ChIJFZF6-KQIK4cRjmOh_voY9l0"
+  },
+  {
+    "code": "CSB",
+    "name": "Community Services Bldg.",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "MSB",
+    "name": "Material Services Bldg.",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "CRTVC",
+    "name": "Creativity Commons",
+    "campus": "tempe",
+    "lat": 33.4181439,
+    "lng": -111.9323895,
+    "place_id": "ChIJIRHax_gJK4cRzoypKMTINiA"
+  },
+  {
+    "code": "CPS",
+    "name": "Central Plant South",
+    "campus": "tempe",
+    "lat": 33.4113014,
+    "lng": -111.9285414,
+    "place_id": "ChIJC2-h48EIK4cRoxH5HWccOjI"
+  },
+  {
+    "code": "SONX",
+    "name": "Sonora Annex",
+    "campus": "tempe",
+    "lat": 33.4122295,
+    "lng": -111.9276728,
+    "place_id": "ChIJi1VxG-oIK4cRnhMbGIR_Rf8"
+  },
+  {
+    "code": "SCD",
+    "name": "Sonora Center",
+    "campus": "tempe",
+    "lat": 33.4122295,
+    "lng": -111.9276728,
+    "place_id": "ChIJi1VxG-oIK4cRnhMbGIR_Rf8"
+  },
+  {
+    "code": "ECANX",
+    "name": "Engineering Center Annex",
     "campus": "tempe",
     "lat": 33.4185949,
     "lng": -111.9322069,
     "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
   },
   {
-    "code": "ECF",
-    "name": "Engineering Center F",
+    "code": "HBH",
+    "name": "Harrington-Birchett House",
     "campus": "tempe",
-    "lat": 33.4197229,
-    "lng": -111.9326119,
-    "place_id": "ChIJDQmQNiEJK4cRLKYZZfGGvoM"
+    "lat": 33.4235278,
+    "lng": -111.9364479,
+    "place_id": "ChIJw4pHGdkIK4cR0qUvkqHeTQU"
   },
   {
-    "code": "CAVC",
-    "name": "Career & Professional Development",
+    "code": "WG",
+    "name": "West Garage",
     "campus": "tempe",
-    "lat": 33.4169733,
-    "lng": -111.9365104,
-    "place_id": "ChIJx3opOtsIK4cR91EifP9gfjU"
+    "lat": 33.4229592,
+    "lng": -111.9209342,
+    "place_id": "ChIJJ1Bh8tgIK4cR7ZV07Q70tMw"
   },
   {
-    "code": "CPCOM",
-    "name": "Cronkite School",
+    "code": "UNIVT",
+    "name": "University Towers",
     "campus": "tempe",
-    "lat": 33.4536581,
-    "lng": -112.0736419,
-    "place_id": "ChIJgSMcxyISK4cRd2KXvtHLdSE"
+    "lat": 33.4252867,
+    "lng": -111.9358222,
+    "place_id": "ChIJTT-08tgIK4cRjyL1zMBI7Uk"
   },
   {
-    "code": "HLTH",
+    "code": "RBHL",
+    "name": "Ross-Blakley Hall",
+    "campus": "tempe",
+    "lat": 33.41741640000001,
+    "lng": -111.92989,
+    "place_id": "ChIJVeYytMIIK4cRyEHiTBE8vhs"
+  },
+  {
+    "code": "CSSB",
+    "name": "Community Services Storage Bldg. No. 2",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "USB",
+    "name": "University Services",
+    "campus": "tempe",
+    "lat": 33.4170484,
+    "lng": -111.9365006,
+    "place_id": "ChIJ7bPLO9sIK4cRPIYaZYoArvI"
+  },
+  {
+    "code": "PABLO",
+    "name": "San Pablo Residence Hall",
+    "campus": "tempe",
+    "lat": 33.4228821,
+    "lng": -111.9312973,
+    "place_id": "ChIJE-5ufd4IK4cRITiGw7rs5BM"
+  },
+  {
+    "code": "PABLO",
+    "name": "San Pablo Residence Hall (Classroom)",
+    "campus": "tempe",
+    "lat": 33.4228821,
+    "lng": -111.9312973,
+    "place_id": "ChIJE-5ufd4IK4cRITiGw7rs5BM"
+  },
+  {
+    "code": "MERCA",
+    "name": "Mercado A",
+    "campus": "downtown",
+    "lat": 33.4507071,
+    "lng": -112.067049,
+    "place_id": "ChIJX_3wTRkSK4cRt5JTK1mbjEQ"
+  },
+  {
+    "code": "MERCB",
+    "name": "Mercado B",
+    "campus": "downtown",
+    "lat": 33.4507071,
+    "lng": -112.067049,
+    "place_id": "ChIJX_3wTRkSK4cRt5JTK1mbjEQ"
+  },
+  {
+    "code": "MERCC",
+    "name": "Mercado C",
+    "campus": "tempe",
+    "lat": 33.4507071,
+    "lng": -112.067049,
+    "place_id": "ChIJX_3wTRkSK4cRt5JTK1mbjEQ"
+  },
+  {
+    "code": "MERCD",
+    "name": "Mercado D",
+    "campus": "tempe",
+    "lat": 33.4507071,
+    "lng": -112.067049,
+    "place_id": "ChIJX_3wTRkSK4cRt5JTK1mbjEQ"
+  },
+  {
+    "code": "MERCE",
+    "name": "Mercado E",
+    "campus": "tempe",
+    "lat": 33.4507071,
+    "lng": -112.067049,
+    "place_id": "ChIJX_3wTRkSK4cRt5JTK1mbjEQ"
+  },
+  {
+    "code": "MERCF",
+    "name": "Mercado F",
+    "campus": "tempe",
+    "lat": 33.4507071,
+    "lng": -112.067049,
+    "place_id": "ChIJX_3wTRkSK4cRt5JTK1mbjEQ"
+  },
+  {
+    "code": "ALBER",
+    "name": "Farrington Softball Stadium",
+    "campus": "tempe",
+    "lat": 33.4252045,
+    "lng": -111.9236184,
+    "place_id": "ChIJe6aTZeEIK4cRaHQwYkDwef0"
+  },
+  {
+    "code": "SLSTDM",
+    "name": "Soccer & Lacrosse Stadium",
+    "campus": "tempe",
+    "lat": 33.4245685,
+    "lng": -111.9223744,
+    "place_id": "ChIJYcxm_eMIK4cR0re3L4FJlXg"
+  },
+  {
+    "code": "WTF",
+    "name": "Wrestling Training Facility",
+    "campus": "tempe",
+    "lat": 33.426494,
+    "lng": -111.9236934,
+    "place_id": "ChIJ7x0oVCsJK4cRD0mcVgSNh8s"
+  },
+  {
+    "code": "ADEAB",
+    "name": "Adelphi Commons (Wings A/B)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "ADELM",
+    "name": "Adelphi Commons (Wings L/M)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "ADEHJK",
+    "name": "Adelphi Commons (Wings H/J/K)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "ADEEFG",
+    "name": "Adelphi Commons (Wings E/F/G)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "ADECD",
+    "name": "Adelphi Commons (Wings C/D)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "ADEN",
+    "name": "Adelphi Commons (Wing N)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "SDSP",
+    "name": "Sun Devil Sports Performance",
+    "campus": "tempe",
+    "lat": 33.4242999,
+    "lng": -111.9238371,
+    "place_id": "ChIJST3fSOEIK4cRQLMAOu88WOM"
+  },
+  {
+    "code": "ADEPQR",
+    "name": "Adelphi Ii Commons (Wings P/Q/R)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "ADESTU",
+    "name": "Adelphi Ii Commons (Wings S/T/U)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "ADEV",
+    "name": "Adelphi Ii Commons Community Center (Wing V)",
+    "campus": "tempe",
+    "lat": 33.4136641,
+    "lng": -111.9276333,
+    "place_id": "ChIJn2Rs3OkIK4cRAVkIE_0MPiI"
+  },
+  {
+    "code": "MVHAL",
+    "name": "Hav- Mohave Hall (A Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "ARHAL",
+    "name": "Hav- Arroyo Hall (B Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "JOBA",
+    "name": "Hav- Jojoba Hall (C Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "CHUPA",
+    "name": "Hav- Chuparosa Hall (D Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "ACACI",
+    "name": "Hav- Acacia Hall (E Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "VBHAL",
+    "name": "Hav- Verbena Hall (G Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "ACHAL",
+    "name": "Hav- Acourtia Hall (H Wing)",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "WGTF",
+    "name": "Womens Gymnastics Training Facility",
+    "campus": "tempe",
+    "lat": 33.4262416,
+    "lng": -111.923314,
+    "place_id": "ChIJ-7Q_d-EIK4cRO7Q0MoYtDls"
+  },
+  {
+    "code": "VDSC",
+    "name": "Vista Del Sol C",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSD",
+    "name": "Vista Del Sol D",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSE",
+    "name": "Vista Del Sol E",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSF",
+    "name": "Vista Del Sol F",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSG",
+    "name": "Vista Del Sol G",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSH",
+    "name": "Vista Del Sol H",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSI",
+    "name": "Vista Del Sol I",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSJ",
+    "name": "Vista Del Sol J - West Tower",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSK",
+    "name": "Vista Del Sol K - East Tower",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSCC",
+    "name": "Vista Del Sol Community Center (A)",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSCB",
+    "name": "Vista Del Sol Cabana/Pump House",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "SGHAL",
+    "name": "Barrett College Sage Hall",
+    "campus": "tempe",
+    "lat": 33.4156065,
+    "lng": -111.9284959,
+    "place_id": "ChIJ_dcvHOgIK4cRFN48Ys7eSMk"
+  },
+  {
+    "code": "AGVHAL",
+    "name": "Barrett College Agave Hall",
+    "campus": "tempe",
+    "lat": 33.4156962,
+    "lng": -111.9285155,
+    "place_id": "ChIJ_avXO-gIK4cRkwqgjRAKync"
+  },
+  {
+    "code": "CERHAL",
+    "name": "Barrett College Cereus Hall",
+    "campus": "tempe",
+    "lat": 33.4150489,
+    "lng": -111.9276552,
+    "place_id": "ChIJJwhhMugIK4cRzx_YtDWUQSM"
+  },
+  {
+    "code": "CWHAL",
+    "name": "Barrett College Cottonwood Hall",
+    "campus": "tempe",
+    "lat": 33.4156065,
+    "lng": -111.9284959,
+    "place_id": "ChIJ_dcvHOgIK4cRFN48Ys7eSMk"
+  },
+  {
+    "code": "JNHAL",
+    "name": "Barrett College Juniper Hall",
+    "campus": "tempe",
+    "lat": 33.4154387,
+    "lng": -111.9265959,
+    "place_id": "ChIJb0qSS-gIK4cRCHg-iRIuP8E"
+  },
+  {
+    "code": "RWHAL",
+    "name": "Barrett College Rosewood Hall",
+    "campus": "tempe",
+    "lat": 33.4156065,
+    "lng": -111.9284959,
+    "place_id": "ChIJ_dcvHOgIK4cRFN48Ys7eSMk"
+  },
+  {
+    "code": "WILOHAL",
+    "name": "Barrett College Willow Hall",
+    "campus": "tempe",
+    "lat": 33.4156065,
+    "lng": -111.9284959,
+    "place_id": "ChIJ_dcvHOgIK4cRFN48Ys7eSMk"
+  },
+  {
+    "code": "HONHAL",
+    "name": "Barrett College Honors Hall",
+    "campus": "tempe",
+    "lat": 33.4156065,
+    "lng": -111.9284959,
+    "place_id": "ChIJ_dcvHOgIK4cRFN48Ys7eSMk"
+  },
+  {
+    "code": "173J",
+    "name": "Barrett College Fire Pump House",
+    "campus": "tempe",
+    "lat": 33.4156065,
+    "lng": -111.9284959,
+    "place_id": "ChIJ_dcvHOgIK4cRFN48Ys7eSMk"
+  },
+  {
+    "code": "WUC",
+    "name": "Weatherup Center",
+    "campus": "tempe",
+    "lat": 33.424794,
+    "lng": -111.9234201,
+    "place_id": "ChIJ_caIQ-EIK4cRE1yOhb5fohk"
+  },
+  {
+    "code": "VDDM",
+    "name": "Verde Dickey Dome",
+    "campus": "tempe",
+    "lat": 33.4250474,
+    "lng": -111.9249963,
+    "place_id": "ChIJc_A6GeEIK4cRHh2efF0F81Q"
+  },
+  {
+    "code": "176",
+    "name": "Grounds Maintenance Facility",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "VVDS",
+    "name": "Villas @ Vista Del Sol",
+    "campus": "tempe",
+    "lat": 33.4144484,
+    "lng": -111.9313671,
+    "place_id": "ChIJZ-Aqgi8JK4cRs5fqm24gUhc"
+  },
+  {
+    "code": "HLMK",
+    "name": "Helmick Center",
+    "campus": "tempe",
+    "lat": 33.4235152,
+    "lng": -111.9355738,
+    "place_id": "ChIJ4Xa7PNkIK4cRDQUig91_kfA"
+  },
+  {
+    "code": "CTRPT",
+    "name": "Centerpoint Bldg. A",
+    "campus": "tempe",
+    "lat": 33.4230228,
+    "lng": -111.9409883,
+    "place_id": "ChIJ2TcnJtgIK4cRNQLNQgCGB9Y"
+  },
+  {
+    "code": "UNCTRA",
+    "name": "University Center Bldg. A",
+    "campus": "tempe",
+    "lat": 33.4232329,
+    "lng": -111.9211936,
+    "place_id": "ChIJJSMHEeQIK4cRpEIHqwk9jQk"
+  },
+  {
+    "code": "UNCTRB",
+    "name": "University Center Bldg. B",
+    "campus": "tempe",
+    "lat": 33.4232329,
+    "lng": -111.9211936,
+    "place_id": "ChIJJSMHEeQIK4cRpEIHqwk9jQk"
+  },
+  {
+    "code": "UNCTRC",
+    "name": "University Center Bldg. C",
+    "campus": "tempe",
+    "lat": 33.4232329,
+    "lng": -111.9211936,
+    "place_id": "ChIJJSMHEeQIK4cRpEIHqwk9jQk"
+  },
+  {
+    "code": "NCP",
+    "name": "Northern Chiller Plant",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "ABC1",
+    "name": "Arizona Biomedical Collaborative",
+    "campus": "tempe",
+    "lat": 33.4521408,
+    "lng": -112.0670589,
+    "place_id": "ChIJAfaZFBkSK4cRvy8mE4rjJfY"
+  },
+  {
+    "code": "UAADM",
+    "name": "Ua College Of Medicine - Phoenix (Administration)",
+    "campus": "downtown",
+    "lat": 33.4526501,
+    "lng": -112.0658147,
+    "place_id": "ChIJMWT8QBkSK4cRJ6JgvXpzGmI"
+  },
+  {
+    "code": "UAAUD",
+    "name": "Ua College Of Medicine - Phoenix (Auditorium)",
+    "campus": "downtown",
+    "lat": 33.4526501,
+    "lng": -112.0658147,
+    "place_id": "ChIJMWT8QBkSK4cRJ6JgvXpzGmI"
+  },
+  {
+    "code": "UASTD",
+    "name": "Ua College Of Medicine - Phoenix (Student Bldg)",
+    "campus": "downtown",
+    "lat": 33.4526501,
+    "lng": -112.0658147,
+    "place_id": "ChIJMWT8QBkSK4cRJ6JgvXpzGmI"
+  },
+  {
+    "code": "HSEB",
+    "name": "Health Sciences Education Bldg.",
+    "campus": "tempe",
+    "lat": 33.4525834,
+    "lng": -112.0658013,
+    "place_id": "ChIJbzpIYxkSK4cRt7-xddsXSPQ"
+  },
+  {
+    "code": "UCENT",
+    "name": "University Center",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "HLTHS",
+    "name": "Health South",
+    "campus": "tempe",
+    "lat": 33.4213317,
+    "lng": -111.9330443,
+    "place_id": "ChIJvVIjHNwIK4cR1bA2nzsojXc"
+  },
+  {
+    "code": "GRDNC",
+    "name": "Gordon Commons (South Tower)",
+    "campus": "downtown",
+    "lat": 33.4537763,
+    "lng": -112.0723182,
+    "place_id": "ChIJKcV2dgATK4cRvDN6ay3FNEk"
+  },
+  {
+    "code": "GRDNC",
+    "name": "Gordon Commons (North Tower)",
+    "campus": "tempe",
+    "lat": 33.4537763,
+    "lng": -112.0723182,
+    "place_id": "ChIJKcV2dgATK4cRvDN6ay3FNEk"
+  },
+  {
+    "code": "HLTHN",
     "name": "Health North",
     "campus": "tempe",
     "lat": 33.4540505,
@@ -288,76 +1736,4204 @@
     "place_id": "ChIJHbSoFhgSK4cRHe3KpB5IScs"
   },
   {
-    "code": "LAGUNA",
-    "name": "Laguna Hall",
+    "code": "SDFCD",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe",
+    "lat": 33.4152209,
+    "lng": -111.932521,
+    "place_id": "ChIJm0cHEsMIK4cRQmfsvOBArrs"
+  },
+  {
+    "code": "BCLS",
+    "name": "Beus Center For Law And Society",
+    "campus": "tempe",
+    "lat": 33.45311,
+    "lng": -112.072267,
+    "place_id": "ChIJRcatkCISK4cRbnKfQiPxJn4"
+  },
+  {
+    "code": "KERRC",
+    "name": "Kerr Cultural Center A - Offices",
+    "campus": "scottsdale",
+    "lat": 33.526275,
+    "lng": -111.9278778,
+    "place_id": "ChIJqY0omh4LK4cRrKmSNS_bRys"
+  },
+  {
+    "code": "KERRC",
+    "name": "Kerr Cultural Center B - Studio",
+    "campus": "scottsdale",
+    "lat": 33.526275,
+    "lng": -111.9278778,
+    "place_id": "ChIJqY0omh4LK4cRrKmSNS_bRys"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Units C,D,E,F",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Dining Hall",
+    "campus": "tempe",
+    "lat": 33.4226259,
+    "lng": -111.9303734,
+    "place_id": "ChIJ59pZjjQJK4cRxRCeP1cETx4"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Executive Lodge",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Hilltop Dormitory",
+    "campus": "tempe",
+    "lat": 33.423218,
+    "lng": -111.9328685,
+    "place_id": "ChIJAQbTv94IK4cR997TfeShTl8"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Sparkys Den",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Workshop",
+    "campus": "tempe",
+    "lat": 33.4185385,
+    "lng": -111.9359206,
+    "place_id": "ChIJfbSfmNsIK4cRuyD_e1PG7Ck"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Pump House",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Valve House",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "TONTO",
+    "name": "Tontozona - Sun Angel Lodge",
+    "campus": "tempe",
+    "lat": 34.3185616,
+    "lng": -111.0845795,
+    "place_id": "ChIJjSlJ6bygLocRBzJV5cdDNp8"
+  },
+  {
+    "code": "522",
+    "name": "Tontozona - Caretakers Cabin",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "523",
+    "name": "Tontozona - Creekside Cabin",
+    "campus": "tempe",
+    "lat": 33.3732228,
+    "lng": -111.9324489,
+    "place_id": "ChIJ2cIMZvJuA2cRLBl3jTYK_i0"
+  },
+  {
+    "code": "524",
+    "name": "Tontozona - Little Creek Lodge",
+    "campus": "tempe",
+    "lat": 34.3185616,
+    "lng": -111.0845795,
+    "place_id": "ChIJjSlJ6bygLocRBzJV5cdDNp8"
+  },
+  {
+    "code": "525",
+    "name": "Tontozona - Tall Pines Lodge",
+    "campus": "tempe",
+    "lat": 34.3185616,
+    "lng": -111.0845795,
+    "place_id": "ChIJjSlJ6bygLocRBzJV5cdDNp8"
+  },
+  {
+    "code": "539",
+    "name": "Community Services Storage Bldg. No. 3",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "DVPP",
+    "name": "Deer Valley Petroglyph Preserve",
+    "campus": "tempe",
+    "lat": 33.6772584,
+    "lng": -112.1526677,
+    "place_id": "ChIJI40YV1RvK4cR1etdKiWTI3E"
+  },
+  {
+    "code": "ALMDB",
+    "name": "Alameda Building",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "HALHH",
+    "name": "Havasu - Lake Havasu Hall",
+    "campus": "tempe",
+    "lat": 34.4725299,
+    "lng": -114.3218703,
+    "place_id": "ChIJw1U7BYjy0YARM8zaGIQ685I"
+  },
+  {
+    "code": "PSHED",
+    "name": "Packard Stadium Shed (Nw)",
+    "campus": "tempe",
+    "lat": 33.4249413,
+    "lng": -111.928089,
+    "place_id": "ChIJ4_QMZLIJK4cR7HTsCq3Gx9Q"
+  },
+  {
+    "code": "CSCM",
+    "name": "Community Services Center-Maintenance Bldg",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "TYLER",
+    "name": "Tyler Mall Cantina",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "FLHLB",
+    "name": "Fletcher Library",
+    "campus": "west",
+    "lat": 33.6072045,
+    "lng": -112.1598547,
+    "place_id": "ChIJGb7ga1tpK4cRpivZw0BLneg"
+  },
+  {
+    "code": "SANDS",
+    "name": "Sands Classroom & Lecture Hall",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "CPL",
+    "name": "Central Plant",
+    "campus": "tempe",
+    "lat": 33.4190946,
+    "lng": -111.933535,
+    "place_id": "ChIJY09giNwIK4cRvZLLS8vzOrQ"
+  },
+  {
+    "code": "WCB",
+    "name": "University Tunnel Network",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "UCB",
+    "name": "University Center",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "FAB",
+    "name": "Faculty Office/Administration",
+    "campus": "west",
+    "lat": 33.6079039,
+    "lng": -112.1609696,
+    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
+  },
+  {
+    "code": "CLCC",
+    "name": "Classroom/Lab/Computer Classroom",
+    "campus": "west",
+    "lat": 33.60806609999999,
+    "lng": -112.1594482,
+    "place_id": "ChIJ6SWC-YNpK4cR9L5ZQ8rmmIs"
+  },
+  {
+    "code": "CSC",
+    "name": "Central Services Complex",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "906X",
+    "name": "West Campus Infrastructure",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "STOR",
+    "name": "Storage",
+    "campus": "tempe",
+    "lat": 33.4405652,
+    "lng": -111.9129072,
+    "place_id": "ChIJh8TUqFgJK4cRHh4o1z1zOS4"
+  },
+  {
+    "code": "LECT",
+    "name": "Lecture Hall",
+    "campus": "tempe",
+    "lat": 33.4179169,
+    "lng": -111.9378426,
+    "place_id": "ChIJbS8O-9oIK4cRUimsh4zm8gw"
+  },
+  {
+    "code": "NSB",
+    "name": "North Services Building",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "CDOR",
+    "name": "Casa De Oro",
+    "campus": "tempe",
+    "lat": 33.608122,
+    "lng": -112.16219,
+    "place_id": "ChIJRXCQiTloK4cRoss4U79P72A"
+  },
+  {
+    "code": "VRDE",
+    "name": "Verde Dining Pavilion",
+    "campus": "tempe",
+    "lat": 33.6086101,
+    "lng": -112.162051,
+    "place_id": "ChIJA8tt8lFpK4cRQm7af0oUELg"
+  },
+  {
+    "code": "SDFCW",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe",
+    "lat": 33.4152209,
+    "lng": -111.932521,
+    "place_id": "ChIJm0cHEsMIK4cRQmfsvOBArrs"
+  },
+  {
+    "code": "CASAB",
+    "name": "Las Casas - B Wing (Ne)",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "CASAC",
+    "name": "Las Casas - Pool",
+    "campus": "tempe",
+    "lat": 33.4241259,
+    "lng": -111.9341606,
+    "place_id": "ChIJdd550t4IK4cRGOrzQ7V6zrI"
+  },
+  {
+    "code": "CASAD",
+    "name": "Las Casas Community Center",
+    "campus": "tempe",
+    "lat": 33.6084059,
+    "lng": -112.1648773,
+    "place_id": "ChIJy2I50UJpK4cRXULhVqJ4zsA"
+  },
+  {
+    "code": "ADMIN",
+    "name": "Administration",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "CNTR",
+    "name": "Academic Center",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "FM15",
+    "name": "Facilities Management 15",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "E1007",
+    "name": "Ammo Bunker 1",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "E1008",
+    "name": "Ammo Bunker 2",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FS",
+    "name": "Facility Services",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "FM8",
+    "name": "Facilities Management 8",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "WCBGC",
+    "name": "Wms Campus Boys & Girls Club",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "FM14",
+    "name": "Facilities Management 14",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "QUAD4",
+    "name": "Quad 4",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "QUAD1",
+    "name": "Quad 1",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "QUAD3",
+    "name": "Quad 3",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "QUAD2",
+    "name": "Quad 2",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "ALTCH",
+    "name": "Altitude Chamber",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "CRHL",
+    "name": "Creativity Hall",
+    "campus": "polytechnic",
+    "lat": 33.3086327,
+    "lng": -111.6820395,
+    "place_id": "ChIJ7aOakZutK4cRI4ynQ43bAPA"
+  },
+  {
+    "code": "CRHLS",
+    "name": "Creativity Hall Services",
+    "campus": "tempe",
+    "lat": 33.4181439,
+    "lng": -111.9323895,
+    "place_id": "ChIJIRHax_gJK4cRzoypKMTINiA"
+  },
+  {
+    "code": "CRHLA",
+    "name": "Creativity Hall Administration",
+    "campus": "tempe",
+    "lat": 33.4181439,
+    "lng": -111.9323895,
+    "place_id": "ChIJIRHax_gJK4cRzoypKMTINiA"
+  },
+  {
+    "code": "UNON2",
+    "name": "Student Union Annex",
+    "campus": "tempe",
+    "lat": 33.4177504,
+    "lng": -111.9343818,
+    "place_id": "ChIJVa3mX9sIK4cRxyxpWfI_9S4"
+  },
+  {
+    "code": "SIM",
+    "name": "Simulator Building",
+    "campus": "tempe",
+    "lat": 33.3101318,
+    "lng": -111.6716968,
+    "place_id": "ChIJ81f-AIStK4cRHk7EP3Vgu-E"
+  },
+  {
+    "code": "CDRHL",
+    "name": "Cedar Hall",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "SACTN",
+    "name": "Sacaton Hall",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "RINCN",
+    "name": "Rincon Building",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "TLABS",
+    "name": "Technology Innovation Labs",
+    "campus": "tempe",
+    "lat": 33.4184681,
+    "lng": -111.9315321,
+    "place_id": "ChIJVwhR4NwIK4cRt1LT9wXkMUw"
+  },
+  {
+    "code": "CLRB",
+    "name": "Classroom Building",
+    "campus": "tempe",
+    "lat": 33.4186266,
+    "lng": -111.9305783,
+    "place_id": "ChIJvbSDEN0IK4cR8a9Yt9_TTsE"
+  },
+  {
+    "code": "SUTON",
+    "name": "Sutton Hall",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "BELL",
+    "name": "Bell Hall",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "WANER",
+    "name": "Wanner Hall",
+    "campus": "tempe",
+    "lat": 33.3058931,
+    "lng": -111.677226,
+    "place_id": "ChIJ-drd2YKtK4cRzDE3UXmOrhY"
+  },
+  {
+    "code": "DEAN",
+    "name": "Dean Hall",
     "campus": "tempe",
     "lat": 33.4207973,
     "lng": -111.9345532,
     "place_id": "ChIJrazSyOAJK4cROb1mkG8lHOk"
   },
   {
-    "code": "MOEUR",
-    "name": "Moeur Hall",
+    "code": "PALOB",
+    "name": "Palo Blanco Hall",
     "campus": "tempe",
-    "lat": 33.4179923,
-    "lng": -111.9361833,
-    "place_id": "ChIJId506vkJK4cR7smPZLDXnzs"
+    "lat": 33.4228821,
+    "lng": -111.9312973,
+    "place_id": "ChIJE-5ufd4IK4cRITiGw7rs5BM"
   },
   {
-    "code": "PAYNE",
-    "name": "Payne Hall",
+    "code": "TAYLO",
+    "name": "Taylor Hall",
     "campus": "tempe",
-    "lat": 33.4190089,
-    "lng": -111.9370295,
-    "place_id": "ChIJWf8wrNsIK4cRU2tK5EZxhpA"
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
   },
   {
-    "code": "FQST",
-    "name": "Farmer Education Building",
-    "campus": "tempe",
-    "lat": 33.4180342,
-    "lng": -111.9373076,
-    "place_id": "ChIJ79aFAtsIK4cRJ7REEGevmB4"
+    "code": "POLYPD2",
+    "name": "Polytechnic Police Department Support 2",
+    "campus": "polytechnic",
+    "lat": 33.3057894,
+    "lng": -111.6816018,
+    "place_id": "ChIJPZG2xzCtK4cRoS-mYV4JVsM"
   },
   {
-    "code": "CHEM",
-    "name": "Chemistry Building",
+    "code": "IRNWD",
+    "name": "Ironwood Bldg.",
     "campus": "tempe",
-    "lat": 33.4212825,
-    "lng": -111.9320347,
-    "place_id": "ChIJXUyZMNwIK4cRBdqut1Pm51M"
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
   },
   {
-    "code": "PHYX",
-    "name": "Physical Sciences F Wing",
+    "code": "POLYPD",
+    "name": "Polytechnic Police Department",
     "campus": "tempe",
-    "lat": 33.4210023,
-    "lng": -111.9313576,
-    "place_id": "ChIJX6_GStwIK4cRYtpWOMYiNyE"
+    "lat": 33.4143327,
+    "lng": -111.9344567,
+    "place_id": "ChIJn-LAgsQIK4cRGQ3dFJVJSYg"
   },
   {
-    "code": "WXLR",
-    "name": "Walton Center for Planetary Health",
+    "code": "E715",
+    "name": "Water Tower Pump Bldg.",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "POLYPD3",
+    "name": "Polytechnic Police Department Support 3",
+    "campus": "polytechnic",
+    "lat": 33.3057894,
+    "lng": -111.6816018,
+    "place_id": "ChIJPZG2xzCtK4cRoS-mYV4JVsM"
+  },
+  {
+    "code": "POLYPD4",
+    "name": "Polytechnic Police Department Support 4",
+    "campus": "tempe",
+    "lat": 33.4143327,
+    "lng": -111.9344567,
+    "place_id": "ChIJn-LAgsQIK4cRGQ3dFJVJSYg"
+  },
+  {
+    "code": "COMUN",
+    "name": "Communications",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FM3",
+    "name": "Facilities Management 3",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FM1",
+    "name": "Facilities Management 1",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "FM4",
+    "name": "Facilities Management 4",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FM9",
+    "name": "Facilities Management 9",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FM10",
+    "name": "Facilities Management 10",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FM11",
+    "name": "Facilities Management 11",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FM17",
+    "name": "Facilities Management 17",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "AGBC",
+    "name": "Agribusiness Center",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "ENGR",
+    "name": "Engineering Studio",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "FM5",
+    "name": "Facilities Management 5",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "FM2",
+    "name": "Facilities Management 2",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "ECET",
+    "name": "Ecet Research",
+    "campus": "polytechnic",
+    "lat": 33.3034795,
+    "lng": -111.6793906,
+    "place_id": "ChIJqQDBXZ2tK4cRRKMTHg05BQY"
+  },
+  {
+    "code": "TECH",
+    "name": "Technology Center",
+    "campus": "tempe",
+    "lat": 33.3055512,
+    "lng": -111.6804993,
+    "place_id": "ChIJc4wg9JytK4cRd_YLCUtrVtM"
+  },
+  {
+    "code": "ARAVA",
+    "name": "Aravaipa Auditorium",
+    "campus": "tempe",
+    "lat": 33.4162651,
+    "lng": -111.9380015,
+    "place_id": "ChIJZeQR0NoIK4cR8QuZMAjEjLI"
+  },
+  {
+    "code": "RECVG",
+    "name": "Polytechnic Central Receiving",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "GRNHS",
+    "name": "Greenhouse",
+    "campus": "tempe",
+    "lat": 33.4181203,
+    "lng": -111.9236473,
+    "place_id": "ChIJX-w4BOYIK4cRr3RAhwmw6QI"
+  },
+  {
+    "code": "ULA",
+    "name": "University Library Archives",
+    "campus": "tempe",
+    "lat": 33.4190312,
+    "lng": -111.9345968,
+    "place_id": "ChIJP9xxf9sIK4cRHvnd6G_lJdY"
+  },
+  {
+    "code": "UNION",
+    "name": "Student Union",
+    "campus": "tempe",
+    "lat": 33.4177504,
+    "lng": -111.9343818,
+    "place_id": "ChIJVa3mX9sIK4cRxyxpWfI_9S4"
+  },
+  {
+    "code": "ISTB3",
+    "name": "Interdisciplinary Science And Technology Building Iii",
+    "campus": "tempe",
+    "lat": 33.4184681,
+    "lng": -111.9315321,
+    "place_id": "ChIJVwhR4NwIK4cRt1LT9wXkMUw"
+  },
+  {
+    "code": "GRNT",
+    "name": "Teaching Greenhouse",
+    "campus": "tempe",
+    "lat": 33.4181203,
+    "lng": -111.9236473,
+    "place_id": "ChIJX-w4BOYIK4cRr3RAhwmw6QI"
+  },
+  {
+    "code": "GRNH",
+    "name": "Headhouse",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "GRNR",
+    "name": "Research Greenhouse",
+    "campus": "tempe",
+    "lat": 33.4199737,
+    "lng": -111.9313448,
+    "place_id": "ChIJG7i9rN0IK4cRneHWQhe0SZE"
+  },
+  {
+    "code": "BEE2",
+    "name": "Bee Lab Annex",
+    "campus": "tempe",
+    "lat": 33.2929248,
+    "lng": -111.6845066,
+    "place_id": "ChIJYRGGGHKtK4cRGBCw98vo0ks"
+  },
+  {
+    "code": "BEE3",
+    "name": "Bee Lab Apiary",
+    "campus": "tempe",
+    "lat": 33.2929248,
+    "lng": -111.6845066,
+    "place_id": "ChIJYRGGGHKtK4cRGBCw98vo0ks"
+  },
+  {
+    "code": "PRLTA",
+    "name": "Peralta Hall",
+    "campus": "tempe",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "PICHO",
+    "name": "Picacho Hall",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "SANTN",
+    "name": "Santan Hall",
+    "campus": "tempe",
+    "lat": 33.3061241,
+    "lng": -111.6780116,
+    "place_id": "ChIJpQRmH4OtK4cRqlo8SJaRuqM"
+  },
+  {
+    "code": "SANCA",
+    "name": "Santa Catalina Hall",
+    "campus": "tempe",
+    "lat": 33.3060618,
+    "lng": -111.6764151,
+    "place_id": "ChIJ79x7H4OtK4cRJc5iCXCJT7I"
+  },
+  {
+    "code": "AAPAV",
+    "name": "Applied Arts Pavilion",
+    "campus": "tempe",
+    "lat": 33.30633,
+    "lng": -111.6760516,
+    "place_id": "ChIJx38L4oKtK4cR8hX0aITnLQ0"
+  },
+  {
+    "code": "CWP",
+    "name": "Chilled Water Plant",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "CNTRY",
+    "name": "Century Hall",
+    "campus": "tempe",
+    "lat": 33.3081797,
+    "lng": -111.6774831,
+    "place_id": "ChIJhaDBUYOtK4cRi3aTxh50e5E"
+  },
+  {
+    "code": "CITRS",
+    "name": "Citrus Dining Pavilion",
+    "campus": "tempe",
+    "lat": 33.3079541,
+    "lng": -111.676144,
+    "place_id": "ChIJOan3a4OtK4cRDPA9BJycR1I"
+  },
+  {
+    "code": "SDFCP",
+    "name": "Sun Devil Fitness Complex",
+    "campus": "tempe",
+    "lat": 33.4152209,
+    "lng": -111.932521,
+    "place_id": "ChIJm0cHEsMIK4cRQmfsvOBArrs"
+  },
+  {
+    "code": "E900N",
+    "name": "North Desert Village",
+    "campus": "polytechnic",
+    "lat": 33.3116028,
+    "lng": -111.6802325,
+    "place_id": "ChIJVVVV5ZqtK4cR-9gcjtYagco"
+  },
+  {
+    "code": "E900S",
+    "name": "South Desert Village",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "E900W",
+    "name": "West Desert Village",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Unim6915-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Unim6927-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6966-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6960-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6954-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6948-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6942-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6936-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6928-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6916-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6910-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6917-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6923-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6929-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6935-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6941-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6953-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6957-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6961-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valm6965-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6340-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6344-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6348-H",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6352-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6359-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6353-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6347-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sage6341-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venb6934-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6412-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6418-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6424-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6430-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6436-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6442-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6448-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6447-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6439-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6427-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosb6419-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venb6939-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6506-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6524-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Essr6511-H",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6457-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6503-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6515-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6527-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6510-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6456-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6453-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6459-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6507-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6514-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rosr6454-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6864-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6865-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Verr6862-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6907-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6560-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Lonr6561-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6931-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6963-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6908-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6924-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6948-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volr6964-H",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7011-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7027-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6538-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6544-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6550-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6551-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6545-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Sagw6539-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7035-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6540-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6546-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6552-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6553-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6547-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Terw6541-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7045-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7061-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7064-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7046-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7028-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vncw7010-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vanc7009-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vanc7021-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vanc7029-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6355-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6351-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6347-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6343-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6342-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6348-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6354-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Tere6362-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6344-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6348-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6352-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6356-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7147-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7159-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6345-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6351-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6357-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athl6363-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6352-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6346-H",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6347-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6353-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravl6359-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7154-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7160-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7202-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6360-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6354-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6348-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6347-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6353-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6359-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amul6365-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7215-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Vall7203-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7218-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7224-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7230-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Venh7236-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6448-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6424-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6425-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6449-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6406-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7265-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7257-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7249-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7241-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7233-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7232-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7240-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7248-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Valv7264-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6342-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6349-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowv6361-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6504-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6516-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6523-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6517-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6511-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Athi6505-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravj6506-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravj6512-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7163-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7157-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravt6549-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravt6555-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Ravt6548-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7141-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7117-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7109-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7110-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7118-G",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7126-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7134-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7142-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7150-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7158-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7164-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7204-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7212-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7220-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7228-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7236-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7244-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7243-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7231-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7219-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Volt7207-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6515-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6509-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6503-F",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Amuk6455-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6456-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6504-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6522-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6534-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6529-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6513-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Rowu6457-H",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E9551",
+    "name": "Wch Storage",
+    "campus": "tempe",
+    "lat": 33.4297148,
+    "lng": -111.9535533,
+    "place_id": "ChIJYcuBQ9MOK4cRKzRMsh1cgIY"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7063-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7064-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7049-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7050-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7035-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7036-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7021-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7022-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss7007-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss6960-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E900S",
+    "name": "Wch-Sdv-Voss6955-K",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L01",
+    "name": "Antenna - Stauffer Hall West",
+    "campus": "tempe",
+    "lat": 33.41985,
+    "lng": -111.9371092,
+    "place_id": "ChIJT46XtdsIK4cRDqKy922lFC4"
+  },
+  {
+    "code": "L03",
+    "name": "Aquatic Complex - Main Area",
+    "campus": "tempe",
+    "lat": 33.4241259,
+    "lng": -111.9341606,
+    "place_id": "ChIJdd550t4IK4cRGOrzQ7V6zrI"
+  },
+  {
+    "code": "L04",
+    "name": "N.E. Fields - Kajikawa Football Practice Fields",
+    "campus": "tempe",
+    "lat": 33.4265337,
+    "lng": -111.9272354,
+    "place_id": "ChIJ0TRQb-AIK4cRH7bYtMV80pY"
+  },
+  {
+    "code": "L05",
+    "name": "N.E. Fields - Band Practice Field",
+    "campus": "tempe",
+    "lat": 33.424456,
+    "lng": -111.918369,
+    "place_id": "ChIJB07u2OMIK4cRaGJ2OWmKIe0"
+  },
+  {
+    "code": "L07",
+    "name": "N.E. Fields - Softball",
+    "campus": "tempe",
+    "lat": 33.4252045,
+    "lng": -111.9236184,
+    "place_id": "ChIJe6aTZeEIK4cRaHQwYkDwef0"
+  },
+  {
+    "code": "L09",
+    "name": "Sun Angel Stadium - Yard",
+    "campus": "tempe",
+    "lat": 33.4265337,
+    "lng": -111.9272354,
+    "place_id": "ChIJ0TRQb-AIK4cRH7bYtMV80pY"
+  },
+  {
+    "code": "L100",
+    "name": "Flagpole",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "WCBGC2",
+    "name": "Boys & Girls Club Playground",
+    "campus": "polytechnic",
+    "lat": 33.362503,
+    "lng": -111.9617919,
+    "place_id": "ChIJh_oW5OUFK4cR1iGdaKsVpOE"
+  },
+  {
+    "code": "CHOLL",
+    "name": "Cholla Ballfield",
+    "campus": "tempe",
+    "lat": 33.588553,
+    "lng": -111.838213,
+    "place_id": "ChIJj6ihCOyfK4cRiKWmF2KAyYs"
+  },
+  {
+    "code": "TRACK",
+    "name": "Track",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L14",
+    "name": "Engineering Gas Canister Stor.",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L16",
+    "name": "Sonora - East Area",
+    "campus": "tempe",
+    "lat": 33.4122295,
+    "lng": -111.9276728,
+    "place_id": "ChIJi1VxG-oIK4cRnhMbGIR_Rf8"
+  },
+  {
+    "code": "L167",
+    "name": "213/215 E. Sixth St.",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L19",
+    "name": "Soccer & Lacrosse Field",
+    "campus": "tempe",
+    "lat": 33.4245685,
+    "lng": -111.9223744,
+    "place_id": "ChIJYcxm_eMIK4cR0re3L4FJlXg"
+  },
+  {
+    "code": "L20",
+    "name": "Desert Arboretum Park",
+    "campus": "tempe",
+    "lat": 33.425937,
+    "lng": -111.9308486,
+    "place_id": "ChIJa3EutN8IK4cRiT-cZb4Jhto"
+  },
+  {
+    "code": "L22",
+    "name": "Grounds Fenced Yard 'Boneyard'",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L28",
+    "name": "Us Weather Station",
+    "campus": "tempe",
+    "lat": 33.4461474,
+    "lng": -111.9515712,
+    "place_id": "ChIJ-dq3NLUOK4cRK8AFcIXCu0w"
+  },
+  {
+    "code": "COMPK",
+    "name": "Asu/Cop Community Park",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L31",
+    "name": "T-Mobile Monopalm At Karsten Gc",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "SDFCTF",
+    "name": "Sdfc Intramural Fields",
+    "campus": "tempe",
+    "lat": 33.4165509,
+    "lng": -111.9304922,
+    "place_id": "ChIJ6eqZz8IIK4cRtEBf6nEDjj0"
+  },
+  {
+    "code": "L517",
+    "name": "Tontozona Football Field 1",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "TTZN",
+    "name": "Tontozona Football Field 2",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "L539E",
+    "name": "Tlab Field East",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L539W",
+    "name": "Tlab Field West",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L801",
+    "name": "Sonoran Arroyo Mall",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "L802",
+    "name": "Sun Devil Mall",
+    "campus": "tempe",
+    "lat": 33.4234107,
+    "lng": -111.9352286,
+    "place_id": "ChIJDT3Y19gIK4cRRWX59F14MUU"
+  },
+  {
+    "code": "L814",
+    "name": "Entry Sign",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "L815",
+    "name": "Roundabout",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "L820",
+    "name": "Greenhouse Field",
+    "campus": "tempe",
+    "lat": 33.4181203,
+    "lng": -111.9236473,
+    "place_id": "ChIJX-w4BOYIK4cRr3RAhwmw6QI"
+  },
+  {
+    "code": "L832",
+    "name": "Date Grove",
+    "campus": "polytechnic",
+    "lat": 33.3020924,
+    "lng": -111.6795421,
+    "place_id": "ChIJtZzwFe2tK4cRL036ad8LkqU"
+  },
+  {
+    "code": "L87A",
+    "name": "Phoenix Municipal Ballfield",
+    "campus": "downtown",
+    "lat": 33.44903499999999,
+    "lng": -111.9551528,
+    "place_id": "ChIJTy7PkbQOK4cRCz472Lnz-2k"
+  },
+  {
+    "code": "L87B",
+    "name": "Phoenix Municipal East Practice Ballfield",
+    "campus": "downtown",
+    "lat": 33.44903499999999,
+    "lng": -111.9551528,
+    "place_id": "ChIJTy7PkbQOK4cRCz472Lnz-2k"
+  },
+  {
+    "code": "PS1",
+    "name": "Apache Blvd. Parking Structure (Apache & College)",
+    "campus": "tempe",
+    "lat": 33.4155516,
+    "lng": -111.9340264,
+    "place_id": "ChIJVYCrXsMIK4cREDyrr6-eCYY"
+  },
+  {
+    "code": "PS2",
+    "name": "Tyler Street Parking Structure (Mcallister & Tyler)",
+    "campus": "tempe",
+    "lat": 33.4207391,
+    "lng": -111.9282154,
+    "place_id": "ChIJeTWufecIK4cR0-Hbxe91amY"
+  },
+  {
+    "code": "PS3",
+    "name": "Myrtle Avenue Parking Structure",
+    "campus": "tempe",
+    "lat": 33.4241527,
+    "lng": -111.9331805,
+    "place_id": "ChIJYx-_3N4IK4cRSH5howqg4Ic"
+  },
+  {
+    "code": "PS4",
+    "name": "Rural Road Parking Structure (Rural Road)",
+    "campus": "tempe",
+    "lat": 33.4241527,
+    "lng": -111.9331805,
+    "place_id": "ChIJYx-_3N4IK4cRSH5howqg4Ic"
+  },
+  {
+    "code": "PS5",
+    "name": "Stadium Parking Structure (Veterans Way)",
+    "campus": "tempe",
+    "lat": 33.4241527,
+    "lng": -111.9331805,
+    "place_id": "ChIJYx-_3N4IK4cRSH5howqg4Ic"
+  },
+  {
+    "code": "PS6",
+    "name": "University Towers Parking Structure (Towers)",
+    "campus": "tempe",
+    "lat": 33.4252867,
+    "lng": -111.9358222,
+    "place_id": "ChIJTT-08tgIK4cRjyL1zMBI7Uk"
+  },
+  {
+    "code": "PS7",
+    "name": "Packard Drive Parking Structure",
+    "campus": "tempe",
+    "lat": 33.4249413,
+    "lng": -111.928089,
+    "place_id": "ChIJ4_QMZLIJK4cR7HTsCq3Gx9Q"
+  },
+  {
+    "code": "P31",
+    "name": "426 N. 1St Street",
+    "campus": "tempe",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "SSW",
+    "name": "340 N Commerce Park Loop, Ste. 250, Tucson 85745",
+    "campus": "tempe",
+    "lat": 32.2257509,
+    "lng": -110.9836901,
+    "place_id": "ChIJR1V9fCZx1oYRyoRK3jk0K9o"
+  },
+  {
+    "code": "BYENG",
+    "name": "Bank Of America At The Brickyard",
+    "campus": "tempe",
+    "lat": 33.4237198,
+    "lng": -111.9396648,
+    "place_id": "ChIJ35qAK9gIK4cRhMbwGfAmbx8"
+  },
+  {
+    "code": "BYAC",
+    "name": "Artisan Court At The Brickyard",
+    "campus": "tempe",
+    "lat": 33.4235064,
+    "lng": -111.9389478,
+    "place_id": "ChIJmZ6aytkIK4cROoDOd7xpPcU"
+  },
+  {
+    "code": "BYOH",
+    "name": "Orchidhouse At The Brickyard",
+    "campus": "tempe",
+    "lat": 33.4238448,
+    "lng": -111.9390681,
+    "place_id": "ChIJb8fSN9gIK4cRI0xWufehK6c"
+  },
+  {
+    "code": "FULTN",
+    "name": "Fulton Center",
+    "campus": "tempe",
+    "lat": 33.4222222,
+    "lng": -111.9344444,
+    "place_id": "ChIJD1QzO9sIK4cR4W0_DpFHz_s"
+  },
+  {
+    "code": "CAM",
+    "name": "College Avenue Market Place",
+    "campus": "tempe",
+    "lat": 33.4234107,
+    "lng": -111.9352286,
+    "place_id": "ChIJDT3Y19gIK4cRRWX59F14MUU"
+  },
+  {
+    "code": "AEEB",
+    "name": "A. E. England Bldg.",
+    "campus": "tempe",
+    "lat": 33.453218,
+    "lng": -112.0742314,
+    "place_id": "ChIJVVVF3iISK4cRlEBBs9gLomY"
+  },
+  {
+    "code": "KAETT",
+    "name": "Kaet Transmitter @ South Mt.",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "PAR22",
+    "name": "Parcel 22 @ Williams Gateway Airport (Flight Program)",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "R39",
+    "name": "64 E. Broadway Road. - Wells Fargo",
+    "campus": "tempe",
+    "lat": 33.4082013,
+    "lng": -111.9393181,
+    "place_id": "ChIJMTZ-MsYIK4cRl3E9bHO_w34"
+  },
+  {
+    "code": "APMA",
+    "name": "Asu Performing & Media Arts",
+    "campus": "tempe",
+    "lat": 33.4234935,
+    "lng": -111.9242529,
+    "place_id": "ChIJ61pwy-YIK4cRaPe0k02E2H8"
+  },
+  {
+    "code": "SICB1",
+    "name": "Asu Scottsdale Innovation Center Building One",
+    "campus": "scottsdale",
+    "lat": 33.464197,
+    "lng": -111.9231421,
+    "place_id": "ChIJ38hDjWYJK4cRLNoi5oZZAPo"
+  },
+  {
+    "code": "R51",
+    "name": "Asu/Cop Community Park Restroom",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "R61",
+    "name": "Holbrook Warehouse",
+    "campus": "tempe",
+    "lat": 33.4144145,
+    "lng": -111.9292737,
+    "place_id": "ChIJ_04hf4kJK4cRJa-wn56xCBk"
+  },
+  {
+    "code": "AZCNTR",
+    "name": "Garden Office Space Lease - Arizona Center",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "ACIC",
+    "name": "Asu Chandler Innovation Center",
+    "campus": "tempe",
+    "lat": 33.30035,
+    "lng": -111.838079,
+    "place_id": "ChIJC1v00yirK4cR03vCy6dg9rM"
+  },
+  {
+    "code": "SICB3",
+    "name": "Asu Scottsdale Innovation Center Building Three",
+    "campus": "scottsdale",
+    "lat": 33.464197,
+    "lng": -111.9231421,
+    "place_id": "ChIJ38hDjWYJK4cRLNoi5oZZAPo"
+  },
+  {
+    "code": "R87",
+    "name": "Phoenix Municipal Stadium",
+    "campus": "downtown",
+    "lat": 33.44903499999999,
+    "lng": -111.9551528,
+    "place_id": "ChIJTy7PkbQOK4cRCz472Lnz-2k"
+  },
+  {
+    "code": "R87A",
+    "name": "Home Locker/Concessions",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "R87B",
+    "name": "South Restrooms",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "R87C",
+    "name": "Stadium Management",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "R87D",
+    "name": "West Restrooms",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "R87E",
+    "name": "Box Office/Team Shop",
+    "campus": "downtown",
+    "lat": 33.4533385,
+    "lng": -112.0715141,
+    "place_id": "ChIJg4iNdUgQK4cRpziU-2qoF50"
+  },
+  {
+    "code": "R87F",
+    "name": "Visitor Locker/Concessions",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "R87G",
+    "name": "Stadium Support",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "R87M",
+    "name": "Official'S Locker/Maintenance",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "BOWC",
+    "name": "Barrett & O'Connor Center",
+    "campus": "tempe",
+    "lat": 33.4156065,
+    "lng": -111.9284959,
+    "place_id": "ChIJ_dcvHOgIK4cRFN48Ys7eSMk"
+  },
+  {
+    "code": "CLBC",
+    "name": "Collaboratory On Central",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "PHXPACA",
+    "name": "Asu Ppa - Academics",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "PHXPADM",
+    "name": "Asu Ppa - Administration",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "PHXPAUD",
+    "name": "Asu Ppa - Auditorium",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "PHXPMUS",
+    "name": "Asu Ppa - Music",
+    "campus": "tempe",
+    "lat": 33.417774,
+    "lng": -111.9386103,
+    "place_id": "ChIJzbNn8toIK4cRWxL_qeeZNmU"
+  },
+  {
+    "code": "PHXPGYM",
+    "name": "Asu Ppa - Gymnasium",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "PHXPDIN",
+    "name": "Asu Ppa - Dining",
+    "campus": "tempe",
+    "lat": 33.4163285,
+    "lng": -111.9285783,
+    "place_id": "ChIJZ8mLAv4JK4cRBrFLEigThQA"
+  },
+  {
+    "code": "RP01",
+    "name": "Fulton Center Parking Structure",
+    "campus": "tempe",
+    "lat": 33.4229801,
+    "lng": -111.9342802,
+    "place_id": "ChIJr3M3td4IK4cRxkfDR41857I"
+  },
+  {
+    "code": "RP02",
+    "name": "Brickyard Parking Garage",
+    "campus": "tempe",
+    "lat": 33.4233236,
+    "lng": -111.9381493,
+    "place_id": "ChIJuxSXcyAJK4cRUqjW4AiD0m0"
+  },
+  {
+    "code": "VDSPS",
+    "name": "Vista Del Sol Parking Structure",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "THERM",
+    "name": "Thermal Energy Storage",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "GDSMH",
+    "name": "Good Samaritan Hospital",
+    "campus": "downtown",
+    "lat": 33.4645644,
+    "lng": -112.0573664,
+    "place_id": "ChIJoV6LoQ0SK4cRCSIr_H4TRlA"
+  },
+  {
+    "code": "ABORP",
+    "name": "Board Of Regents (Phoenix)",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "X07",
+    "name": "Mt. Francis - Prescott",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "MINGS",
+    "name": "Mingus Mt. - Cottonwood",
+    "campus": "tempe",
+    "lat": 34.6978787,
+    "lng": -112.1255437,
+    "place_id": "ChIJUW-t3xIaLYcRlcgaPgQAAVc"
+  },
+  {
+    "code": "TCK",
+    "name": "Tower Mt. - Crown King",
+    "campus": "tempe",
+    "lat": 33.4252867,
+    "lng": -111.9358222,
+    "place_id": "ChIJTT-08tgIK4cRjyL1zMBI7Uk"
+  },
+  {
+    "code": "GL813",
+    "name": "Gazebo At L813",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "CSG",
+    "name": "Carol Springs - Globe",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "TMSS",
+    "name": "Tontozona - Metal Storage Shed",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X21",
+    "name": "2055 Centennial Dr. - Research Park",
+    "campus": "tempe",
+    "lat": 33.336607,
+    "lng": -111.897189,
+    "place_id": "ChIJqQ1eDRsHK4cRALfLeid_PoY"
+  },
+  {
+    "code": "BTPS",
+    "name": "Batting Tunnels @ Packard Stadium",
+    "campus": "tempe",
+    "lat": 33.3672815,
+    "lng": -111.9360813,
+    "place_id": "ChIJ-4ZufhEGK4cRS7ShuHD-XRo"
+  },
+  {
+    "code": "X28",
+    "name": "Src Pump House",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "VDSJAC",
+    "name": "Vista Del Sol Jacuzzi",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "VDSGAZ",
+    "name": "Vista Del Sol Pavilion",
+    "campus": "tempe",
+    "lat": 33.4185542,
+    "lng": -111.9337034,
+    "place_id": "ChIJXzC1mtwIK4cR4_yfQ9tMZWQ"
+  },
+  {
+    "code": "VDSTC",
+    "name": "Vista Del Sol Trash Compaction",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "TALON",
+    "name": "Talon Residence Hall",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "EAGLE",
+    "name": "Eagle Residence Hall",
+    "campus": "polytechnic",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "VDSDM",
+    "name": "Vista Del Sol Dome",
+    "campus": "tempe",
+    "lat": 33.4131469,
+    "lng": -111.9291346,
+    "place_id": "ChIJzbdwFMIIK4cRd_gk9t96pRM"
+  },
+  {
+    "code": "PHANT",
+    "name": "Phantom Residence Hall",
+    "campus": "polytechnic",
+    "lat": 33.3098572,
+    "lng": -111.6769957,
+    "place_id": "ChIJQR1iuYStK4cRgXXWqdAYLLo"
+  },
+  {
+    "code": "FALCO",
+    "name": "Falcon Residence Hall",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "MUSTA",
+    "name": "Mustang Residence Hall",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "X39",
+    "name": "Grounds Department Agricultural Chemical Storage",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X40",
+    "name": "West Sub-Station (Meter At Cp)",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X410",
+    "name": "Bluford Hall",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "X46",
+    "name": "Gray Hawk Nature Center",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "FC",
+    "name": "Physical Education Center",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "SCIL",
+    "name": "Thomas Hall",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "X48",
+    "name": "West Solar Parking 1, 2, & 3",
+    "campus": "downtown",
+    "lat": 33.4540575,
+    "lng": -112.0747112,
+    "place_id": "ChIJ0QFzySISK4cRSXJuvn0sxcg"
+  },
+  {
+    "code": "FST",
+    "name": "Baylor Hall South",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "GS",
+    "name": "Baylor Hall North",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "X49",
+    "name": "West Solar Ground Mount",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "X51",
+    "name": "Underground Thermal Storage",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X52",
+    "name": "Central Plant Storage",
+    "campus": "tempe",
+    "lat": 33.4405652,
+    "lng": -111.9129072,
+    "place_id": "ChIJh8TUqFgJK4cRHh4o1z1zOS4"
+  },
+  {
+    "code": "X56",
+    "name": "City Of Phoenix Enzyme Storage Tank At Csc",
+    "campus": "tempe",
+    "lat": 33.336607,
+    "lng": -111.897189,
+    "place_id": "ChIJqQ1eDRsHK4cRALfLeid_PoY"
+  },
+  {
+    "code": "X61",
+    "name": "City Of Phoenix Communications Site",
+    "campus": "tempe",
+    "lat": 33.419854,
+    "lng": -111.9371125,
+    "place_id": "ChIJ_RhztdsIK4cRYB5Zx-LwGIs"
+  },
+  {
+    "code": "X62",
+    "name": "Skyspace Ramada",
+    "campus": "tempe",
+    "lat": 33.4193662,
+    "lng": -111.9272202,
+    "place_id": "ChIJDRURlOcIK4cRv9_Fvf55B94"
+  },
+  {
+    "code": "X63",
+    "name": "Parking Lot 59 North Solar",
+    "campus": "tempe",
+    "lat": 33.4277133,
+    "lng": -111.9298253,
+    "place_id": "ChIJbW3GnN8IK4cRQ-dWbLAw1hw"
+  },
+  {
+    "code": "X632A",
+    "name": "Solar Fuel Cell",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X64",
+    "name": "Polytechnic Solar Ground Mount 1",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "X65",
+    "name": "Polytechnic Solar Ground Mount 2",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "GE664",
+    "name": "Gazebo At E633",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "RES1C",
+    "name": "Res1 Chiller",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "GE711",
+    "name": "Gazebo At E711",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X72",
+    "name": "Gammage Pkwy Solar",
+    "campus": "tempe",
+    "lat": 33.4162651,
+    "lng": -111.9380015,
+    "place_id": "ChIJZeQR0NoIK4cR8QuZMAjEjLI"
+  },
+  {
+    "code": "X724",
+    "name": "Water Tower",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "X73",
+    "name": "Orange - Cady Malls Solar",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X74",
+    "name": "Parking Lot 11 Solar",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X75",
+    "name": "Parking Lot 19 Solar",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X76",
+    "name": "Parking Lot 41 Solar",
+    "campus": "tempe",
+    "lat": 33.4179181,
+    "lng": -111.9300627,
+    "place_id": "ChIJY3YsON0IK4cRdowlAwyun1U"
+  },
+  {
+    "code": "X77",
+    "name": "Parking Lot 58 Solar",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X80",
+    "name": "Parking Lot 45 Solar",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "SVE",
+    "name": "Soil Vapor Extraction Facility",
+    "campus": "tempe",
+    "lat": 33.4235152,
+    "lng": -111.9355738,
+    "place_id": "ChIJJ2fGPNkIK4cR-aJeodwkdCc"
+  },
+  {
+    "code": "X80",
+    "name": "Parking Lot 55 West Solar",
+    "campus": "tempe",
+    "lat": 33.4236846,
+    "lng": -111.93532,
+    "place_id": "ChIJN8OZw94IK4cRjwp571IOO7k"
+  },
+  {
+    "code": "POST",
+    "name": "Post Office",
+    "campus": "downtown",
+    "lat": 33.4544697,
+    "lng": -112.0746113,
+    "place_id": "ChIJ6zGdKiMSK4cRreGZ4z0KSbE"
+  },
+  {
+    "code": "304X",
+    "name": "Downtown Phoenix Campus Infrastructure",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "CRONK",
+    "name": "Cronkite/Arizona Pbs",
+    "campus": "downtown",
+    "lat": 33.4536581,
+    "lng": -112.0736419,
+    "place_id": "ChIJgSMcxyISK4cRd2KXvtHLdSE"
+  },
+  {
+    "code": "E712X",
+    "name": "Polytechnic Campus Infrastructure",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "MTW",
+    "name": "Macrotechnology Works",
+    "campus": "tempe",
+    "lat": 33.3475339,
+    "lng": -111.8982737,
+    "place_id": "ChIJRZsyTQcHK4cRjYC3x8PpIm8"
+  },
+  {
+    "code": "CUB",
+    "name": "Central Utilities Bldg For Mtw",
+    "campus": "tempe",
+    "lat": 33.4207797,
+    "lng": -111.9304963,
+    "place_id": "ChIJ_YCVgCwJK4cRQiO643_yUR0"
+  },
+  {
+    "code": "X85",
+    "name": "Micro-Grid Test Bed Modular",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "ZWO",
+    "name": "Zero Waste Office",
+    "campus": "tempe",
+    "lat": 33.4235256,
+    "lng": -111.9172381,
+    "place_id": "ChIJJ3qMH-UIK4cR_xpIrKbhbsM"
+  },
+  {
+    "code": "CBBGL",
+    "name": "Cbbg Laboratory",
+    "campus": "tempe",
+    "lat": 33.4233407,
+    "lng": -111.935413,
+    "place_id": "ChIJ819WYdUJK4cR3wTBii1B9_4"
+  },
+  {
+    "code": "GLVCC",
+    "name": "Glv Community Center",
+    "campus": "tempe",
+    "lat": 33.4195106,
+    "lng": -111.9260408,
+    "place_id": "ChIJE3FM1-cIK4cRMrwzfGJRyvA"
+  },
+  {
+    "code": "GLVA",
+    "name": "Greek Leadership Village - Bldg A",
+    "campus": "tempe",
+    "lat": 33.4195106,
+    "lng": -111.9260408,
+    "place_id": "ChIJE3FM1-cIK4cRMrwzfGJRyvA"
+  },
+  {
+    "code": "GLVB",
+    "name": "Greek Leadership Village - Bldg B",
+    "campus": "tempe",
+    "lat": 33.4195106,
+    "lng": -111.9260408,
+    "place_id": "ChIJE3FM1-cIK4cRMrwzfGJRyvA"
+  },
+  {
+    "code": "GLVC",
+    "name": "Greek Leadership Village - Bldg C",
+    "campus": "tempe",
+    "lat": 33.4195106,
+    "lng": -111.9260408,
+    "place_id": "ChIJE3FM1-cIK4cRMrwzfGJRyvA"
+  },
+  {
+    "code": "GLVD",
+    "name": "Greek Leadership Village - Bldg D",
+    "campus": "tempe",
+    "lat": 33.4195106,
+    "lng": -111.9260408,
+    "place_id": "ChIJE3FM1-cIK4cRMrwzfGJRyvA"
+  },
+  {
+    "code": "PPAHS",
+    "name": "Asu Prep Poly Stem Hs",
+    "campus": "tempe",
+    "lat": 33.3052892,
+    "lng": -111.6743588,
+    "place_id": "ChIJFx9haYKtK4cRZJiSiv3nH9k"
+  },
+  {
+    "code": "INTDSA",
+    "name": "Interdisciplinary A",
+    "campus": "tempe",
+    "lat": 33.4175905,
+    "lng": -111.9354917,
+    "place_id": "ChIJvfwYatsIK4cRJYGTKPIllM4"
+  },
+  {
+    "code": "916",
+    "name": "South Fields' Restrooms",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "HYSA",
+    "name": "Herberger Young Scholars Academy",
+    "campus": "tempe",
+    "lat": 33.6087844,
+    "lng": -112.1626365,
+    "place_id": "ChIJgzxaKVtpK4cRd6NKc__g2QI"
+  },
+  {
+    "code": "CASAA",
+    "name": "Las Casas - A Wing (Se)",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "X80",
+    "name": "Parking Lot 55 East Solar",
+    "campus": "tempe",
+    "lat": 33.4241527,
+    "lng": -111.9331805,
+    "place_id": "ChIJYx-_3N4IK4cRSH5howqg4Ic"
+  },
+  {
+    "code": "X816A",
+    "name": "Interdisciplinary Science & Technology Building Iii Support",
+    "campus": "polytechnic",
+    "lat": 33.4210215,
+    "lng": -111.9293248,
+    "place_id": "ChIJNbCBkd0IK4cRTmdS9AamlYk"
+  },
+  {
+    "code": "STADTN",
+    "name": "Stadium Ticket Trailer-N",
+    "campus": "tempe",
+    "lat": 33.4241527,
+    "lng": -111.9331805,
+    "place_id": "ChIJYx-_3N4IK4cRSH5howqg4Ic"
+  },
+  {
+    "code": "HALHH",
+    "name": "Havasu - Lake Havasu Hall (2- Story)",
+    "campus": "tempe",
+    "lat": 34.4725299,
+    "lng": -114.3218703,
+    "place_id": "ChIJw1U7BYjy0YARM8zaGIQ685I"
+  },
+  {
+    "code": "GSS",
+    "name": "Grant Street Studios",
+    "campus": "tempe",
+    "lat": 33.4186906,
+    "lng": -111.9390401,
+    "place_id": "ChIJF50zRdoIK4cRWMY9O8bw-lc"
+  },
+  {
+    "code": "TGC",
+    "name": "The Bird",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "HFC",
+    "name": "Health Futures Center",
+    "campus": "tempe",
+    "lat": 33.6571006,
+    "lng": -111.9493408,
+    "place_id": "ChIJiwsmp7V2K4cR8Vkt94SX5wA"
+  },
+  {
+    "code": "PASPI",
+    "name": "Asu Preparatory Academy South Phoenix - Primary/Intermediate",
+    "campus": "downtown",
+    "lat": 33.3952838,
+    "lng": -112.0738122,
+    "place_id": "ChIJeT4CcdURK4cRLKXuBmUX7as"
+  },
+  {
+    "code": "PASPH",
+    "name": "Asu Preparatory Academy South Phoenix - High School",
+    "campus": "tempe",
+    "lat": 33.4051672,
+    "lng": -112.0556983,
+    "place_id": "ChIJOW2R1asRK4cR3rAYVWUMoN8"
+  },
+  {
+    "code": "CCB",
+    "name": "Asu California Center Broadway",
+    "campus": "tempe",
+    "lat": 34.0391751,
+    "lng": -118.2597653,
+    "place_id": "ChIJVVVVVdCkwoARpEYYubO-HVY"
+  },
+  {
+    "code": "R74",
+    "name": "Alliance",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "579",
+    "name": "624 House",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "579A",
+    "name": "624 Garage",
+    "campus": "downtown",
+    "lat": 33.4236846,
+    "lng": -111.93532,
+    "place_id": "ChIJN8OZw94IK4cRjwp571IOO7k"
+  },
+  {
+    "code": "ISTB8",
+    "name": "Interdisciplinary Science And Technology Building 8",
+    "campus": "tempe",
+    "lat": 33.4184681,
+    "lng": -111.9315321,
+    "place_id": "ChIJVwhR4NwIK4cRt1LT9wXkMUw"
+  },
+  {
+    "code": "BOWCNX",
+    "name": "1776 Eye Street Nw",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "LNTAHL",
+    "name": "Lantana Hall",
+    "campus": "tempe",
+    "lat": 33.308936,
+    "lng": -111.6770673,
+    "place_id": "ChIJw_oAM62tK4cRHcATbOwB444"
+  },
+  {
+    "code": "MIX",
+    "name": "Media And Immersive Experience Center",
+    "campus": "tempe",
+    "lat": 33.4163264,
+    "lng": -111.8300935,
+    "place_id": "ChIJw1saCI-nK4cR-ZhFifIf_aY"
+  },
+  {
+    "code": "MRBLA",
+    "name": "Asu At Mirabella",
+    "campus": "tempe",
+    "lat": 33.421457,
+    "lng": -111.9385259,
+    "place_id": "ChIJUbjtCtMOK4cRoS3r9tGVK6o"
+  },
+  {
+    "code": "TGHB",
+    "name": "Thunderbird Global Headquarters Building",
+    "campus": "tempe",
+    "lat": 33.4525459,
+    "lng": -112.0718272,
+    "place_id": "ChIJS5Tm5A5pK4cRllD3vLqRJtM"
+  },
+  {
+    "code": "PS8",
+    "name": "Novus Parking Structure",
+    "campus": "tempe",
+    "lat": 33.4233787,
+    "lng": -111.9291705,
+    "place_id": "ChIJV5_6TLkJK4cRG5TJJ_ORqTw"
+  },
+  {
+    "code": "CWP2",
+    "name": "Chilled Water Plant 2",
+    "campus": "polytechnic",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "SICB5",
+    "name": "Asu Scottsdale Innovation Center Building Five",
+    "campus": "scottsdale",
+    "lat": 33.464197,
+    "lng": -111.9231421,
+    "place_id": "ChIJ38hDjWYJK4cRLNoi5oZZAPo"
+  },
+  {
+    "code": "L34",
+    "name": "Field 1",
+    "campus": "tempe",
+    "lat": 33.4260654,
+    "lng": -111.9181849,
+    "place_id": "ChIJpWAr7GoJK4cRPHQYHCQ7v7I"
+  },
+  {
+    "code": "L35",
+    "name": "Field 2",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L36",
+    "name": "Field 3",
+    "campus": "tempe",
+    "lat": 33.4252045,
+    "lng": -111.9236184,
+    "place_id": "ChIJe6aTZeEIK4cRaHQwYkDwef0"
+  },
+  {
+    "code": "L37",
+    "name": "Field 4",
+    "campus": "tempe",
+    "lat": 33.3662916,
+    "lng": -111.9475883,
+    "place_id": "ChIJhXB1lTcHK4cRIS-twRfGg5s"
+  },
+  {
+    "code": "183",
+    "name": "Recreation And Sports Fields Restroom",
+    "campus": "tempe",
+    "lat": 33.4260654,
+    "lng": -111.9181849,
+    "place_id": "ChIJpWAr7GoJK4cRPHQYHCQ7v7I"
+  },
+  {
+    "code": "X88",
+    "name": "Pump & Electrical Station",
+    "campus": "tempe",
+    "lat": 33.4185949,
+    "lng": -111.9322069,
+    "place_id": "ChIJbwX88twIK4cR6hisydUaQbw"
+  },
+  {
+    "code": "FOF",
+    "name": "Fusion On First",
+    "campus": "tempe",
+    "lat": 33.4542045,
+    "lng": -112.0753101,
+    "place_id": "ChIJO7Kkd5wTK4cRrZVWGo0GY_c"
+  },
+  {
+    "code": "PWOP",
+    "name": "Palm Walk Overpass",
+    "campus": "tempe",
+    "lat": 33.4183442,
+    "lng": -111.9327049,
+    "place_id": "ChIJnQoTdXsJK4cRDeBnpgTzrxo"
+  },
+  {
+    "code": "BRO",
+    "name": "Bro Softball Hitting Facility",
+    "campus": "tempe",
+    "lat": 33.4252045,
+    "lng": -111.9236184,
+    "place_id": "ChIJe6aTZeEIK4cRaHQwYkDwef0"
+  },
+  {
+    "code": "X89",
+    "name": "Mt. Elden",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X90",
+    "name": "Porter Mountain",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X91",
+    "name": "Telegraph Pass",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X92",
+    "name": "Madera Peak",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "R98",
+    "name": "Nau Communications Bldg. 16",
+    "campus": "tempe",
+    "lat": 35.1916586,
+    "lng": -111.6558345,
+    "place_id": "ChIJtwpAhGePLYcRyi3dEOEn9O0"
+  },
+  {
+    "code": "NVS1",
+    "name": "777 Tower At Novus",
+    "campus": "tempe",
+    "lat": 33.4229195,
+    "lng": -111.9273702,
+    "place_id": "ChIJg8FVQA0JK4cRs08-k2Zx2zY"
+  },
+  {
+    "code": "184",
+    "name": "Recreation Storage Building",
+    "campus": "tempe",
+    "lat": 33.42328,
+    "lng": -111.903157,
+    "place_id": "ChIJMYBq61cIK4cRSyQ5h30rjPo"
+  },
+  {
+    "code": "L53",
+    "name": "Tree Research Platform",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "WCPH",
+    "name": "Walton Center For Planetary Health",
     "campus": "tempe",
     "lat": 33.4218577,
     "lng": -111.9269701,
     "place_id": "ChIJ0wmxbAAJK4cRMkJ6l7SDLSI"
   },
   {
-    "code": "CIDSE",
-    "name": "Computing & Informatics Design",
-    "campus": "tempe",
-    "lat": 33.42361160000001,
-    "lng": -111.9397511,
-    "place_id": "ChIJU0SqLdgIK4cRxEB-omIbhvg"
+    "code": "SICB2",
+    "name": "Asu Scottsdale Innovation Center Building Two",
+    "campus": "scottsdale",
+    "lat": 33.464197,
+    "lng": -111.9231421,
+    "place_id": "ChIJ38hDjWYJK4cRLNoi5oZZAPo"
   },
   {
-    "code": "SEMTE",
-    "name": "SEMTE Building",
+    "code": "X94",
+    "name": "Grounds Storage",
     "campus": "tempe",
-    "lat": 33.4200883,
-    "lng": -111.9321079,
-    "place_id": "ChIJj-dvUNwIK4cRtRWOyfCzdiQ"
+    "lat": 33.4297148,
+    "lng": -111.9535533,
+    "place_id": "ChIJYcuBQ9MOK4cRKzRMsh1cgIY"
+  },
+  {
+    "code": "X95",
+    "name": "Carbon Tree",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "MSHAL",
+    "name": "Hav- Mesquite Outdoor Room",
+    "campus": "tempe",
+    "lat": 33.4153456,
+    "lng": -111.9294321,
+    "place_id": "ChIJQZ3yksIIK4cRzaWTZ_8etZY"
+  },
+  {
+    "code": "INTDSA",
+    "name": "Interdisciplinary A Outdoor Room",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "SCOB",
+    "name": "Schwada Outdoor Room",
+    "campus": "tempe",
+    "lat": 33.4186266,
+    "lng": -111.9305783,
+    "place_id": "ChIJvbSDEN0IK4cR8a9Yt9_TTsE"
+  },
+  {
+    "code": "PSC",
+    "name": "Physical Sciences C Outdoor Room",
+    "campus": "tempe",
+    "lat": 33.4210023,
+    "lng": -111.9313576,
+    "place_id": "ChIJX6_GStwIK4cRYtpWOMYiNyE"
+  },
+  {
+    "code": "R101",
+    "name": "922 Place",
+    "campus": "tempe",
+    "lat": 33.4149963,
+    "lng": -111.9250324,
+    "place_id": "ChIJc2f1B-kIK4cRNyiOFvsaSDA"
+  },
+  {
+    "code": "MA",
+    "name": "Mullett Arena",
+    "campus": "tempe",
+    "lat": 33.4266174,
+    "lng": -111.9286578,
+    "place_id": "ChIJSaHJhmAJK4cRqtS0E2DA9E0"
+  },
+  {
+    "code": "R103",
+    "name": "Asu At St. Luke�S Medical Pavilion",
+    "campus": "tempe",
+    "lat": 33.4185542,
+    "lng": -111.9337034,
+    "place_id": "ChIJXzC1mtwIK4cR4_yfQ9tMZWQ"
+  },
+  {
+    "code": "X96",
+    "name": "University Drive Pedestrian Bridge",
+    "campus": "tempe",
+    "lat": 33.4219948,
+    "lng": -111.932736,
+    "place_id": "ChIJPXtoINwIK4cRCQ4smmEE3Ak"
+  },
+  {
+    "code": "FAB",
+    "name": "Fab Outdoor Room",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "186A",
+    "name": "Brix Apartments A",
+    "campus": "tempe",
+    "lat": 33.411515,
+    "lng": -111.9234553,
+    "place_id": "ChIJCYXBk-sIK4cRtZHkegUnaZ4"
+  },
+  {
+    "code": "186B",
+    "name": "Brix Apartments B",
+    "campus": "tempe",
+    "lat": 33.411515,
+    "lng": -111.9234553,
+    "place_id": "ChIJCYXBk-sIK4cRtZHkegUnaZ4"
+  },
+  {
+    "code": "580",
+    "name": "88-180 Kai Ave.; Captain Cook; Hi; 96704",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X97",
+    "name": "(Clcc Outdoor Research Pad)",
+    "campus": "tempe",
+    "lat": 33.336607,
+    "lng": -111.897189,
+    "place_id": "ChIJqQ1eDRsHK4cRALfLeid_PoY"
+  },
+  {
+    "code": "SDBVF",
+    "name": "Sun Devil Beach Volleyball Facility",
+    "campus": "tempe",
+    "lat": 33.4254824,
+    "lng": -111.9224145,
+    "place_id": "ChIJZaNErP4JK4cRPK4-VHnefeM"
   },
   {
     "code": "WLSN",
@@ -365,126 +5941,662 @@
     "campus": "tempe",
     "lat": 33.4185263,
     "lng": -111.9359934,
-    "place_id": "ChIJj-dvUNwIK4cRtRWOyfCzdiQ"
+    "place_id": "ChIJqzHqC9sIK4cR-x72iycUMvg"
   },
   {
-    "code": "CLCC",
-    "name": "Classroom Central West",
-    "campus": "west",
-    "lat": 33.6079039,
-    "lng": -112.1609696,
-    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
-  },
-  {
-    "code": "CAVC_W",
-    "name": "Community Collaboration Area",
-    "campus": "west",
-    "lat": 33.6079039,
-    "lng": -112.1609696,
-    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
-  },
-  {
-    "code": "CCTC",
-    "name": "Classroom & Technology Center",
-    "campus": "west",
-    "lat": 33.6079039,
-    "lng": -112.1609696,
-    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
-  },
-  {
-    "code": "UACB",
-    "name": "University Academic Center B",
-    "campus": "west",
-    "lat": 33.6079039,
-    "lng": -112.1609696,
-    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
-  },
-  {
-    "code": "UACA",
-    "name": "University Academic Center A",
-    "campus": "west",
-    "lat": 33.6079039,
-    "lng": -112.1609696,
-    "place_id": "ChIJi7CNmFxpK4cRvUmZGyMWMc4"
-  },
-  {
-    "code": "LLAC",
-    "name": "Liberal Arts and Sciences",
-    "campus": "west",
-    "lat": 33.4175472,
-    "lng": -111.9290953,
-    "place_id": "ChIJNYPmUtkIK4cR7dbV7bcV0e0"
-  },
-  {
-    "code": "AAMU",
-    "name": "Academic Advising & Memorial Union",
-    "campus": "polytechnic",
-    "lat": 33.4177504,
-    "lng": -111.9343818,
-    "place_id": "ChIJVa3mX9sIK4cRxyxpWfI_9S4"
-  },
-  {
-    "code": "ALTEC",
-    "name": "ALTEC Building",
+    "code": "E716",
+    "name": "Water Tower Maintenance Bldg.",
     "campus": "polytechnic",
     "lat": 33.3060092,
     "lng": -111.6785238,
     "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
   },
   {
-    "code": "SANTAN",
-    "name": "Santan Hall Polytechnic",
-    "campus": "polytechnic",
-    "lat": 33.3061241,
-    "lng": -111.6780116,
-    "place_id": "ChIJpQRmH4OtK4cRqlo8SJaRuqM"
+    "code": "PS9",
+    "name": "Mill Avenue Parking Structure",
+    "campus": "tempe",
+    "lat": 33.4155516,
+    "lng": -111.9340264,
+    "place_id": "ChIJVYCrXsMIK4cREDyrr6-eCYY"
   },
   {
-    "code": "POLY",
-    "name": "Polytechnic Academic Center",
+    "code": "185A",
+    "name": "Locker Annex",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "R87H",
+    "name": "Pitching Lab",
+    "campus": "downtown",
+    "lat": 33.4538978,
+    "lng": -112.0706222,
+    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+  },
+  {
+    "code": "R105",
+    "name": "Rosewood Office Plaza",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "R107",
+    "name": "The Studios At Mesa City Center",
     "campus": "polytechnic",
+    "lat": 33.4169161,
+    "lng": -111.829315,
+    "place_id": "ChIJz92Ai7WnK4cRZkOyFcfWlV0"
+  },
+  {
+    "code": "B01",
+    "name": "Langton Villa (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B02",
+    "name": "Cherry Tree (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B03",
+    "name": "Casa Linda (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B04",
+    "name": "Carriage House (Marlin/Dolphin/Bonita/Porpoise Residence)",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B05",
+    "name": "Nautilus Staff Housing Complex (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B06",
+    "name": "Topside/Below (Residence)",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B07",
+    "name": "Big Wind (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B08",
+    "name": "Generator",
+    "campus": "tempe",
+    "lat": 33.3672764,
+    "lng": -111.9443936,
+    "place_id": "ChIJtVqokA4GK4cRMkksbpYXsxA"
+  },
+  {
+    "code": "B09",
+    "name": "Marine Operations Building",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "B10",
+    "name": "Storage Containers",
+    "campus": "tempe",
+    "lat": 33.411618,
+    "lng": -111.875212,
+    "place_id": "ChIJiW-m3BwIK4cRE85vQIna7Cc"
+  },
+  {
+    "code": "B11",
+    "name": "Maintenance Workshop And Warehouse",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B12",
+    "name": "Office & Storage Containers",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B14",
+    "name": "Chemical Storage Facility",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B15",
+    "name": "Mcnichols Building",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "B16",
+    "name": "Hanson Hall/Reception",
+    "campus": "tempe",
+    "lat": 33.4205406,
+    "lng": -111.9339714,
+    "place_id": "ChIJh3-Lc9wIK4cR4UV8QO_X2mg"
+  },
+  {
+    "code": "B17",
+    "name": "Reception",
+    "campus": "tempe",
+    "lat": 33.4205406,
+    "lng": -111.9339714,
+    "place_id": "ChIJh3-Lc9wIK4cR4UV8QO_X2mg"
+  },
+  {
+    "code": "B18",
+    "name": "Portable Offices",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "B19",
+    "name": "Administration And Library - Alfred C. Redfield Building",
+    "campus": "tempe",
+    "lat": 33.4215996,
+    "lng": -111.9367939,
+    "place_id": "ChIJj5D1e9kIK4cR96Qe_cm3BcA"
+  },
+  {
+    "code": "B20",
+    "name": "Naess Laboratory",
+    "campus": "tempe",
+    "lat": 33.4197203,
+    "lng": -111.9313079,
+    "place_id": "ChIJs3C8qt0IK4cRWYAi9gNtSp4"
+  },
+  {
+    "code": "B21",
+    "name": "Scott Teaching Lab/Marine Services Building",
+    "campus": "tempe",
+    "lat": 33.4169752,
+    "lng": -111.9362889,
+    "place_id": "ChIJZwMpOtsIK4cRBM_HuCpfeQk"
+  },
+  {
+    "code": "B22",
+    "name": "Reiss-Conklin Laboratory",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "B23",
+    "name": "Wright Hall",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B24",
+    "name": "Visitor Housing",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B25",
+    "name": "Downwind (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B26",
+    "name": "Driftwood (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B27",
+    "name": "Lower Reach (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B28",
+    "name": "Middle Reach (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B29",
+    "name": "Upper Reach (Residence)",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "B30",
+    "name": "Jet Stream (Residence)",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B31",
+    "name": "Mesocosm Pump House",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "B32",
+    "name": "Satellite Dish",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "UGB",
+    "name": "University Gateway Building",
+    "campus": "tempe",
+    "lat": 33.4212644,
+    "lng": -111.9652478,
+    "place_id": "ChIJkT9B9icPK4cRhGdFmZNLMy4"
+  },
+  {
+    "code": "X501",
+    "name": "East Valley Institute Of Technology Building 1",
+    "campus": "polytechnic",
+    "lat": 33.4129376,
+    "lng": -111.8644042,
+    "place_id": "ChIJUTUaDBkIK4cRXKL1QiNjcQw"
+  },
+  {
+    "code": "X502",
+    "name": "East Valley Institute Of Technology Building 2",
+    "campus": "polytechnic",
+    "lat": 33.4210215,
+    "lng": -111.9293248,
+    "place_id": "ChIJNbCBkd0IK4cRTmdS9AamlYk"
+  },
+  {
+    "code": "X503",
+    "name": "East Valley Institute Of Technology Building 3",
+    "campus": "polytechnic",
+    "lat": 33.4129376,
+    "lng": -111.8644042,
+    "place_id": "ChIJUTUaDBkIK4cRXKL1QiNjcQw"
+  },
+  {
+    "code": "X504",
+    "name": "Evit Parking Structure Building 4",
+    "campus": "polytechnic",
+    "lat": 33.4129376,
+    "lng": -111.8644042,
+    "place_id": "ChIJUTUaDBkIK4cRXKL1QiNjcQw"
+  },
+  {
+    "code": "X505",
+    "name": "Evit Aviation Education Building 5",
+    "campus": "polytechnic",
+    "lat": 33.295543,
+    "lng": -111.685853,
+    "place_id": "ChIJdZUpk3OtK4cRgNWLHc6lKFU"
+  },
+  {
+    "code": "X506",
+    "name": "Evit Veterinarian Assistant Building 6 (Building A)",
+    "campus": "polytechnic",
+    "lat": 33.4129376,
+    "lng": -111.8644042,
+    "place_id": "ChIJUTUaDBkIK4cRXKL1QiNjcQw"
+  },
+  {
+    "code": "X507",
+    "name": "Evit Engineering Building 7 (Building B)",
+    "campus": "polytechnic",
+    "lat": 33.4129376,
+    "lng": -111.8644042,
+    "place_id": "ChIJUTUaDBkIK4cRXKL1QiNjcQw"
+  },
+  {
+    "code": "CDV",
+    "name": "Casa Del Valle",
+    "campus": "tempe",
+    "lat": 33.4164585,
+    "lng": -111.9285272,
+    "place_id": "ChIJ2Xs7hsEIK4cRdH62Hrcs7FQ"
+  },
+  {
+    "code": "FSYARD",
+    "name": "Facilities Service Yard",
+    "campus": "tempe",
+    "lat": 33.4118069,
+    "lng": -111.9257456,
+    "place_id": "ChIJR5svMeoIK4cRNAntQOkSBJE"
+  },
+  {
+    "code": "P32",
+    "name": "Taylor Street Parking Structure",
+    "campus": "tempe",
+    "lat": 33.4229592,
+    "lng": -111.9209342,
+    "place_id": "ChIJJ1Bh8tgIK4cR7ZV07Q70tMw"
+  },
+  {
+    "code": "AOB",
+    "name": "Academic And Office Building",
+    "campus": "tempe",
+    "lat": 33.41654,
+    "lng": -111.9338448,
+    "place_id": "ChIJrSk4rdwIK4cRKF7WuoRSCVc"
+  },
+  {
+    "code": "E835",
+    "name": "Polytechnic Environmental Services Facility",
+    "campus": "tempe",
+    "lat": 33.4235152,
+    "lng": -111.9355738,
+    "place_id": "ChIJJ2fGPNkIK4cR-aJeodwkdCc"
+  },
+  {
+    "code": "ISTB12",
+    "name": "Interdisciplinary Science And Technology Building 12",
+    "campus": "tempe",
+    "lat": 33.4184681,
+    "lng": -111.9315321,
+    "place_id": "ChIJVwhR4NwIK4cRt1LT9wXkMUw"
+  },
+  {
+    "code": "MASH",
+    "name": "Mill Avenue Student Housing",
+    "campus": "tempe",
+    "lat": 33.4249424,
+    "lng": -111.934389,
+    "place_id": "ChIJY85QBNgIK4cRZMq5xzXzdCE"
+  },
+  {
+    "code": "190",
+    "name": "(Tempe District Utility Plant)",
+    "campus": "tempe",
+    "lat": 33.4222573,
+    "lng": -111.9149268,
+    "place_id": "ChIJR8FgPvoIK4cRBWwmwTUpnfE"
+  },
+  {
+    "code": "CCG",
+    "name": "Asu California Center Grand",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "X98",
+    "name": "Omni Tempe Hotel",
+    "campus": "tempe",
+    "lat": 33.4215105,
+    "lng": -111.9397194,
+    "place_id": "ChIJy5pdIYcJK4cRxh6E2j7WZvE"
+  },
+  {
+    "code": "X99",
+    "name": "Clcc Astronomy Pad",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X100",
+    "name": "Spider/Lizard Enclosure",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "X835A",
+    "name": "Polytechnic Central Accumulation Area Unit 1",
+    "campus": "tempe",
     "lat": 33.3060092,
     "lng": -111.6785238,
     "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
   },
   {
-    "code": "WANNER",
-    "name": "Wanner Engineering Center",
-    "campus": "polytechnic",
-    "lat": 33.3058931,
-    "lng": -111.677226,
-    "place_id": "ChIJ-drd2YKtK4cRzDE3UXmOrhY"
+    "code": "X835B",
+    "name": "Polytechnic Central Accumulation Area Unit 2",
+    "campus": "tempe",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
   },
   {
-    "code": "UCENT",
-    "name": "University Center Building",
-    "campus": "downtown",
-    "lat": 33.4529589,
-    "lng": -112.0734451,
-    "place_id": "ChIJK1U46SISK4cREele9krEAzI"
+    "code": "X835C",
+    "name": "Polytechnic Central Accumulation Area Unit 3",
+    "campus": "tempe",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
   },
   {
-    "code": "TCOM",
-    "name": "Technology Center",
-    "campus": "downtown",
-    "lat": 33.4538978,
-    "lng": -112.0706222,
-    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+    "code": "X835D",
+    "name": "Polytechnic Central Accumulation Area Unit 4",
+    "campus": "tempe",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
   },
   {
-    "code": "CITYSQ",
-    "name": "City Square",
-    "campus": "downtown",
-    "lat": 33.4538978,
-    "lng": -112.0706222,
-    "place_id": "ChIJqY3-yCISK4cRmgdxXKf2MZU"
+    "code": "X835E",
+    "name": "Polytechnic Central Accumulation Area Unit 5",
+    "campus": "tempe",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
   },
   {
-    "code": "UNION",
-    "name": "University Center North",
-    "campus": "downtown",
-    "lat": 33.4529589,
-    "lng": -112.0734451,
-    "place_id": "ChIJK1U46SISK4cREele9krEAzI"
+    "code": "X835F",
+    "name": "Polytechnic Central Accumulation Area Unit 6",
+    "campus": "tempe",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "R109A",
+    "name": "Broadway Palace Apts (North Building)",
+    "campus": "tempe",
+    "lat": 33.407015,
+    "lng": -111.9494213,
+    "place_id": "ChIJHSWqT7YJK4cR6NFbE6frMlw"
+  },
+  {
+    "code": "R109B",
+    "name": "Broadway Palace Apts (South Building)",
+    "campus": "tempe",
+    "lat": 33.4030314,
+    "lng": -111.9427035,
+    "place_id": "ChIJh7sYybcIK4cRGyGLu8FMO4c"
+  },
+  {
+    "code": "R110",
+    "name": "Yuma Office",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "R112",
+    "name": "Pleasanton Office",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "R113",
+    "name": "Nelha Hawaii",
+    "campus": "tempe",
+    "lat": 19.7282928,
+    "lng": -156.0595535,
+    "place_id": "ChIJhX616HYNVHkRRP6hU6PuCu4"
+  },
+  {
+    "code": "R114",
+    "name": "Asu At Five West Mountain Fayetteville",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "E836",
+    "name": "Polytechnic Utilities Expansion",
+    "campus": "tempe",
+    "lat": 33.3060092,
+    "lng": -111.6785238,
+    "place_id": "ChIJ-c0dQ52tK4cR0o7GfBfBnC0"
+  },
+  {
+    "code": "MRIFAC",
+    "name": "Mri Facility",
+    "campus": "tempe",
+    "lat": 33.4235981,
+    "lng": -111.9395366,
+    "place_id": "ChIJ-3HNMoAJK4cRancNpW3WXOs"
+  },
+  {
+    "code": "R116",
+    "name": "First Christian Church Of Tempe",
+    "campus": "tempe",
+    "lat": 33.4006652,
+    "lng": -111.9158634,
+    "place_id": "ChIJoa5V2I8IK4cRWIKOmrdKEts"
+  },
+  {
+    "code": "548",
+    "name": "Arizona Golf House",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "LACS",
+    "name": "La Center Studios",
+    "campus": "tempe",
+    "lat": 33.4232329,
+    "lng": -111.9211936,
+    "place_id": "ChIJJSMHEeQIK4cRpEIHqwk9jQk"
+  },
+  {
+    "code": "R119",
+    "name": "Asu Local Hawaii",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "L40",
+    "name": "Novus Place Park",
+    "campus": "tempe",
+    "lat": 33.4233543,
+    "lng": -111.927513,
+    "place_id": "ChIJWxPLpOAIK4cR3hQg9PlR9d0"
+  },
+  {
+    "code": "R120",
+    "name": "Asu Local Yuma",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "E837",
+    "name": "(Student Union Expansion)",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
+  },
+  {
+    "code": "X138",
+    "name": "Beach Volleyball Shed",
+    "campus": "tempe",
+    "lat": 33.4254824,
+    "lng": -111.9224145,
+    "place_id": "ChIJZaNErP4JK4cRPK4-VHnefeM"
+  },
+  {
+    "code": "313",
+    "name": "Asu Health Building",
+    "campus": "tempe",
+    "lat": 33.4213317,
+    "lng": -111.9330443,
+    "place_id": "ChIJvVIjHNwIK4cR1bA2nzsojXc"
+  },
+  {
+    "code": "191",
+    "name": "Mccain Center",
+    "campus": "tempe",
+    "lat": 33.4229975,
+    "lng": -111.9278306,
+    "place_id": "ChIJD1QzO9sIK4cRMzA8R39xbmY"
+  },
+  {
+    "code": "X101",
+    "name": "Irrigation Pump House",
+    "campus": "tempe",
+    "lat": 33.42166,
+    "lng": -111.9349746,
+    "place_id": "ChIJN0dhVNsIK4cRyNVUwGGe5-M"
   }
 ]
