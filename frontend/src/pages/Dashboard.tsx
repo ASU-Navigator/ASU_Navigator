@@ -145,6 +145,11 @@ export default function Dashboard() {
               <div
                 key={s.id}
                 onClick={() => { if (renamingId !== s.id) setSearchParams((p) => { p.set("schedule", s.id); return p; }); }}
+                onDoubleClick={(e) => {
+                  e.stopPropagation();
+                  startRename(s, e);
+                }}
+                title="Double-click to rename"
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm cursor-pointer transition-colors select-none ${
                   scheduleId === s.id
                     ? "bg-asu-maroon border-asu-maroon text-white"

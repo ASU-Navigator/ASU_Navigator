@@ -5,4 +5,5 @@ export type ParsedEvent = {
   start: Date;
   end: Date;
   isRecurring: boolean;
+  daysOfWeek: string[];
 };
