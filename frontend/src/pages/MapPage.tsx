@@ -78,10 +78,16 @@ function todayStr() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
+function offsetDate(dateStr: string, days: number) {
+  const d = new Date(dateStr + "T12:00:00");
+  d.setDate(d.getDate() + days);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
 const LIBRARIES: ("geometry" | "marker")[] = ["geometry", "marker"];
 
 export default function MapPage() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const date = searchParams.get("date") ?? todayStr();
   const scheduleId = searchParams.get("schedule") ?? "";
@@ -185,7 +191,29 @@ export default function MapPage() {
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const markersRef = useRef<google.maps.marker.AdvancedMarkerElement[]>([]);
+  const markerContentsRef = useRef<HTMLDivElement[]>([]);
+  const startMarkerContentRef = useRef<HTMLDivElement | null>(null);
   const [activeEventIndex, setActiveEventIndex] = useState<number | null>(null);
+  const [activeRouteSegmentIndex, setActiveRouteSegmentIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    setRouteSegments([]);
+    setActiveEventIndex(null);
+    setActiveRouteSegmentIndex(null);
+  }, [date]);
+
+  const highlightedRouteIndexes = useMemo(() => {
+    const selected = new Set<number>();
+    if (activeEventIndex !== null) selected.add(activeEventIndex);
+    if (activeRouteSegmentIndex !== null) {
+      const seg = routeSegments[activeRouteSegmentIndex];
+      if (seg) {
+        if (seg.fromIndex >= 0) selected.add(seg.fromIndex);
+        if (seg.toIndex >= 0) selected.add(seg.toIndex);
+      }
+    }
+    return selected;
+  }, [activeEventIndex, activeRouteSegmentIndex, routeSegments]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const mapCenter = (() => {
@@ -266,7 +294,14 @@ export default function MapPage() {
     async function compute() {
       setIsComputingRoutes(true);
       setRouteSegments([]);
+      setActiveEventIndex(null);
+      setActiveRouteSegmentIndex(null);
       const segments: RouteSegment[] = [];
+
+      if (events.length === 0) {
+        setIsComputingRoutes(false);
+        return;
+      }
 
       if (startLocation && events.length > 0) {
         const firstB = resolveBuilding(events[0].location);
@@ -308,6 +343,7 @@ export default function MapPage() {
 
     markersRef.current.forEach((m) => (m.map = null));
     markersRef.current = [];
+    markerContentsRef.current = [];
 
     const createMarkers = async () => {
       const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
@@ -332,6 +368,7 @@ export default function MapPage() {
         content.style.alignItems = "center";
         content.style.justifyContent = "center";
         content.style.border = "2px solid white";
+        content.style.transition = "transform 0.15s ease, width 0.15s ease, height 0.15s ease, border 0.15s ease, font-size 0.15s ease";
         content.textContent = String(i + 1);
 
         const marker = new AdvancedMarkerElement({
@@ -341,8 +378,12 @@ export default function MapPage() {
           title: `${event.summary} — ${displayName}`,
         });
 
-        marker.addListener("gmp-click", () => setActiveEventIndex(i));
+        marker.addListener("gmp-click", () => {
+          setActiveEventIndex(i);
+          setActiveRouteSegmentIndex(null);
+        });
         markersRef.current.push(marker);
+        markerContentsRef.current.push(content);
       }
     };
 
@@ -355,6 +396,7 @@ export default function MapPage() {
     if (startMarkerRef.current) {
       startMarkerRef.current.map = null;
       startMarkerRef.current = null;
+      startMarkerContentRef.current = null;
     }
 
     if (!startLocation) return;
@@ -372,6 +414,7 @@ export default function MapPage() {
       content.style.justifyContent = "center";
       content.style.border = "3px solid white";
       content.style.fontSize = "14px";
+      content.style.transition = "transform 0.15s ease, width 0.15s ease, height 0.15s ease, border 0.15s ease, font-size 0.15s ease";
       content.textContent = "⚑";
 
       startMarkerRef.current = new AdvancedMarkerElement({
@@ -380,10 +423,40 @@ export default function MapPage() {
         content,
         title: startLocation.label,
       });
+      startMarkerContentRef.current = content;
     };
 
     createStartMarker();
   }, [map, isLoaded, startLocation]);
+
+  useEffect(() => {
+    const selectedMarkerIndexes = new Set<number>();
+    if (activeEventIndex !== null) selectedMarkerIndexes.add(activeEventIndex);
+    if (activeRouteSegmentIndex !== null) {
+      const seg = routeSegments[activeRouteSegmentIndex];
+      if (seg) {
+        if (seg.fromIndex >= 0) selectedMarkerIndexes.add(seg.fromIndex);
+        if (seg.toIndex >= 0) selectedMarkerIndexes.add(seg.toIndex);
+      }
+    }
+
+    markerContentsRef.current.forEach((content, index) => {
+      const isSelected = selectedMarkerIndexes.has(index);
+      content.style.width = isSelected ? "32px" : "24px";
+      content.style.height = isSelected ? "32px" : "24px";
+      content.style.fontSize = isSelected ? "14px" : "12px";
+      content.style.borderWidth = isSelected ? "3px" : "2px";
+      content.style.transform = isSelected ? "scale(1.15)" : "scale(1)";
+    });
+
+    if (startMarkerContentRef.current) {
+      const startSelected = activeRouteSegmentIndex !== null && routeSegments[activeRouteSegmentIndex]?.fromIndex === -1;
+      const content = startMarkerContentRef.current;
+      content.style.width = startSelected ? "34px" : "28px";
+      content.style.height = startSelected ? "34px" : "28px";
+      content.style.transform = startSelected ? "scale(1.1)" : "scale(1)";
+    }
+  }, [activeEventIndex, activeRouteSegmentIndex, routeSegments]);
 
   const handleMapClick = useCallback((e: google.maps.MapMouseEvent) => {
     if (isPickingStart && e.latLng) {
@@ -391,6 +464,7 @@ export default function MapPage() {
       setIsPickingStart(false);
     } else {
       setActiveEventIndex(null);
+      setActiveRouteSegmentIndex(null);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPickingStart]);
@@ -445,6 +519,41 @@ export default function MapPage() {
               day: "numeric",
             })}
           </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            <button
+              onClick={() => {
+                setActiveEventIndex(null);
+                setActiveRouteSegmentIndex(null);
+                setRouteSegments([]);
+                setSearchParams((p) => { p.set("date", offsetDate(date, -1)); return p; });
+              }}
+              className="px-3 py-1 rounded-lg bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
+            >
+              Yesterday
+            </button>
+            <button
+              onClick={() => {
+                setActiveEventIndex(null);
+                setActiveRouteSegmentIndex(null);
+                setRouteSegments([]);
+                setSearchParams((p) => { p.set("date", todayStr()); return p; });
+              }}
+              className="px-3 py-1 rounded-lg bg-asu-gold/10 text-asu-gold text-xs transition-colors hover:bg-asu-gold/20"
+            >
+              Today
+            </button>
+            <button
+              onClick={() => {
+                setActiveEventIndex(null);
+                setActiveRouteSegmentIndex(null);
+                setRouteSegments([]);
+                setSearchParams((p) => { p.set("date", offsetDate(date, 1)); return p; });
+              }}
+              className="px-3 py-1 rounded-lg bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
+            >
+              Tomorrow
+            </button>
+          </div>
         </div>
 
         {/* Starting location */}
@@ -573,11 +682,16 @@ export default function MapPage() {
                       ⚑ <span>{Math.round(startSeg.durationSeconds / 60)} min walk to class</span>
                     </div>
                   )}
-                  <button
-                    onClick={() => setActiveEventIndex(isActive ? null : i)}
+                      <button
+                    onClick={() => {
+                      setActiveEventIndex(isActive ? null : i);
+                      setActiveRouteSegmentIndex(null);
+                    }}
                     className={`w-full text-left rounded-xl p-3 border transition-colors ${
                       isActive
                         ? "bg-asu-maroon/30 border-asu-maroon/60"
+                        : highlightedRouteIndexes.has(i)
+                        ? "bg-asu-maroon/20 border-asu-maroon/40"
                         : "bg-white/5 border-white/10 hover:bg-white/8"
                     }`}
                   >
@@ -646,26 +760,30 @@ export default function MapPage() {
           options={{
             disableDefaultUI: false,
             zoomControl: true,
-            streetViewControl: false,
-            mapTypeControl: false,
+            streetViewControl: true,
+            mapTypeControl: true,
             mapId: "bdfa66bd0ca03dc990ecaed7",
-            cursor: isPickingStart ? "crosshair" : undefined,
           }}
         >
-          {routeSegments.map((seg) => (
-            <Polyline
-              key={`${seg.fromIndex}-${seg.toIndex}`}
-              path={seg.path}
-              options={{
-                strokeColor: seg.fromIndex === -1 ? "#FFC627" : seg.isTight ? "#EF4444" : "#3B82F6",
-                strokeWeight: seg.isFallback ? 3 : 5,
-                strokeOpacity: seg.isFallback ? 0.55 : 0.85,
-                icons: seg.isFallback
-                  ? [{ icon: { path: "M 0,-1 0,1", strokeOpacity: 1, scale: 3 }, offset: "0", repeat: "12px" }]
-                  : undefined,
-              }}
-            />
-          ))}
+          {routeSegments.map((seg, idx) => {
+            const isSelected = activeRouteSegmentIndex === idx;
+            return (
+              <Polyline
+                key={`${seg.fromIndex}-${seg.toIndex}`}
+                path={seg.path}
+                onClick={() => setActiveRouteSegmentIndex(isSelected ? null : idx)}
+                options={{
+                  strokeColor: isSelected ? "#FFD54F" : seg.fromIndex === -1 ? "#FFC627" : seg.isTight ? "#EF4444" : "#3B82F6",
+                  strokeWeight: isSelected ? 8 : seg.isFallback ? 3 : 5,
+                  strokeOpacity: isSelected ? 1 : seg.isFallback ? 0.55 : 0.85,
+                  zIndex: isSelected ? 2 : 1,
+                  icons: seg.isFallback
+                    ? [{ icon: { path: "M 0,-1 0,1", strokeOpacity: 1, scale: 3 }, offset: "0", repeat: "12px" }]
+                    : undefined,
+                }}
+              />
+            );
+          })}
         </GoogleMap>
 
         {allVirtual && (

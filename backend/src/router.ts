@@ -37,8 +37,11 @@ const scheduleRouter = router({
       if (!schedule) return { hasSchedule: false, events: [] };
       const targetDate = input.date ? new Date(input.date + "T12:00:00Z") : new Date();
       const allEvents = parseIcsContent(schedule.rawIcs);
+      const scheduleStartDate = allEvents.length > 0
+        ? allEvents[0].start.toISOString().slice(0, 10)
+        : targetDate.toISOString().slice(0, 10);
       const dayEvents = filterEventsForDate(allEvents, targetDate);
-      return { hasSchedule: true, events: dayEvents };
+      return { hasSchedule: true, events: dayEvents, scheduleStartDate };
     }),
 
   rename: protectedProcedure

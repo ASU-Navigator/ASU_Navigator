@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
@@ -109,6 +109,32 @@ export default function Dashboard() {
       }
     },
   });
+
+  const lastScheduleId = useRef<string | null>(null);
+  const pendingScheduleReset = useRef(false);
+
+  useEffect(() => {
+    const currentDateParam = searchParams.get("date");
+    const scheduleChanged = lastScheduleId.current !== null && lastScheduleId.current !== scheduleId;
+
+    pendingScheduleReset.current = scheduleChanged || currentDateParam === null;
+    lastScheduleId.current = scheduleId;
+  }, [scheduleId, searchParams]);
+
+  useEffect(() => {
+    const scheduleStartDate = scheduleQuery.data?.scheduleStartDate;
+    if (!scheduleId || !scheduleStartDate || !pendingScheduleReset.current) return;
+
+    const currentDateParam = searchParams.get("date");
+    if (currentDateParam !== scheduleStartDate) {
+      setSearchParams((p) => {
+        p.set("schedule", scheduleId);
+        p.set("date", scheduleStartDate);
+        return p;
+      }, { replace: true });
+    }
+    pendingScheduleReset.current = false;
+  }, [scheduleId, scheduleQuery.data?.scheduleStartDate, searchParams, setSearchParams]);
 
   const events: ParsedEvent[] = scheduleQuery.data?.events ?? [];
 
