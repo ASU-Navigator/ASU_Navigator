@@ -90,7 +90,7 @@ export default function DaySelector({ date, onChange }: Props) {
 
       <div className="relative flex items-center gap-2">
         <span className="text-white font-medium">
-          {selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}
+          {selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })}
         </span>
 
         <button

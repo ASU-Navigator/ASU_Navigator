@@ -132,8 +132,11 @@ var scheduleRouter = router({
     if (!schedule) return { hasSchedule: false, events: [] };
     const targetDate = input.date ? /* @__PURE__ */ new Date(input.date + "T12:00:00Z") : /* @__PURE__ */ new Date();
     const allEvents = parseIcsContent(schedule.rawIcs);
+    const scheduleStartDate = allEvents.length > 0
+      ? allEvents[0].start.toISOString().slice(0, 10)
+      : targetDate.toISOString().slice(0, 10);
     const dayEvents = filterEventsForDate(allEvents, targetDate);
-    return { hasSchedule: true, events: dayEvents };
+    return { hasSchedule: true, events: dayEvents, scheduleStartDate };
   }),
   rename: protectedProcedure.input(z.object({ scheduleId: z.string(), label: z.string().min(1).max(60) })).mutation(async ({ ctx, input }) => {
     const userId = ctx.session.user.id;
