@@ -12,24 +12,59 @@ export default function Navbar() {
     navigate("/login");
   }
 
+  const initials = session?.user?.name
+    ?.split(" ")
+    .map((n) => n[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2) ?? "A";
+
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-asu-maroon">
+    <nav
+      className="flex items-center justify-between px-6 py-3 bg-asu-maroon"
+      style={{ boxShadow: "0 1px 0 rgba(255,198,39,0.25), 0 2px 12px rgba(0,0,0,0.4)" }}
+    >
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-          <span className="text-white font-bold text-sm">A</span>
+        <div
+          className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+          style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)" }}
+        >
+          <span className="text-lg" style={{ color: "var(--color-asu-gold)" }}>🗺</span>
         </div>
-        <span className="text-white font-bold text-lg tracking-tight">ASU Navigator</span>
+        <div>
+          <span className="text-white font-bold text-base tracking-tight leading-tight block">ASU Navigator</span>
+          <span className="text-white/45 text-[10px] leading-none tracking-wide uppercase">Campus Route Planner</span>
+        </div>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-3">
         {session?.user && (
-          <span className="text-white/70 text-sm hidden sm:block">
-            {session.user.name}
-          </span>
+          <>
+            <span className="text-white/60 text-sm hidden sm:block truncate max-w-[140px]">
+              {session.user.name}
+            </span>
+            <div
+              className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 hidden sm:flex"
+              style={{ background: "rgba(255,255,255,0.15)", border: "1.5px solid rgba(255,255,255,0.3)" }}
+            >
+              <span className="text-white text-xs font-bold leading-none">{initials}</span>
+            </div>
+          </>
         )}
         <button
           onClick={handleSignOut}
-          className="px-4 py-1.5 rounded-lg text-sm font-medium text-white border border-white/30 hover:bg-white/10 transition-colors"
+          className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
+          style={{ color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.2)" }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = "white";
+            e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+            e.currentTarget.style.borderColor = "rgba(255,255,255,0.4)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = "rgba(255,255,255,0.75)";
+            e.currentTarget.style.background = "";
+            e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)";
+          }}
         >
           Sign Out
         </button>

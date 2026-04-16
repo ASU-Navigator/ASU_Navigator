@@ -498,21 +498,27 @@ export default function MapPage() {
       )}
 
       <aside className={`
-        w-80 shrink-0 flex flex-col bg-gray-900 border-r border-white/10 overflow-y-auto
+        w-80 shrink-0 flex flex-col border-r border-white/10 overflow-y-auto
         absolute md:relative inset-y-0 left-0 z-20 transition-transform duration-200
         ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
-      `}>
-        <div className="p-4 border-b border-white/10 bg-asu-maroon">
+      `} style={{ background: "#111118" }}>
+        <div
+          className="p-4 border-b border-white/10"
+          style={{ background: "var(--color-asu-maroon)", boxShadow: "0 1px 0 rgba(255,198,39,0.2)" }}
+        >
           <div className="flex items-center justify-between mb-1">
-            <span className="text-white font-bold">ASU Navigator</span>
+            <div className="flex items-center gap-2">
+              <span className="text-lg" style={{ color: "var(--color-asu-gold)" }}>🗺</span>
+              <span className="text-white font-bold text-sm">ASU Navigator</span>
+            </div>
             <button
               onClick={() => navigate(isSimulate ? "/simulate" : `/dashboard?schedule=${scheduleId}&date=${date}`)}
-              className="text-white/70 hover:text-white text-sm transition-colors"
+              className="text-white/60 hover:text-white text-xs transition-colors px-2 py-1 rounded hover:bg-white/10"
             >
               ← Back
             </button>
           </div>
-          <p className="text-white/70 text-xs">
+          <p className="text-white/60 text-xs mt-1">
             {new Date(date + "T12:00:00").toLocaleDateString("en-US", {
               weekday: "long",
               month: "long",
@@ -692,11 +698,11 @@ export default function MapPage() {
                         ? "bg-asu-maroon/30 border-asu-maroon/60"
                         : highlightedRouteIndexes.has(i)
                         ? "bg-asu-maroon/20 border-asu-maroon/40"
-                        : "bg-white/5 border-white/10 hover:bg-white/8"
+                        : "bg-white/5 border-white/10 hover:bg-white/[0.08]"
                     }`}
                   >
                     <p className="text-white text-sm font-semibold truncate">{event.summary}</p>
-                    <p className="text-gray-400 text-xs mt-0.5">
+                    <p className="text-xs mt-0.5 font-medium tabular-nums" style={{ color: "var(--color-asu-gold)", opacity: 0.8 }}>
                       {formatTime(event.start)} – {formatTime(event.end)}
                     </p>
                     {building ? (
@@ -797,16 +803,20 @@ export default function MapPage() {
         )}
 
         {activeEvent && (
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 border border-white/20 rounded-2xl p-4 shadow-xl w-72 z-10">
+          <div
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-2xl p-4 w-72 z-10"
+            style={{ background: "#111118", border: "1px solid rgba(255,255,255,0.15)", boxShadow: "0 8px 32px rgba(0,0,0,0.6)" }}
+          >
             <div className="flex items-start justify-between gap-2">
               <div className="flex-1 min-w-0">
                 <p className="text-white font-semibold text-sm truncate">{activeEvent.summary}</p>
-                <p className="text-gray-400 text-xs mt-0.5">
+                <p className="text-xs mt-1 font-medium tabular-nums" style={{ color: "var(--color-asu-gold)", opacity: 0.85 }}>
                   {formatTime(activeEvent.start)} – {formatTime(activeEvent.end)}
                 </p>
                 {activeBuilding ? (
                   <p className="text-gray-300 text-xs mt-1">
-                    {activeBuilding.name} · {CAMPUS_LABELS[activeBuilding.campus]}
+                    {activeBuilding.name}
+                    <span className="text-gray-500"> · {CAMPUS_LABELS[activeBuilding.campus]}</span>
                   </p>
                 ) : (
                   <p className="text-gray-500 text-xs mt-1 italic">{activeEvent.location}</p>
@@ -814,7 +824,7 @@ export default function MapPage() {
               </div>
               <button
                 onClick={() => setActiveEventIndex(null)}
-                className="text-gray-500 hover:text-white text-lg leading-none shrink-0"
+                className="text-gray-500 hover:text-white text-base leading-none shrink-0 mt-0.5 transition-colors"
               >
                 ✕
               </button>

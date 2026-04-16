@@ -9,6 +9,13 @@ const CAMPUS_COLORS: Record<string, string> = {
   downtown: "bg-purple-600/30 text-purple-300",
 };
 
+const CAMPUS_LEFT_BORDER: Record<string, string> = {
+  tempe: "rgba(234,179,8,0.65)",
+  west: "rgba(59,130,246,0.65)",
+  polytechnic: "rgba(34,197,94,0.65)",
+  downtown: "rgba(168,85,247,0.65)",
+};
+
 const dayNames: Record<string, string> = {
   MO: 'Monday',
   TU: 'Tuesday',
@@ -48,8 +55,15 @@ export default function ClassCard({ event, isTight, walkMinutes }: Props) {
   });
   const formattedDays = sortedDays.map(day => dayNames[day] || day).join(', ');
 
+  const leftBorderColor = building
+    ? (CAMPUS_LEFT_BORDER[building.campus] ?? "rgba(255,255,255,0.15)")
+    : "rgba(255,255,255,0.08)";
+
   return (
-    <div className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/8 transition-colors">
+    <div
+      className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-white/[0.08] transition-colors border-l-4"
+      style={{ borderLeftColor: leftBorderColor }}
+    >
       {isTight && walkMinutes !== undefined && (
         <div className="flex items-center gap-2 mb-3 text-red-400 text-xs bg-red-900/20 border border-red-500/30 rounded-lg px-3 py-1.5">
           <span>⚠</span>
@@ -60,7 +74,7 @@ export default function ClassCard({ event, isTight, walkMinutes }: Props) {
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <p className="text-white font-semibold text-sm truncate">{event.summary}</p>
-          <p className="text-gray-400 text-xs mt-1">
+          <p className="text-xs mt-1 font-medium tabular-nums" style={{ color: "var(--color-asu-gold)", opacity: 0.85 }}>
             {formatTime(event.start)} – {formatTime(event.end)}
           </p>
           {event.daysOfWeek.length > 0 && (
@@ -70,7 +84,7 @@ export default function ClassCard({ event, isTight, walkMinutes }: Props) {
           )}
           {building ? (
             <p className="text-gray-300 text-xs mt-1">
-              {building.name}{room ? ` · Room ${room}` : ""}
+              {building.name}{room ? <span className="text-gray-500"> · Room {room}</span> : ""}
             </p>
           ) : event.location ? (
             <p className="text-gray-500 text-xs mt-1 truncate">{event.location}</p>

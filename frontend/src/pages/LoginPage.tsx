@@ -24,8 +24,14 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="w-full max-w-sm bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div
+      className="min-h-screen flex items-center justify-center p-4"
+      style={{ background: "linear-gradient(135deg, #0f0f1a 0%, #1e1e2f 55%, #2d1540 100%)" }}
+    >
+      <div
+        className="w-full max-w-sm bg-white rounded-2xl overflow-hidden"
+        style={{ boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08)" }}
+      >
 
         {/* Maroon header */}
         <div className="bg-asu-maroon px-8 py-8">

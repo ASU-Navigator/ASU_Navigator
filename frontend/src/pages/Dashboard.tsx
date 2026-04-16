@@ -7,9 +7,17 @@ import ClassCard from "../components/ClassCard";
 import UploadSection from "../components/UploadSection";
 import LoadingScreen from "../components/LoadingScreen";
 import { trpc } from "../utils/trpc/client";
+import { useSession } from "../utils/auth/client";
 import { resolveBuilding } from "../utils/buildingLookup";
 import type { ParsedEvent } from "../types";
 import { START_LOCATION_KEY } from "./MapPage";
+
+function greeting() {
+  const h = new Date().getHours();
+  if (h < 12) return "Good morning";
+  if (h < 17) return "Good afternoon";
+  return "Good evening";
+}
 
 function todayStr() {
   const d = new Date();
@@ -46,6 +54,7 @@ function haversineMinutes(a: ParsedEvent, b: ParsedEvent): number | null {
 export default function Dashboard() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const { data: session } = useSession();
   const date = searchParams.get("date") ?? todayStr();
   const scheduleId = searchParams.get("schedule") ?? "";
 
@@ -163,6 +172,21 @@ export default function Dashboard() {
       <Navbar />
 
       <main className="max-w-3xl mx-auto px-4 py-8">
+
+        {/* Greeting */}
+        {session?.user && (
+          <div className="mb-8">
+            <h1 className="text-white text-2xl font-bold tracking-tight">
+              {greeting()},{" "}
+              <span style={{ color: "var(--color-asu-gold)" }}>
+                {session.user.name?.split(" ")[0] ?? "there"}
+              </span>
+            </h1>
+            <p className="text-gray-500 text-sm mt-1">
+              {new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}
+            </p>
+          </div>
+        )}
 
         {/* Schedule tabs */}
         {hasSchedules && (
