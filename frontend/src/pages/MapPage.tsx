@@ -95,6 +95,17 @@ const ROUTE_COLORS = [
   "#EC4899", // pink
   "#84CC16", // lime
   "#A78BFA", // purple-light
+  "#F59E0B", // amber
+  "#14B8A6", // teal
+  "#6366F1", // indigo
+  "#FB7185", // rose
+  "#34D399", // green-light
+  "#60A5FA", // blue-light
+  "#C084FC", // fuchsia
+  "#FBBF24", // yellow
+  "#2DD4BF", // teal-light
+  "#818CF8", // indigo-light
+  "#4ADE80", // green-bright
 ];
 
 export default function MapPage() {
