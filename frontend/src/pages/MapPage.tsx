@@ -86,6 +86,9 @@ function offsetDate(dateStr: string, days: number) {
 
 const LIBRARIES: ("geometry" | "marker")[] = ["geometry", "marker"];
 
+const SELECTED_ROUTE_COLOR = "#FFD54F"; // bright yellow when a route is clicked/active
+const START_ROUTE_COLOR = "#FFC627";   // ASU gold for the segment from start pin to first class
+
 const ROUTE_COLORS = [
   "#3B82F6", // blue
   "#10B981", // emerald
@@ -801,7 +804,7 @@ export default function MapPage() {
                 path={seg.path}
                 onClick={() => setActiveRouteSegmentIndex(isSelected ? null : idx)}
                 options={{
-                  strokeColor: isSelected ? "#FFD54F" : seg.fromIndex === -1 ? "#FFC627" : seg.isTight ? "#EF4444" : ROUTE_COLORS[idx % ROUTE_COLORS.length],
+                  strokeColor: isSelected ? SELECTED_ROUTE_COLOR : seg.fromIndex === -1 ? START_ROUTE_COLOR : ROUTE_COLORS[idx % ROUTE_COLORS.length],
                   strokeWeight: isSelected ? 8 : seg.isFallback ? 3 : 5,
                   strokeOpacity: isSelected ? 1 : seg.isFallback ? 0.55 : 0.85,
                   zIndex: isSelected ? 2 : 1,
