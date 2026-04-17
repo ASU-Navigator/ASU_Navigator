@@ -86,6 +86,17 @@ function offsetDate(dateStr: string, days: number) {
 
 const LIBRARIES: ("geometry" | "marker")[] = ["geometry", "marker"];
 
+const ROUTE_COLORS = [
+  "#3B82F6", // blue
+  "#10B981", // emerald
+  "#8B5CF6", // violet
+  "#F97316", // orange
+  "#06B6D4", // cyan
+  "#EC4899", // pink
+  "#84CC16", // lime
+  "#A78BFA", // purple-light
+];
+
 export default function MapPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -779,7 +790,7 @@ export default function MapPage() {
                 path={seg.path}
                 onClick={() => setActiveRouteSegmentIndex(isSelected ? null : idx)}
                 options={{
-                  strokeColor: isSelected ? "#FFD54F" : seg.fromIndex === -1 ? "#FFC627" : seg.isTight ? "#EF4444" : "#3B82F6",
+                  strokeColor: isSelected ? "#FFD54F" : seg.fromIndex === -1 ? "#FFC627" : seg.isTight ? "#EF4444" : ROUTE_COLORS[idx % ROUTE_COLORS.length],
                   strokeWeight: isSelected ? 8 : seg.isFallback ? 3 : 5,
                   strokeOpacity: isSelected ? 1 : seg.isFallback ? 0.55 : 0.85,
                   zIndex: isSelected ? 2 : 1,
