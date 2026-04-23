@@ -24,10 +24,66 @@ export default function LoginPage() {
   }
 
   return (
-    <div
-      className="min-h-screen flex items-center justify-center p-4"
-      style={{ background: "linear-gradient(135deg, #0f0f1a 0%, #1e1e2f 55%, #2d1540 100%)" }}
-    >
+    <div className="min-h-screen flex flex-col relative">
+      {/* YouTube Video Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ opacity: 0.3, pointerEvents: "none", border: "none" }}
+          src="https://www.youtube.com/embed/bV0_Qw3st8g?autoplay=1&mute=1&loop=1&playlist=bV0_Qw3st8g&controls=0&modestbranding=1"
+          allow="autoplay; encrypted-media"
+        ></iframe>
+      </div>
+
+      {/* Dark overlay for better contrast */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Navigation Bar */}
+      <nav className="bg-white shadow-md relative z-10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-12">
+            <Link to="/" className="text-2xl font-bold text-asu-maroon hover:text-asu-maroon-dark transition-colors">
+              ASU Navigator
+            </Link>
+            <div className="flex items-center gap-8">
+              <Link
+                to="/"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Home Screen
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                About Us
+              </Link>
+              <Link
+                to="/purpose"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Purpose
+              </Link>
+              <Link
+                to="/acknowledgements"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Acknowledgements
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+          <div className="text-2xl font-bold text-asu-maroon">ASU</div>
+        </div>
+      </nav>
+
+      {/* Login Form Container */}
+      <div className="flex-1 flex items-center justify-center p-4 relative z-20">
       <div
         className="w-full max-w-sm bg-white rounded-2xl overflow-hidden"
         style={{ boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08)" }}
@@ -100,6 +156,7 @@ export default function LoginPage() {
             </Link>
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

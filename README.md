@@ -102,6 +102,21 @@ The frontend proxies `/api` and `/trpc` requests to the backend running on `http
 5. Open the map to preview walking routes between class locations.
 6. Optionally save a start pin or use simulation mode to test a hypothetical schedule.
 
+## Run locally
+
+Front-end:
+- pnpm install
+- pnpm run dev
+
+Back-end:
+- npx prisma migrate dev
+- npx prisma generate
+- pnpm install
+- pnpm install axios
+- pnpm run dev
+
+To update back-end:
+pnpm exec prisma generate
 ## Production Build
 
 To run the Vercel-style production build locally:
@@ -124,6 +139,23 @@ The scripts in `frontend/src/data/scripts/` are for maintaining ASU building dat
 
 - `convert.js`
 - `fixBuildingCoords.js`
+
+## To obtain accurate buildings list:
+- Search up "ASU building codes JSON" and click on ASU link
+- Download the Excel file on the website
+- In the Excel file, change the "Building Name" column using "PROPER" formula
+- Export the Excel sheet to CSV file
+- Run the CSV file to a JSON converter website: "https://csvjson.com/csv2json"
+- Paste the node file in .\frontent\src\data\scripts
+- Run the convert.js script using "node convert.js"
+- paste the javascript list into the fixBuildingCoordinates list in "const buildings = [...]"
+
+## To run fixBuildingCoords.js script:
+- cd .\ASU_Navigator\data\scripts
+- node fixBuildingCoords.js
+- Should create a new file with accurate building coordinates in a .json file
+
+![alt text](image.png)
 
 ## Current Auth Behavior
 
