@@ -63,7 +63,7 @@ export default function SignupPage() {
                 to="/about"
                 className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
               >
-                About Us
+                About the Project
               </Link>
               <Link
                 to="/purpose"

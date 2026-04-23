@@ -49,7 +49,7 @@ export default function ContactUs() {
                 to="/about"
                 className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
               >
-                About Us
+                About the Project
               </Link>
               <Link
                 to="/purpose"
@@ -79,6 +79,60 @@ export default function ContactUs() {
       <div className="flex-1 max-w-7xl mx-auto px-6 py-16 w-full">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
         
+        {/*Picture and description of mentors and mentees*/}
+          <section>
+            <h2 className="text-2xl font-semibold text-asu-maroon mb-6">Developers</h2>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Mentor</h3>
+                <div className="flex justify-around items-center gap-6 flex-wrap">
+                  <img 
+                    src="/images/Ben_Juntilla_PFP.png" 
+                    alt="Ben Juntilla" 
+                    className="w-150 h-150 object-contain rounded-lg shadow-md bg-gray-100" 
+                  />
+                  <p className="text-large font-medium text-gray-700 text-center max-w-100">
+                      Ben Juntilla<br />
+                      <span className="text-medium text-gray-500">Third Year Computer Science (Software Engineering) student at 
+                        Arizona State University, Barrett Honors College, Tempe Campus
+                      </span>
+                    </p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Mentees</h3>
+                <div className="flex justify-around items-center gap-6 flex-wrap">
+                  <div className="flex flex-col items-center gap-3">
+                    <img
+                      src="/images/Ethan_Nguyen_PFP.jpg"
+                      alt="Ethan Nguyen"
+                      className="w-100 h-150 object-contain rounded-lg shadow-md bg-gray-100 flex-shrink-0"
+                    />
+                    <p className="text-large font-medium text-gray-700 text-center max-w-100">
+                      Ethan Nguyen<br />
+                      <span className="text-medium text-gray-500">First Year Computer Science (Software Engineering) student at 
+                        Arizona State University, Barrett Honors College, Tempe Campus
+                      </span>
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center gap-3">
+                    <img
+                      src="/images/Xander_Morris_PFP.jpg"
+                      alt="Xander Morris"
+                      className="w-150 h-150 object-contain rounded-xl shadow-lg bg-gray-100 flex-shrink-0"
+                    />
+                    <p className="text-large font-medium text-gray-700 text-center max-w-100">
+                      Xander Morris<br />
+                      <span className="text-medium text-gray-500">Third Year Computer Science student at Arizona State University Online</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
