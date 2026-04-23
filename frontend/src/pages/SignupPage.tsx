@@ -30,14 +30,67 @@ export default function SignupPage() {
     }
   }
 
-  const inputClass =
-    "w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-asu-maroon focus:border-transparent transition-all";
-
   return (
-    <div
-      className="min-h-screen flex items-center justify-center p-4"
-      style={{ background: "linear-gradient(135deg, #0f0f1a 0%, #1e1e2f 55%, #2d1540 100%)" }}
-    >
+    <div className="min-h-screen flex flex-col relative">
+      {/* YouTube Video Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ opacity: 0.3, pointerEvents: "none", border: "none" }}
+          src="https://www.youtube.com/embed/bV0_Qw3st8g?autoplay=1&mute=1&loop=1&playlist=bV0_Qw3st8g&controls=0&modestbranding=1"
+          allow="autoplay; encrypted-media"
+        ></iframe>
+      </div>
+
+      {/* Dark overlay for better contrast */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Navigation Bar */}
+      <nav className="bg-white shadow-md relative z-10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-12">
+            <Link to="/" className="text-2xl font-bold text-asu-maroon hover:text-asu-maroon-dark transition-colors">
+              ASU Navigator
+            </Link>
+            <div className="flex items-center gap-8">
+              <Link
+                to="/"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Home Screen
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                About Us
+              </Link>
+              <Link
+                to="/purpose"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Purpose
+              </Link>
+              <Link
+                to="/acknowledgements"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Acknowledgements
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+          <div className="text-2xl font-bold text-asu-maroon">ASU</div>
+        </div>
+      </nav>
+
+      {/* Signup Form Container */}
+      <div className="flex-1 flex items-center justify-center p-4 relative z-20">
       <div
         className="w-full max-w-sm bg-white rounded-2xl overflow-hidden"
         style={{ boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08)" }}
@@ -58,7 +111,7 @@ export default function SignupPage() {
 
         {/* Form */}
         <div className="px-8 py-8">
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-5">
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1.5">
@@ -70,7 +123,7 @@ export default function SignupPage() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 placeholder="Your Name"
-                className={inputClass}
+                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-asu-maroon focus:border-transparent transition-all"
               />
             </div>
 
@@ -84,7 +137,7 @@ export default function SignupPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="yourname@asu.edu"
-                className={inputClass}
+                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-asu-maroon focus:border-transparent transition-all"
               />
               <p className="text-xs text-gray-400 mt-1">Must be an @asu.edu address</p>
             </div>
@@ -100,7 +153,7 @@ export default function SignupPage() {
                 required
                 minLength={8}
                 placeholder="••••••••"
-                className={inputClass}
+                className="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-asu-maroon focus:border-transparent transition-all"
               />
               <p className="text-xs text-gray-400 mt-1">Minimum 8 characters</p>
             </div>
@@ -114,7 +167,7 @@ export default function SignupPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-2.5 bg-asu-maroon hover:bg-asu-maroon-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer mt-1"
+              className="w-full py-2.5 bg-asu-maroon hover:bg-asu-maroon-dark text-white font-semibold rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
             >
               {isLoading ? "Creating account..." : "Create Account"}
             </button>
@@ -127,6 +180,7 @@ export default function SignupPage() {
             </Link>
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

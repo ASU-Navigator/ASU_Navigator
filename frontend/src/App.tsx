@@ -12,6 +12,10 @@ import SignupPage from "./pages/SignupPage";
 import Dashboard from "./pages/Dashboard";
 import MapPage from "./pages/MapPage";
 import SimulatePage from "./pages/SimulatePage";
+import AboutUs from "./pages/AboutUs";
+import Purpose from "./pages/Purpose";
+import Acknowledgements from "./pages/Acknowledgements";
+import ContactUs from "./pages/ContactUs";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +50,10 @@ const router = createBrowserRouter([
         children: [
           { path: "login", element: <LoginPage /> },
           { path: "signup", element: <SignupPage /> },
+          { path: "about", element: <AboutUs /> },
+          { path: "purpose", element: <Purpose /> },
+          { path: "acknowledgements", element: <Acknowledgements /> },
+          { path: "contact", element: <ContactUs /> },
         ],
       },
       {
