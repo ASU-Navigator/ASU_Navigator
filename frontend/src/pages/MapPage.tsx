@@ -215,11 +215,42 @@ export default function MapPage() {
   const [routeSegments, setRouteSegments] = useState<RouteSegment[]>([]);
   const [isComputingRoutes, setIsComputingRoutes] = useState(false);
   const [map, setMap] = useState<google.maps.Map | null>(null);
+  const [mapKey, setMapKey] = useState(0);
   const markersRef = useRef<google.maps.marker.AdvancedMarkerElement[]>([]);
   const markerContentsRef = useRef<HTMLDivElement[]>([]);
   const startMarkerContentRef = useRef<HTMLDivElement | null>(null);
+  const routeComputeRequestId = useRef(0);
   const [activeEventIndex, setActiveEventIndex] = useState<number | null>(null);
   const [activeRouteSegmentIndex, setActiveRouteSegmentIndex] = useState<number | null>(null);
+
+  function resetMapAndRoutes() {
+    setRouteSegments([]);
+    setActiveEventIndex(null);
+    setActiveRouteSegmentIndex(null);
+    setIsComputingRoutes(false);
+    setMapKey((current) => current + 1);
+    setMap(null);
+    markersRef.current.forEach((marker) => {
+      try { marker.map = null; } catch {};
+    });
+    markersRef.current = [];
+    markerContentsRef.current = [];
+    if (startMarkerRef.current) {
+      startMarkerRef.current.map = null;
+      startMarkerRef.current = null;
+      startMarkerContentRef.current = null;
+    }
+  }
+
+  function centerRouteSegment(segment: RouteSegment) {
+    if (!map || segment.path.length === 0) return;
+    const bounds = new google.maps.LatLngBounds();
+    segment.path.forEach((point) => bounds.extend(point));
+    if (segment.fromIndex === -1 && startLocation) {
+      bounds.extend(startLocation);
+    }
+    map.panTo(bounds.getCenter());
+  }
 
   useEffect(() => {
     setRouteSegments([]);
@@ -253,7 +284,14 @@ export default function MapPage() {
   })();
 
   useEffect(() => {
-    if (!isLoaded || events.length === 0) return;
+    setRouteSegments([]);
+    setActiveEventIndex(null);
+    setActiveRouteSegmentIndex(null);
+
+    if (!isLoaded || events.length === 0) {
+      setIsComputingRoutes(false);
+      return;
+    }
 
     function straightLineSegment(
       fromIndex: number,
@@ -316,6 +354,7 @@ export default function MapPage() {
       };
     }
 
+    const requestId = ++routeComputeRequestId.current;
     async function compute() {
       setIsComputingRoutes(true);
       setRouteSegments([]);
@@ -324,7 +363,9 @@ export default function MapPage() {
       const segments: RouteSegment[] = [];
 
       if (events.length === 0) {
-        setIsComputingRoutes(false);
+        if (requestId === routeComputeRequestId.current) {
+          setIsComputingRoutes(false);
+        }
         return;
       }
 
@@ -355,13 +396,14 @@ export default function MapPage() {
         segments.push(await fetchRoute(i, i + 1, fromCoords, toCoords, gapSeconds));
       }
 
+      if (requestId !== routeComputeRequestId.current) return;
       setRouteSegments(segments);
       setIsComputingRoutes(false);
     }
 
     void compute();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoaded, events.length, date, startLocation]);
+  }, [isLoaded, events, date, startLocation]);
 
   useEffect(() => {
     if (!map || events.length === 0) return;
@@ -406,6 +448,10 @@ export default function MapPage() {
         marker.addListener("gmp-click", () => {
           setActiveEventIndex(i);
           setActiveRouteSegmentIndex(null);
+          if (map) {
+            map.panTo(coords);
+            map.setCenter(coords);
+          }
         });
         markersRef.current.push(marker);
         markerContentsRef.current.push(content);
@@ -483,6 +529,34 @@ export default function MapPage() {
     }
   }, [activeEventIndex, activeRouteSegmentIndex, routeSegments]);
 
+  useEffect(() => {
+    if (!map || routeSegments.length === 0) return;
+
+    const bounds = new google.maps.LatLngBounds();
+    routeSegments.forEach((seg) => {
+      seg.path.forEach((point) => bounds.extend(point));
+    });
+    if (startLocation) {
+      bounds.extend(startLocation);
+    }
+
+    map.fitBounds(bounds, 80);
+  }, [map, routeSegments, startLocation]);
+
+  useEffect(() => {
+    if (activeRouteSegmentIndex === null || !map) return;
+    const seg = routeSegments[activeRouteSegmentIndex];
+    if (!seg) return;
+
+    const bounds = new google.maps.LatLngBounds();
+    seg.path.forEach((point) => bounds.extend(point));
+    if (seg.fromIndex === -1 && startLocation) {
+      bounds.extend(startLocation);
+    }
+
+    map.panTo(bounds.getCenter());
+  }, [activeRouteSegmentIndex, map, routeSegments, startLocation]);
+
   const handleMapClick = useCallback((e: google.maps.MapMouseEvent) => {
     if (isPickingStart && e.latLng) {
       persistStartLocation({ lat: e.latLng.lat(), lng: e.latLng.lng(), label: "Custom Pin" });
@@ -553,10 +627,12 @@ export default function MapPage() {
           <div className="mt-3 flex flex-wrap gap-2">
             <button
               onClick={() => {
-                setActiveEventIndex(null);
-                setActiveRouteSegmentIndex(null);
-                setRouteSegments([]);
-                setSearchParams((p) => { p.set("date", offsetDate(date, -1)); return p; });
+                resetMapAndRoutes();
+                setSearchParams((p) => {
+                  const next = new URLSearchParams(p);
+                  next.set("date", offsetDate(date, -1));
+                  return next;
+                });
               }}
               className="px-3 py-1 rounded-lg bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
             >
@@ -564,10 +640,12 @@ export default function MapPage() {
             </button>
             <button
               onClick={() => {
-                setActiveEventIndex(null);
-                setActiveRouteSegmentIndex(null);
-                setRouteSegments([]);
-                setSearchParams((p) => { p.set("date", todayStr()); return p; });
+                resetMapAndRoutes();
+                setSearchParams((p) => {
+                  const next = new URLSearchParams(p);
+                  next.set("date", todayStr());
+                  return next;
+                });
               }}
               className="px-3 py-1 rounded-lg bg-asu-gold/10 text-asu-gold text-xs transition-colors hover:bg-asu-gold/20"
             >
@@ -575,10 +653,12 @@ export default function MapPage() {
             </button>
             <button
               onClick={() => {
-                setActiveEventIndex(null);
-                setActiveRouteSegmentIndex(null);
-                setRouteSegments([]);
-                setSearchParams((p) => { p.set("date", offsetDate(date, 1)); return p; });
+                resetMapAndRoutes();
+                setSearchParams((p) => {
+                  const next = new URLSearchParams(p);
+                  next.set("date", offsetDate(date, 1));
+                  return next;
+                });
               }}
               className="px-3 py-1 rounded-lg bg-white/10 text-white text-xs transition-colors hover:bg-white/20"
             >
@@ -783,9 +863,10 @@ export default function MapPage() {
         )}
 
         <GoogleMap
+          key={mapKey}
           mapContainerStyle={{ width: "100%", height: "100%" }}
-          center={{ lat: mapCenter.lat, lng: mapCenter.lng }}
-          zoom={mapCenter.zoom}
+          defaultCenter={{ lat: mapCenter.lat, lng: mapCenter.lng }}
+          defaultZoom={mapCenter.zoom}
           onLoad={(mapInstance) => setMap(mapInstance)}
           onClick={handleMapClick}
           options={{
@@ -802,7 +883,14 @@ export default function MapPage() {
               <Polyline
                 key={`${seg.fromIndex}-${seg.toIndex}`}
                 path={seg.path}
-                onClick={() => setActiveRouteSegmentIndex(isSelected ? null : idx)}
+                onClick={() => {
+                  if (activeRouteSegmentIndex === idx) {
+                    centerRouteSegment(seg);
+                    setActiveRouteSegmentIndex(idx);
+                  } else {
+                    setActiveRouteSegmentIndex(idx);
+                  }
+                }}
                 options={{
                   strokeColor: isSelected ? SELECTED_ROUTE_COLOR : seg.fromIndex === -1 ? START_ROUTE_COLOR : ROUTE_COLORS[idx % ROUTE_COLORS.length],
                   strokeWeight: isSelected ? 8 : seg.isFallback ? 3 : 5,
