@@ -3,6 +3,8 @@ import { router, publicProcedure, protectedProcedure } from "./trpc.ts";
 import { prisma } from "./prismaClient.ts";
 import { parseIcsContent, filterEventsForDate } from "./utils/parseIcs.ts";
 
+const routeCache = new Map<string, { durationSeconds: number; encodedPolyline: string }>();
+
 const scheduleRouter = router({
   upload: protectedProcedure
     .input(z.object({
@@ -71,6 +73,12 @@ const scheduleRouter = router({
       destLng: z.number(),
     }))
     .query(async ({ input }) => {
+      const key = `${input.originLat},${input.originLng}->${input.destLat},${input.destLng}`;
+      const cached = routeCache.get(key);
+      if (cached) {
+        return { ok: true as const, durationSeconds: cached.durationSeconds, encodedPolyline: cached.encodedPolyline };
+      }
+
       const apiKey = process.env.API_KEY;
       if (!apiKey) throw new Error("API_KEY not configured");
 
@@ -89,11 +97,9 @@ const scheduleRouter = router({
         return { ok: false as const, error: "Invalid route data" };
       }
 
-      return {
-        ok: true as const,
-        durationSeconds: leg.duration.value,
-        encodedPolyline: route.overview_polyline.points,
-      };
+      const result = { durationSeconds: leg.duration.value as number, encodedPolyline: route.overview_polyline.points as string };
+      routeCache.set(key, result);
+      return { ok: true as const, ...result };
     }),
 });
 

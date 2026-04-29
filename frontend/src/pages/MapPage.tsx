@@ -222,6 +222,7 @@ export default function MapPage() {
   const routeComputeRequestId = useRef(0);
   const [activeEventIndex, setActiveEventIndex] = useState<number | null>(null);
   const [activeRouteSegmentIndex, setActiveRouteSegmentIndex] = useState<number | null>(null);
+  const routeCacheRef = useRef(new Map<string, { path: { lat: number; lng: number }[]; durationSeconds: number }>());
 
   function resetMapAndRoutes() {
     setRouteSegments([]);
@@ -327,6 +328,18 @@ export default function MapPage() {
       toCoords: { lat: number; lng: number },
       gapSeconds: number,
     ): Promise<RouteSegment> {
+      const key = `${fromCoords.lat},${fromCoords.lng}->${toCoords.lat},${toCoords.lng}`;
+      const cached = routeCacheRef.current.get(key);
+      if (cached) {
+        return {
+          fromIndex,
+          toIndex,
+          path: cached.path,
+          durationSeconds: cached.durationSeconds,
+          gapSeconds,
+          isTight: cached.durationSeconds > gapSeconds - 300,
+        };
+      }
       try {
         const result = await trpcClient.schedule.route.query({
           originLat: fromCoords.lat,
@@ -336,10 +349,12 @@ export default function MapPage() {
         });
         if (result.ok) {
           const decoded = window.google.maps.geometry.encoding.decodePath(result.encodedPolyline);
+          const path = decoded.map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
+          routeCacheRef.current.set(key, { path, durationSeconds: result.durationSeconds });
           return {
             fromIndex,
             toIndex,
-            path: decoded.map((pt) => ({ lat: pt.lat(), lng: pt.lng() })),
+            path,
             durationSeconds: result.durationSeconds,
             gapSeconds,
             isTight: result.durationSeconds > gapSeconds - 300,
