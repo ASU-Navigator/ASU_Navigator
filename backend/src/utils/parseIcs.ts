@@ -107,7 +107,6 @@ export function parseIcsContent(rawIcs: string): ParsedEvent[] {
         while (next) {
           const startDate = next.toJSDate();
           if (startDate > endOfYear) break;
-          const durationMs = event.duration.toSeconds() * 1000;
           const endDate = new Date(startDate.getTime() + durationMs);
           events.push({
             uid: `${event.uid}-${startDate.toISOString()}`,
@@ -137,7 +136,6 @@ export function parseIcsContent(rawIcs: string): ParsedEvent[] {
   return events.sort((a, b) => a.start.getTime() - b.start.getTime());
 }
 
-// Arizona is UTC-7 with no DST. Midnight Arizona = 07:00 UTC.
 function sameUtcCalendarDate(a: Date, b: Date): boolean {
   return (
     a.getUTCFullYear() === b.getUTCFullYear() &&

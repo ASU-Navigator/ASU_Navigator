@@ -2,8 +2,10 @@ import { z } from "zod";
 import { router, publicProcedure, protectedProcedure } from "./trpc.ts";
 import { prisma } from "./prismaClient.ts";
 import { parseIcsContent, filterEventsForDate } from "./utils/parseIcs.ts";
+import type { ParsedEvent } from "./utils/parseIcs.ts";
 
 const routeCache = new Map<string, { durationSeconds: number; encodedPolyline: string }>();
+const parsedIcsCache = new Map<string, ParsedEvent[]>();
 
 const scheduleRouter = router({
   upload: protectedProcedure
@@ -17,6 +19,7 @@ const scheduleRouter = router({
       const schedule = await prisma.schedule.create({
         data: { userId, rawIcs: input.icsContent, label: input.label },
       });
+      parsedIcsCache.set(schedule.id, events);
       return { success: true, totalEvents: events.length, scheduleId: schedule.id };
     }),
 
@@ -38,7 +41,13 @@ const scheduleRouter = router({
       });
       if (!schedule) return { hasSchedule: false, events: [] };
       const targetDate = input.date ? new Date(input.date + "T12:00:00Z") : new Date();
-      const allEvents = parseIcsContent(schedule.rawIcs);
+
+      let allEvents = parsedIcsCache.get(input.scheduleId);
+      if (!allEvents) {
+        allEvents = parseIcsContent(schedule.rawIcs);
+        parsedIcsCache.set(input.scheduleId, allEvents);
+      }
+
       const scheduleStartDate = allEvents.length > 0
         ? allEvents[0].start.toISOString().slice(0, 10)
         : targetDate.toISOString().slice(0, 10);
@@ -62,6 +71,7 @@ const scheduleRouter = router({
     .mutation(async ({ ctx, input }) => {
       const userId = ctx.session.user.id;
       await prisma.schedule.deleteMany({ where: { id: input.scheduleId, userId } });
+      parsedIcsCache.delete(input.scheduleId);
       return { success: true };
     }),
 
@@ -104,14 +114,6 @@ const scheduleRouter = router({
 });
 
 export const appRouter = router({
-  hello: publicProcedure
-    .input(z.string().nullish())
-    .query(({ input }) => `Hello ${input ?? "world"}!`),
-
-  getSession: publicProcedure.query(({ ctx }) => ctx.session),
-
-  me: protectedProcedure.query(({ ctx }) => ctx.session.user),
-
   schedule: scheduleRouter,
 });
 

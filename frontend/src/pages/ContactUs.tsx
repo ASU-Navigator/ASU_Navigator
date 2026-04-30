@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import PublicNav from "../components/PublicNav";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -20,8 +20,6 @@ export default function ContactUs() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend service
-    console.log("Form submitted:", formData);
     setSubmitted(true);
     setTimeout(() => {
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -31,113 +29,68 @@ export default function ContactUs() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      {/* Navigation Bar */}
-      <nav className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            <Link to="/" className="text-2xl font-bold text-asu-maroon hover:text-asu-maroon-dark transition-colors">
-              ASU Navigator
-            </Link>
-            <div className="flex items-center gap-8">
-              <Link
-                to="/"
-                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
-              >
-                Home Screen
-              </Link>
-              <Link
-                to="/about"
-                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
-              >
-                About the Project
-              </Link>
-              <Link
-                to="/purpose"
-                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
-              >
-                Purpose
-              </Link>
-              <Link
-                to="/acknowledgements"
-                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
-              >
-                Acknowledgements
-              </Link>
-              <Link
-                to="/contact"
-                className="text-gray-700 font-medium hover:text-asu-maroon transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-          <div className="text-2xl font-bold text-asu-maroon">ASU</div>
-        </div>
-      </nav>
+      <PublicNav />
 
-      {/* Main Content */}
       <div className="flex-1 max-w-7xl mx-auto px-6 py-16 w-full">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
-        
-        {/*Picture and description of mentors and mentees*/}
-          <section>
-            <h2 className="text-2xl font-semibold text-asu-maroon mb-6">Developers</h2>
-            
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Mentor</h3>
-                <div className="flex justify-around items-center gap-6 flex-wrap">
-                  <img 
-                    src="/images/Ben_Juntilla_PFP.png" 
-                    alt="Ben Juntilla" 
-                    className="w-150 h-150 object-contain rounded-lg shadow-md bg-gray-100" 
+
+        <section>
+          <h2 className="text-2xl font-semibold text-asu-maroon mb-6">Developers</h2>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Mentor</h3>
+              <div className="flex justify-around items-center gap-6 flex-wrap">
+                <img
+                  src="/images/Ben_Juntilla_PFP.png"
+                  alt="Ben Juntilla"
+                  className="w-150 h-150 object-contain rounded-lg shadow-md bg-gray-100"
+                />
+                <p className="text-large font-medium text-gray-700 text-center max-w-100">
+                  Ben Juntilla<br />
+                  <span className="text-medium text-gray-500">Third Year Computer Science (Software Engineering) student at
+                    Arizona State University, Barrett Honors College, Tempe Campus
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Mentees</h3>
+              <div className="flex justify-around items-center gap-6 flex-wrap">
+                <div className="flex flex-col items-center gap-3">
+                  <img
+                    src="/images/Ethan_Nguyen_PFP.jpg"
+                    alt="Ethan Nguyen"
+                    className="w-100 h-150 object-contain rounded-lg shadow-md bg-gray-100 flex-shrink-0"
                   />
                   <p className="text-large font-medium text-gray-700 text-center max-w-100">
-                      Ben Juntilla<br />
-                      <span className="text-medium text-gray-500">Third Year Computer Science (Software Engineering) student at 
-                        Arizona State University, Barrett Honors College, Tempe Campus
-                      </span>
-                    </p>
+                    Ethan Nguyen<br />
+                    <span className="text-medium text-gray-500">First Year Computer Science (Software Engineering) student at
+                      Arizona State University, Barrett Honors College, Tempe Campus
+                    </span>
+                  </p>
                 </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Mentees</h3>
-                <div className="flex justify-around items-center gap-6 flex-wrap">
-                  <div className="flex flex-col items-center gap-3">
-                    <img
-                      src="/images/Ethan_Nguyen_PFP.jpg"
-                      alt="Ethan Nguyen"
-                      className="w-100 h-150 object-contain rounded-lg shadow-md bg-gray-100 flex-shrink-0"
-                    />
-                    <p className="text-large font-medium text-gray-700 text-center max-w-100">
-                      Ethan Nguyen<br />
-                      <span className="text-medium text-gray-500">First Year Computer Science (Software Engineering) student at 
-                        Arizona State University, Barrett Honors College, Tempe Campus
-                      </span>
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center gap-3">
-                    <img
-                      src="/images/Xander_Morris_PFP.jpg"
-                      alt="Xander Morris"
-                      className="w-150 h-150 object-contain rounded-xl shadow-lg bg-gray-100 flex-shrink-0"
-                    />
-                    <p className="text-large font-medium text-gray-700 text-center max-w-100">
-                      Xander Morris<br />
-                      <span className="text-medium text-gray-500">Third Year Computer Science student at Arizona State University Online</span>
-                    </p>
-                  </div>
+                <div className="flex flex-col items-center gap-3">
+                  <img
+                    src="/images/Xander_Morris_PFP.jpg"
+                    alt="Xander Morris"
+                    className="w-150 h-150 object-contain rounded-xl shadow-lg bg-gray-100 flex-shrink-0"
+                  />
+                  <p className="text-large font-medium text-gray-700 text-center max-w-100">
+                    Xander Morris<br />
+                    <span className="text-medium text-gray-500">Third Year Computer Science student at Arizona State University Online</span>
+                  </p>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Contact Information */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
             <h2 className="text-2xl font-semibold text-asu-maroon">Get in Touch</h2>
-            
+
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
               <div className="space-y-1 text-asu-maroon">
@@ -190,10 +143,9 @@ export default function ContactUs() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-semibold text-asu-maroon mb-6">Send us a Message</h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">

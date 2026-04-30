@@ -36,6 +36,7 @@ export const START_LOCATION_KEY = "asuStartLocation";
 export const SAVED_PINS_KEY = "asuSavedPins";
 
 const geocodeCache = new Map<string, { lat: number; lng: number } | null>();
+const routeCache = new Map<string, { path: { lat: number; lng: number }[]; durationSeconds: number }>();
 
 async function geocodeLocation(locationStr: string): Promise<{ lat: number; lng: number } | null> {
   const upper = locationStr.toUpperCase();
@@ -86,29 +87,29 @@ function offsetDate(dateStr: string, days: number) {
 
 const LIBRARIES: ("geometry" | "marker")[] = ["geometry", "marker"];
 
-const SELECTED_ROUTE_COLOR = "#FFD54F"; // bright yellow when a route is clicked/active
-const START_ROUTE_COLOR = "#FFC627";   // ASU gold for the segment from start pin to first class
+const SELECTED_ROUTE_COLOR = "#FFD54F";
+const START_ROUTE_COLOR = "#FFC627";
 
 const ROUTE_COLORS = [
-  "#3B82F6", // blue
-  "#10B981", // emerald
-  "#8B5CF6", // violet
-  "#F97316", // orange
-  "#06B6D4", // cyan
-  "#EC4899", // pink
-  "#84CC16", // lime
-  "#A78BFA", // purple-light
-  "#F59E0B", // amber
-  "#14B8A6", // teal
-  "#6366F1", // indigo
-  "#FB7185", // rose
-  "#34D399", // green-light
-  "#60A5FA", // blue-light
-  "#C084FC", // fuchsia
-  "#FBBF24", // yellow
-  "#2DD4BF", // teal-light
-  "#818CF8", // indigo-light
-  "#4ADE80", // green-bright
+  "#3B82F6",
+  "#10B981",
+  "#8B5CF6",
+  "#F97316",
+  "#06B6D4",
+  "#EC4899",
+  "#84CC16",
+  "#A78BFA",
+  "#F59E0B",
+  "#14B8A6",
+  "#6366F1",
+  "#FB7185",
+  "#34D399",
+  "#60A5FA",
+  "#C084FC",
+  "#FBBF24",
+  "#2DD4BF",
+  "#818CF8",
+  "#4ADE80",
 ];
 
 export default function MapPage() {
@@ -222,7 +223,6 @@ export default function MapPage() {
   const routeComputeRequestId = useRef(0);
   const [activeEventIndex, setActiveEventIndex] = useState<number | null>(null);
   const [activeRouteSegmentIndex, setActiveRouteSegmentIndex] = useState<number | null>(null);
-  const routeCacheRef = useRef(new Map<string, { path: { lat: number; lng: number }[]; durationSeconds: number }>());
 
   function resetMapAndRoutes() {
     setRouteSegments([]);
@@ -329,7 +329,7 @@ export default function MapPage() {
       gapSeconds: number,
     ): Promise<RouteSegment> {
       const key = `${fromCoords.lat},${fromCoords.lng}->${toCoords.lat},${toCoords.lng}`;
-      const cached = routeCacheRef.current.get(key);
+      const cached = routeCache.get(key);
       if (cached) {
         return {
           fromIndex,
@@ -350,7 +350,7 @@ export default function MapPage() {
         if (result.ok) {
           const decoded = window.google.maps.geometry.encoding.decodePath(result.encodedPolyline);
           const path = decoded.map((pt) => ({ lat: pt.lat(), lng: pt.lng() }));
-          routeCacheRef.current.set(key, { path, durationSeconds: result.durationSeconds });
+          routeCache.set(key, { path, durationSeconds: result.durationSeconds });
           return {
             fromIndex,
             toIndex,
@@ -361,7 +361,6 @@ export default function MapPage() {
           };
         }
       } catch {
-        // fall through to straight line
       }
       return {
         ...straightLineSegment(fromIndex, toIndex, fromCoords.lat, fromCoords.lng, toCoords.lat, toCoords.lng, gapSeconds),
@@ -417,7 +416,6 @@ export default function MapPage() {
     }
 
     void compute();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoaded, events, date, startLocation]);
 
   useEffect(() => {
@@ -580,7 +578,6 @@ export default function MapPage() {
       setActiveEventIndex(null);
       setActiveRouteSegmentIndex(null);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPickingStart]);
 
   if (!isSimulate && !scheduleId) {
@@ -682,7 +679,6 @@ export default function MapPage() {
           </div>
         </div>
 
-        {/* Starting location */}
         <div className="p-3 border-b border-white/10">
           <p className="text-gray-400 text-xs font-medium mb-2 uppercase tracking-wide">Starting From</p>
 

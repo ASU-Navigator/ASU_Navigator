@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 type Props = {
-  date: string; // YYYY-MM-DD
+  date: string;
   onChange: (date: string) => void;
 };
 
