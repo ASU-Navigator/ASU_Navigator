@@ -17,7 +17,13 @@ import Purpose from "./pages/Purpose";
 import Acknowledgements from "./pages/Acknowledgements";
 import ContactUs from "./pages/ContactUs";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60_000,
+    },
+  },
+});
 
 function ProtectedLayout() {
   const { data: session, isPending } = useSession();
@@ -45,15 +51,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Navigate to="/login" replace /> },
+      { path: "about", element: <AboutUs /> },
+      { path: "purpose", element: <Purpose /> },
+      { path: "acknowledgements", element: <Acknowledgements /> },
+      { path: "contact", element: <ContactUs /> },
       {
         element: <PublicLayout />,
         children: [
           { path: "login", element: <LoginPage /> },
           { path: "signup", element: <SignupPage /> },
-          { path: "about", element: <AboutUs /> },
-          { path: "purpose", element: <Purpose /> },
-          { path: "acknowledgements", element: <Acknowledgements /> },
-          { path: "contact", element: <ContactUs /> },
         ],
       },
       {

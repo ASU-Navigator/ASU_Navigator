@@ -147,7 +147,6 @@ export default function Dashboard() {
 
   const events: ParsedEvent[] = scheduleQuery.data?.events ?? [];
 
-  // Walk connectors between consecutive events (index i = connector before event i)
   const walkConnectors = useMemo(() =>
     events.map((_, i) => {
       if (i === 0) return null;
@@ -173,7 +172,6 @@ export default function Dashboard() {
 
       <main className="max-w-3xl mx-auto px-4 py-8">
 
-        {/* Greeting */}
         {session?.user && (
           <div className="mb-8">
             <h1 className="text-white text-2xl font-bold tracking-tight">
@@ -188,7 +186,6 @@ export default function Dashboard() {
           </div>
         )}
 
-        {/* Schedule tabs */}
         {hasSchedules && (
           <div className="flex items-center gap-2 mb-6 flex-wrap">
             {schedules.map((s) => (
@@ -249,7 +246,6 @@ export default function Dashboard() {
           </div>
         )}
 
-        {/* Upload panel */}
         {(!hasSchedules || showUpload) && (
           <div className="mb-8">
             <div className="flex items-start justify-between mb-4">
@@ -279,7 +275,6 @@ export default function Dashboard() {
           </div>
         )}
 
-        {/* Class list */}
         {!!scheduleId && !showUpload && (
           scheduleQuery.isPending ? (
             <div className="flex justify-center py-16">
@@ -288,7 +283,6 @@ export default function Dashboard() {
             </div>
           ) : !scheduleQuery.data?.hasSchedule ? null : (
             <div className="space-y-6">
-              {/* Header row */}
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <DaySelector
                   date={date}

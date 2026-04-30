@@ -53,18 +53,7 @@ export default function Navbar() {
         )}
         <button
           onClick={handleSignOut}
-          className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
-          style={{ color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.2)" }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.color = "white";
-            e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-            e.currentTarget.style.borderColor = "rgba(255,255,255,0.4)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.color = "rgba(255,255,255,0.75)";
-            e.currentTarget.style.background = "";
-            e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)";
-          }}
+          className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors text-white/75 border border-white/20 hover:text-white hover:bg-white/10 hover:border-white/40"
         >
           Sign Out
         </button>
