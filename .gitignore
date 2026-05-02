@@ -1,2 +1,9 @@
 node_modules
 .env
+api/index.js
+backend/prisma/generated/
+frontend/.next/
+frontend/dist/
+backend/dist/
+frontend/pnpm-lock.yaml
+backend/pnpm-lock.yaml
