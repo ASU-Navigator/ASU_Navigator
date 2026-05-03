@@ -49,7 +49,7 @@ app.use(
 
 app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
   console.error(err);
-  res.status(500).json({ error: String(err) });
+  res.status(500).json({ error: "Internal server error" });
 });
 
 export default app;
