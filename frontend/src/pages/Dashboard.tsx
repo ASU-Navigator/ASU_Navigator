@@ -199,8 +199,8 @@ export default function Dashboard() {
                 title="Double-click to rename"
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm cursor-pointer transition-colors select-none ${
                   scheduleId === s.id
-                    ? "bg-asu-maroon border-asu-maroon text-white"
-                    : "border-white/20 text-gray-400 hover:text-white hover:border-white/40"
+                    ? "bg-asu-maroon/80 border-asu-maroon text-white"
+                    : "border-white/15 text-gray-400 hover:text-white hover:border-white/35 hover:bg-white/5"
                 }`}
               >
                 {renamingId === s.id ? (
@@ -298,10 +298,10 @@ export default function Dashboard() {
                   <button
                     onClick={() => navigate(`/map?date=${date}&schedule=${scheduleId}`)}
                     disabled={!canViewRoute}
-                    className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity disabled:opacity-40 bg-asu-maroon"
+                    className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all disabled:opacity-40 bg-asu-maroon hover:bg-asu-maroon-dark"
                     title={!canViewRoute ? "Need at least 2 in-person classes, or 1 class with a start pin set" : ""}
                   >
-                    🗺 View Route
+                    View Route
                   </button>
                 </div>
               </div>

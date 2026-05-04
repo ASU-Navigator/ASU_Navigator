@@ -44,19 +44,13 @@ export default function LoginPage() {
           className="w-full max-w-sm bg-white rounded-2xl overflow-hidden"
           style={{ boxShadow: "0 25px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.08)" }}
         >
-          <div className="bg-asu-maroon px-8 py-8">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                <span className="text-white font-black text-lg leading-none">A</span>
-              </div>
-              <div>
-                <p className="text-white font-bold text-xl leading-tight">ASU Navigator</p>
-                <p className="text-white/60 text-xs mt-0.5">Sign in to access your campus map</p>
-              </div>
-            </div>
+          <div className="h-1 bg-asu-maroon" />
+          <div className="px-8 pt-7 pb-2">
+            <p className="text-gray-900 font-bold text-xl leading-tight">Welcome back</p>
+            <p className="text-gray-500 text-sm mt-0.5">Sign in to your ASU Navigator account</p>
           </div>
 
-          <div className="px-8 py-8">
+          <div className="px-8 py-6">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">
